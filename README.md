@@ -1,23 +1,32 @@
 # 网页开发助手
 
 #### 介绍
+
 助你快速开发网页，让世界上没有难做的网页！
 
 #### 软件架构
-软件架构说明
+
+基于Google Blockly开发
 
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  下载发行版
+2.  解压到 服务器/虚拟主机（本地也行）
+3.  访问`index.html`，开始使用
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  拖拽积木进行编程
+2.  点击“运行代码”，看看效果，然后再调整
+3.  写完之后，点击“生成代码”，复制代码到HTML文件
+
+
+#### 注意事项
+
+1.  首次使用或遇到问题，请务必阅读“帮助文档”！！！实在看不懂的话，选择第二条路，发邮件到我的邮箱：`3260130869@qq.com`
+2.  该工具正在开发阶段，未完工，目前仅供初学者学习所用，请不要用于生产环境！生产环境复杂多变，可能出现各种问题，我不承担任何责任！
+
 
 #### 参与贡献
 
@@ -25,13 +34,3 @@
 2.  新建 Feat_xxx 分支
 3.  提交代码
 4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
