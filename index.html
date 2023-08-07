@@ -9,6 +9,7 @@
   <script src="js/blockly.min.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/sweetalert.js"></script>
+  <script src="js/jquery.cookie.js"></script>
   <link rel="stylesheet" href="css/main.css">
 
   <style>
@@ -21,11 +22,14 @@
 
   <script>
     $(document).ready(function () {
-      swal({
-        title: "必看提示",
-        text: "如果您是新手，请务必查看帮助文档！帮助文档可以为您解答90%的问题",
-        icon: "success",
-      });
+      if ($.cookie('Starter') === undefined){
+        swal({
+          title: "必看提示",
+          text: "如果您是新手，请务必查看帮助文档！帮助文档可以为您解答90%的问题",
+          icon: "success",
+        });
+        $.cookie('Starter', false);
+      }
       var isExpanded = false;
       $("#code").click(function () {
         if (isExpanded) {
