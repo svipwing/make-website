@@ -1,0 +1,10 @@
+@font-face {
+    font-family: CaskaydiaCoveNerdFont;
+    src: url(../static/CaskaydiaCoveNerdFontMono-Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: CaskaydiaCoveNerdFont;
+}
