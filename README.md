@@ -1,5 +1,6 @@
 # 网页开发助手
 
+![图标](image/logo.png)
 ![预览图1](image/help1.png)
 ![预览图2](image/help2.png)
 
