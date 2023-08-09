@@ -6,7 +6,6 @@ div#code {
   width: 380px;
   background-color: #008b8b;
   color: white;
-  text-align: center;
   overflow: scroll;
 }
 
