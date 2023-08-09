@@ -1,0 +1,14 @@
+{
+  "name": "make-website",
+  "version": "1.0.0",
+  "description": "![图标](image/logo.png)\r ![预览图1](image/help1.png)\r ![预览图2](image/help2.png)",
+  "main": "index.html",
+  "scripts": {
+    "test": "live-server"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

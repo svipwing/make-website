@@ -1,0 +1,22 @@
+div#code {
+  height: 50px;
+  position: absolute;
+  left: 1010px;
+  top: 80px;
+  width: 380px;
+  background-color: #008b8b;
+  color: white;
+  text-align: center;
+  overflow: scroll;
+}
+
+div#look {
+  height: 50px;
+  position: absolute;
+  left: 1410px;
+  top: 80px;
+  width: 380px;
+  background-color: pink;
+  margin-right: 100px;
+  overflow: scroll;
+}
