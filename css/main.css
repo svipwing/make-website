@@ -5,6 +5,17 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: consola;
+    src: url(../static/consola.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
 #copy {
     font-family: CaskaydiaCoveNerdFont;
+}
+
+#code{
+    font-family: consola;
 }
