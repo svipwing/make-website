@@ -30,19 +30,14 @@
       });
     </script>
 
-    <script>
-      window.onload = function () {
-        now = new Date();
-        document.getElementById("years").innerHTML = now.getFullYear();
-      };
-    </script>
+    <script src="js/f12.js"></script>
   </head>
 
-<body>
-  <div id='start_page'>
-    <h1>网页开发助手</h1>
-    <h3>让世界上没有难做的网页！</h3>
-  </div>
+  <body>
+    <div id="start_page">
+      <h1>网页开发助手</h1>
+      <h3>让世界上没有难做的网页！</h3>
+    </div>
 
     <a
       style="z-index: 1; position: fixed; top: 0; right: 0"
@@ -180,11 +175,11 @@
 
     <script src="workspace/workspace.js"></script>
 
-  <div
-    style="position: fixed; bottom: 0; left: 0; width: 100%; display: flex; justify-content: center; align-items: center; background-color: #f8f8f8; padding: 10px;">
-    <h5 id="copy">Copyright (C) 2020-<span id="years"></span> Technology Cloud Developer Team.</h5>
-  </div>
-
-</body>
-
+    <div id="nav">
+      <h5 id="copy">
+        Copyright (C) 2020-<span id="years"></span> Technology Cloud Developer
+        Team.
+      </h5>
+    </div>
+  </body>
 </html>
