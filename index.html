@@ -27,7 +27,7 @@
   <script>
     $(document).ready(function () {
       if ($.cookie('Starter') === undefined) {
-        $.growl.notice({title: "必看提示",message: "如果您是新手，请务必查看帮助文档！帮助文档可以为您解答90%的问题，如果还是不懂，请加QQ交流群，群号：135452025", duration: 10000});
+        $.growl.notice({ title: "必看提示", message: "如果您是新手，请务必查看帮助文档！帮助文档可以为您解答90%的问题，如果还是不懂，请加QQ交流群，群号：135452025", duration: 10000 });
         $.cookie('Starter', false);
       }
 
@@ -130,6 +130,16 @@
 </head>
 
 <body>
+
+  <script>
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'F12' || event.keyCode === 123) {
+        event.preventDefault();
+        $.growl.error({ title: "嘿！别瞎按", message: "坏孩子!", duration: 5000 });
+      }
+    });
+  </script>
+
   <div id='start_page'>
     <h1>网页开发助手</h1>
     <h3>让世界上没有难做的网页！</h3>
