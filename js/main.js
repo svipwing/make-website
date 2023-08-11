@@ -17,6 +17,24 @@ $(document).ready(function () {
     });
   });
 
+  $("#copycode").click(function () {
+    let transfer = document.createElement('textarea');
+    document.body.appendChild(transfer);
+    transfer.value = document.getElementById("code").innerText;
+    transfer.focus();
+    transfer.select();
+    document.execCommand('copy');
+    transfer.blur();
+    document.body.removeChild(transfer);
+
+    $.growl.notice({
+      title: "提示",
+      message:
+        "代码复制成功！",
+      duration: 10000,
+    });
+  });
+
   var isExpanded = false;
   $("#code").click(function () {
     if (isExpanded) {

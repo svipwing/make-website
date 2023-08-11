@@ -28,7 +28,7 @@ var blocklyDiv = document.getElementById("blocklyDiv");
 var workspace = Blockly.inject(blocklyDiv, options);
 var workspaceBlocks = document.getElementById("workspaceBlocks");
 Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
-// 自动生成代码
+
 function myUpdateFunction(event) {
   var code = Blockly.JavaScript.workspaceToCode(workspace);
   document.getElementById("code").innerText = code;
