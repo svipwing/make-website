@@ -21,6 +21,15 @@
     <link rel="stylesheet" href="css/main.css" />
 
     <script src="./js/main.js"></script>
+    <script src="./js/years.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script>
+      const {createApp, ref} = Vue
+
+      const App = createApp()
+      App.mount('#app')
+    </script>
 
     <script>
       $(document).ready(function () {
@@ -102,7 +111,7 @@
         </li>
         <li style="margin: 0 25px">
           <a
-            href="welcome/index.html"
+            href="welcome.html"
             style="text-decoration: none; color: white; font-weight: bold"
             >前往官网</a
           >
@@ -177,8 +186,7 @@
 
     <div id="nav">
       <h5 id="copy">
-        Copyright (C) 2020-<span id="years"></span> Technology Cloud Developer
-        Team.
+        Copyright (C) 2020-<span id="years"></span> Technology Cloud Developer Team.
       </h5>
     </div>
   </body>

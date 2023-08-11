@@ -16,3 +16,10 @@
 .osc_link_color * {
   color: #a28b40 !important;
 }
+#copy{
+  margin-top: 20px;
+}
+#osc-gitee-widget-tag{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

@@ -3,22 +3,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="css/main.css" />
 
-<script>
-  window.onload = function () {
-    now = new Date();
-    document.getElementById("years").innerHTML = now.getFullYear();
-  };
-</script>
+<script src="./js/years.js"></script>
+
+<style>
+  p#notice {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+</style>
 
 <canvas id="c_n9" width="1920" height="990" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.1;"></canvas>
-<script src="welcome/js/lz.js"></script>
+<script src="js/lz.js"></script>
 
 <center>
-  <h1>帮助文档</h1>
+  <h1 style="margin-bottom: 20px;">帮助文档</h1>
 
   <img src="image/help1.png" width="500" height="300" />
 
-  <p>
+  <p id="notice">
     看看上面这张图片，然后咱们来详细介绍每个区域<br /><br />
     ①区域：导航栏，有很多选项，“帮助文档”里面有各种教程和介绍，“关于我们”里面有“网页开发助手”的简介，<br />
     “生成代码”点击后会 展开/收起 “代码生成区”，“运行代码”点击后会 展开/收起
@@ -36,7 +38,7 @@
 
   <img src="image/help2.png" width="500" height="300" />
 
-  <p>
+  <p id="notice">
     上面是“代码生成区”和“效果预览区”展开后的效果<br /><br />
     如果要删除积木，可以把积木拖拽到“积木盒子区”，然后松开鼠标（移动设备就放开手指），就可以删除了
   </p>

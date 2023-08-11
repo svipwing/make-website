@@ -14,7 +14,7 @@
             z: o(v, "zIndex", -1),
             o: o(v, "opacity", 0.5),
             c: o(v, "color", "0,0,0"),
-            n: o(v, "count", 85)
+            n: o(v, "count", 90)
         };
     }
     function k() {
