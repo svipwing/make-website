@@ -1,4 +1,13 @@
 $(document).ready(function () {
+  sometext = ['让世界上没有难做的网页！',
+  '基于Google blockly开发',
+  'jQuery简单又好用',
+  '听说vscode可以在线协作写代码',
+  '内置了一个<a style="color:pink;" href="markdown.html">markdown编辑器</a>哦！',
+  '初次使用要看<a style="color:pink;" href="help.html">帮助文档</a>哦！',
+  '藏了一个<a style="color:pink;" href="mc.html">mc网页版彩蛋</a>哦！'];
+  $("#text").html(sometext[Math.floor(Math.random()*sometext.length)]);
+
   if ($.cookie("Starter") === undefined) {
     $.growl.notice({
       title: "必看提示",
