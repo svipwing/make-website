@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>markdown编辑器</title>
+
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="c_n9" width="1920" height="990"
+    style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.1;background-color: #32CD32;"></canvas>
+  <script src="js/lz.js"></script>
+
+  <center>
+
+    <h1>markdown编辑器</h1>
+
+    <textarea id="text-input" oninput="this.editor.update()" rows="6" cols="60">在这里输入 **Markdown**</textarea>
+    <hr />
+    <div style="background-color:grey;color:white;" id="html_code"> </div>
+
+  </center>
+
+  <div style="background-color:pink;" id="look"> </div>
+
+  <script src="js/markdown.min.js"></script>
+  <script>
+    function Editor(input, preview) {
+      this.update = function () {
+        html_code.innerText = markdown.toHTML(input.value);
+        look.innerHTML = markdown.toHTML(input.value);
+      };
+      input.editor = this;
+      this.update();
+    }
+    var $ = function (id) { return document.getElementById(id); };
+    new Editor($("text-input"), $("look"), $("html"));
+  </script>
+
+</body>
+
+</html>

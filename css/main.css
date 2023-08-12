@@ -100,3 +100,14 @@ body {
   z-index: 9999;
   padding: 10px;
 }
+
+#markdown {
+  border-radius: 10px;
+  background-color: #6d50f0;
+  color: white;
+  position: fixed;
+  bottom: 60px;
+  right: 100px;
+  z-index: 9999;
+  padding: 10px;
+}
