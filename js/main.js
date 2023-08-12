@@ -75,4 +75,13 @@ $(document).ready(function () {
       isExpanded1 = true;
     }
   });
+
+  if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+    $.growl.notice({
+        title: "提示",
+        message:
+          "建议使用电脑端打开，移动端建议切换为横屏以获得更好的体验",
+        duration: 10000,
+    });
+  }
 });

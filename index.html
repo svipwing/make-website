@@ -1,189 +1,151 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
 
-    <title>网页开发助手 - make website</title>
+<head>
+  <meta charset="UTF-8" />
 
-    <link rel="shortcut icon" href="favicon.ico" >
+  <title>网页开发助手 - make website</title>
 
-    <link rel="stylesheet" href="./css/editor.css" />
-    <script src="js/blockly.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/sweetalert.js"></script>
-    <script src="js/jquery.cookie.js"></script>
-    <script
-      src="https://static.runoob.com/assets/jquery/jquery.growl/javascripts/jquery.growl.js"
-      type="text/javascript"
-    ></script>
-    <link
-      href="https://static.runoob.com/assets/jquery/jquery.growl/stylesheets/jquery.growl.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link rel="stylesheet" href="css/main.css" />
+  <link rel="shortcut icon" href="favicon.ico">
 
-    <script src="./js/main.js"></script>
-    <script src="./js/years.js"></script>
+  <link rel="stylesheet" href="./css/editor.css" />
+  <script src="js/blockly.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/sweetalert.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="https://static.runoob.com/assets/jquery/jquery.growl/javascripts/jquery.growl.js"
+    type="text/javascript"></script>
+  <link href="https://static.runoob.com/assets/jquery/jquery.growl/stylesheets/jquery.growl.css" rel="stylesheet"
+    type="text/css" />
+  <link rel="stylesheet" href="css/main.css" />
 
-    <script>
-      $(document).ready(function () {
-        var timer = setInterval(function () {
-          $("#start_page").slideUp(1000);
-        }, 3000);
-      });
-    </script>
+  <script src="./js/main.js"></script>
+  <script src="./js/years.js"></script>
 
-    <script src="js/f12.js"></script>
-  </head>
+  <script>
+    $(document).ready(function () {
+      var timer = setInterval(function () {
+        $("#start_page").slideUp(1000);
+      }, 3000);
+    });
+  </script>
 
-  <body>
-    <div id="start_page">
-      <h1>网页开发助手</h1>
-      <h3>让世界上没有难做的网页！</h3>
-    </div>
+  <script src="js/f12.js"></script>
+</head>
 
-    <a
-      style="z-index: 1; position: fixed; top: 0; right: 0"
-      href="https://gitee.com/jsy-1/make-website"
-      ><img
-        style="width: 200px"
-        src="https://gitee.com/jsy-1/make-website/widgets/widget_1.svg"
-        alt="Fork me on Gitee"
-    /></a>
+<body>
+  <div id="start_page">
+    <h1>网页开发助手</h1>
+    <h3>让世界上没有难做的网页！</h3>
+  </div>
 
-    <button id="qq">遇到问题?</button>
-    <button id="copycode">一键复制代码</button>
+  <a style="z-index: 1; position: fixed; top: 0; right: 0" href='https://gitee.com/jsy-1/make-website'><img src='https://gitee.com/jsy-1/make-website/widgets/widget_5.svg'
+      alt='Fork me on Gitee'></img></a>
 
-    <div class="navbar">
-      <ul
-        style="
+  <button id="qq">遇到问题?</button>
+  <button id="copycode">一键复制代码</button>
+
+  <div class="navbar">
+    <ul style="
           font-size: 25px;
           list-style-type: none;
           margin: 0;
           padding: 0;
           display: flex;
           justify-content: center;
-        "
-      >
-        <li style="margin: 0 25px">
-          <a
-            href="#"
-            style="
-              font-size: 32px;
+        ">
+      <li style="margin: 0 20px">
+        <a href="#" style="
+              font-size: 30px;
               text-decoration: none;
               color: white;
               font-weight: bold;
               background-color: rgb(199, 29, 36);
               border-radius: 20px;
               padding: 10px;
-            "
-            >网页开发助手</a
-          >
-        </li>
-        <li style="margin: 0 25px">
-          <a
-            href="help.html"
-            style="text-decoration: none; color: white; font-weight: bold"
-            >帮助文档</a
-          >
-        </li>
-        <li style="margin: 0 25px">
-          <a
-            href="about.html"
-            style="text-decoration: none; color: white; font-weight: bold"
-            >关于我们</a
-          >
-        </li>
-        <li style="margin: 0 25px" id="code_open">
-          <a style="text-decoration: none; color: white; font-weight: bold"
-            >生成代码</a
-          >
-        </li>
-        <li style="margin: 0 25px" id="look_open">
-          <a style="text-decoration: none; color: white; font-weight: bold"
-            >运行代码</a
-          >
-        </li>
-        <li style="margin: 0 25px">
-          <a
-            href="welcome.html"
-            style="text-decoration: none; color: white; font-weight: bold"
-            >前往官网</a
-          >
-        </li>
-      </ul>
-    </div>
+              white-space: nowrap;
+            ">网页开发助手</a>
+      </li>
+      <li style="margin: 0 25px">
+        <a href="help.html" style="text-decoration: none; color: white; font-weight: bold">帮助文档</a>
+      </li>
+      <li style="margin: 0 25px">
+        <a href="about.html" style="text-decoration: none; color: white; font-weight: bold">关于我们</a>
+      </li>
+      <li style="margin: 0 25px" id="code_open">
+        <a style="text-decoration: none; color: white; font-weight: bold">生成代码</a>
+      </li>
+      <li style="margin: 0 25px" id="look_open">
+        <a style="text-decoration: none; color: white; font-weight: bold">运行代码</a>
+      </li>
+      <li style="margin: 0 25px">
+        <a href="welcome.html" style="text-decoration: none; color: white; font-weight: bold">前往官网</a>
+      </li>
+    </ul>
+  </div>
 
-    <div id="blocklyDiv" style="position: fixed; height: 900px; width: 100%">
-      <xml
-        xmlns="https://developers.google.com/blockly/xml"
-        id="toolbox"
-        style="display: none"
-      >
-        <block type="go">
-          <field name="title">hello</field>
-          <field name="unicode">utf-8</field>
-        </block>
+  <div id="blocklyDiv" style="position: fixed; height: 900px; width: 100%">
+    <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+      <block type="go">
+        <field name="title">hello</field>
+        <field name="unicode">utf-8</field>
+      </block>
 
-        <block type="h1">
-          <field name="text">text</field>
-          <field name="color">black</field>
-          <field name="id">id</field>
-        </block>
+      <block type="h1">
+        <field name="text">text</field>
+        <field name="color">black</field>
+        <field name="id">id</field>
+      </block>
 
-        <block type="h2">
-          <field name="text">text</field>
-          <field name="color">black</field>
-          <field name="id">id</field>
-        </block>
+      <block type="h2">
+        <field name="text">text</field>
+        <field name="color">black</field>
+        <field name="id">id</field>
+      </block>
 
-        <block type="h3">
-          <field name="text">text</field>
-          <field name="color">black</field>
-          <field name="id">id</field>
-        </block>
+      <block type="h3">
+        <field name="text">text</field>
+        <field name="color">black</field>
+        <field name="id">id</field>
+      </block>
 
-        <block type="p">
-          <field name="text">text</field>
-          <field name="color">black</field>
-          <field name="id">id</field>
-        </block>
+      <block type="p">
+        <field name="text">text</field>
+        <field name="color">black</field>
+        <field name="id">id</field>
+      </block>
 
-        <block type="style">
-          <field name="who">a</field>
-        </block>
+      <block type="style">
+        <field name="who">a</field>
+      </block>
 
-        <block type="text_color">
-          <field name="color">red</field>
-        </block>
+      <block type="text_color">
+        <field name="color">red</field>
+      </block>
 
-        <block type="code">
-          <field name="code_txt">&lt;span&gt;自定义&lt;/span&gt;</field>
-        </block>
+      <block type="code">
+        <field name="code_txt">&lt;span&gt;自定义&lt;/span&gt;</field>
+      </block>
 
-        <block type="end"></block>
-      </xml>
-      <xml
-        xmlns="https://developers.google.com/blockly/xml"
-        id="workspaceBlocks"
-        style="display: none"
-      ></xml>
-    </div>
+      <block type="end"></block>
+    </xml>
+    <xml xmlns="https://developers.google.com/blockly/xml" id="workspaceBlocks" style="display: none"></xml>
+  </div>
 
-    <div id="code"></div>
-    <div id="look"></div>
+  <div id="code"></div>
+  <div id="look"></div>
 
-    <script src="blocks/get.js"></script>
+  <script src="blocks/get.js"></script>
 
-    <script src="blocks/get.js.js"></script>
+  <script src="blocks/get.js.js"></script>
 
-    <script src="workspace/workspace.js"></script>
+  <script src="workspace/workspace.js"></script>
 
-    <div id="nav">
-      <h5 id="copy">
-        Copyright (C) 2020-<span id="years"></span> Technology Cloud Developer Team.
-      </h5>
-    </div>
-  </body>
+  <div id="nav">
+    <h5 id="copy">
+      Copyright (C) 2020-<span id="years"></span> Technology Cloud Developer Team.
+    </h5>
+  </div>
+</body>
+
 </html>
