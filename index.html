@@ -87,48 +87,82 @@
 
   <div id="blocklyDiv" style="position: fixed; height: 1000px; width: 100%">
     <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
-      <block type="go">
-        <field name="title">hello</field>
-        <field name="unicode">utf-8</field>
-      </block>
+      <category name="基本框架" colour="120">
 
-      <block type="h1">
-        <field name="text">text</field>
-        <field name="color">black</field>
-        <field name="id">id</field>
-      </block>
+        <block type="go">
+          <field name="title">hello</field>
+          <field name="unicode">utf-8</field>
+        </block>
 
-      <block type="h2">
-        <field name="text">text</field>
-        <field name="color">black</field>
-        <field name="id">id</field>
-      </block>
+        <block type="end"></block>
 
-      <block type="h3">
-        <field name="text">text</field>
-        <field name="color">black</field>
-        <field name="id">id</field>
-      </block>
+      </category>
 
-      <block type="p">
-        <field name="text">text</field>
-        <field name="color">black</field>
-        <field name="id">id</field>
-      </block>
+      <sep></sep>
 
-      <block type="style">
-        <field name="who">a</field>
-      </block>
+      <category name="文字内容" colour="230">
 
-      <block type="text_color">
-        <field name="color">red</field>
-      </block>
+        <block type="h1">
+          <field name="text">text</field>
+          <field name="id">id</field>
+        </block>
 
-      <block type="code">
-        <field name="code_txt">&lt;span&gt;自定义&lt;/span&gt;</field>
-      </block>
+        <block type="h2">
+          <field name="text">text</field>
+          <field name="id">id</field>
+        </block>
 
-      <block type="end"></block>
+        <block type="h3">
+          <field name="text">text</field>
+          <field name="id">id</field>
+        </block>
+
+        <block type="p">
+          <field name="text">text</field>
+          <field name="id">id</field>
+        </block>
+
+      </category>
+
+      <sep></sep>
+
+      <category name="界面样式" colour="260">
+
+        <block type="style">
+          <field name="who">a</field>
+        </block>
+
+        <block type="text_color">
+          <field name="color">red</field>
+        </block>
+
+        <block type="text_size">
+          <field name="size">10</field>
+        </block>
+
+      </category>
+
+      <sep></sep>
+
+      <category name="高级脚本" colour="290">
+
+        <block type="js"></block>
+
+        <block type="alert">
+          <field name="text">hi</field>
+        </block>
+
+      </category>
+
+      <sep></sep>
+      
+      <category name="其他" colour="20">
+
+        <block type="code">
+          <field name="code_txt">&lt;span&gt;自定义&lt;/span&gt;</field>
+        </block>
+
+      </category>
     </xml>
     <xml xmlns="https://developers.google.com/blockly/xml" id="workspaceBlocks" style="display: none"></xml>
   </div>

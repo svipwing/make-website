@@ -6,9 +6,7 @@ Blockly.JavaScript["h1"] = function (block) {
   var text_id = block.getFieldValue("id");
   // TODO: Assemble JavaScript into code variable.
   var code =
-    '<h1 style="color:' +
-    text_color +
-    ';" id="' +
+    '<h1 id="' +
     text_id +
     '">' +
     text_text +
@@ -22,9 +20,7 @@ Blockly.JavaScript["h2"] = function (block) {
   var text_id = block.getFieldValue("id");
   // TODO: Assemble JavaScript into code variable.
   var code =
-    '<h2 style="color:' +
-    text_color +
-    ';" id="' +
+    '<h2 id="' +
     text_id +
     '">' +
     text_text +
@@ -38,9 +34,7 @@ Blockly.JavaScript["h3"] = function (block) {
   var text_id = block.getFieldValue("id");
   // TODO: Assemble JavaScript into code variable.
   var code =
-    '<h3 style="color:' +
-    text_color +
-    ';" id="' +
+    '<h3 id="' +
     text_id +
     '">' +
     text_text +
@@ -72,9 +66,7 @@ Blockly.JavaScript["p"] = function (block) {
   var text_id = block.getFieldValue("id");
   // TODO: Assemble JavaScript into code variable.
   var code =
-    '<p style="color:' +
-    text_color +
-    ';" id="' +
+    '<p id="' +
     text_id +
     '">' +
     text_text +
@@ -101,5 +93,26 @@ Blockly.JavaScript["text_color"] = function (block) {
   var text_color = block.getFieldValue("color");
   // TODO: Assemble JavaScript into code variable.
   var code = "color:" + text_color + ";\n";
+  return code;
+};
+
+Blockly.JavaScript['text_size'] = function(block) {
+  var text_size = block.getFieldValue('size');
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'font-size:' + text_size + 'px;\n';
+  return code;
+};
+
+Blockly.JavaScript['js'] = function(block) {
+  var statements_js = Blockly.JavaScript.statementToCode(block, 'js');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '<script>\n' + statements_js + '</script>\n';
+  return code;
+};
+
+Blockly.JavaScript['alert'] = function(block) {
+  var text_text = block.getFieldValue('text');
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'alert("' + text_text + '");\n';
   return code;
 };

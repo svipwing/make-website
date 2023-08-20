@@ -1,7 +1,7 @@
 div#code {
   height: 50px;
   position: absolute;
-  left: 680px;
+  left: 660px;
   top: 80px;
   width: 380px;
   background-color: #008b8b;
@@ -12,7 +12,7 @@ div#code {
 div#look {
   height: 50px;
   position: absolute;
-  left: 1080px;
+  left: 1060px;
   top: 80px;
   width: 380px;
   background-color: pink;
