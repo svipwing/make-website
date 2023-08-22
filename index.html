@@ -156,6 +156,59 @@
 
       <sep></sep>
       
+      <category name="数学计算" colour="210">
+      
+        <block type="math_constant">
+          <field name="CONSTANT">PI</field>
+        </block>
+      
+        <block type="math_number">
+          <field name="NUM">123456</field>
+        </block>
+        
+        <block type="math_arithmetic">
+          <field name="OP">ADD</field>
+           <value name="A">
+             <shadow type="math_number">
+               <field name="NUM">1</field>
+             </shadow>
+           </value>
+           
+           <value name="B">
+             <shadow type="math_number">
+               <field name="NUM">1</field>
+             </shadow>
+           </value>
+        </block>
+        
+        <block type="math_modulo">
+          <value name="DIVIDEND">
+            <shadow type="math_number">
+              <field name="NUM">102</field>
+            </shadow>
+          </value>
+          
+          <value name="DIVISOR">
+            <shadow type="math_number">
+              <field name="NUM">10</field>
+            </shadow>
+          </value>
+        </block>
+        
+        <block type="math_single">
+          <field name="OP">ROOT</field>
+            <value name="NUM">
+              <shadow type="math_number">
+                <field name="NUM">9</field>
+              </shadow>
+            </value>
+        </block>
+        
+      </category>
+
+
+      <sep></sep>
+      
       <category name="其他" colour="20">
 
         <block type="code">
