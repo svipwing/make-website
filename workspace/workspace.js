@@ -30,10 +30,8 @@ var workspaceBlocks = document.getElementById("workspaceBlocks");
 Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
 
 function myUpdateFunction(event) {
-  let code = Blockly.JavaScript.workspaceToCode(workspace);
-  document.getElementById("code").innerHTML = hljs.highlight(code, {
-    language: xml,
-  }).value;
+  var code = Blockly.JavaScript.workspaceToCode(workspace);
+  document.getElementById("code").innerText = code;
   document.getElementById("look").innerHTML = code;
 }
 workspace.addChangeListener(myUpdateFunction);
