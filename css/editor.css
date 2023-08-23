@@ -1,10 +1,10 @@
-div#code {
-  height: 50px;
+#code {
+  height: 26px;
   position: absolute;
   left: 660px;
   top: 80px;
-  width: 380px;
-  background-color: #008b8b;
+  width: 360px;
+  background-color: #76bf7a;
   color: white;
   overflow: scroll;
 }
