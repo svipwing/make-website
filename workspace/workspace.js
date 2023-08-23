@@ -32,7 +32,7 @@ Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
 function myUpdateFunction(event) {
   let code = Blockly.JavaScript.workspaceToCode(workspace);
   document.getElementById("code").innerHTML = hljs.highlight(code, {
-    language: xml,
+    language: "xml",
   }).value;
   document.getElementById("look").innerHTML = code;
 }
