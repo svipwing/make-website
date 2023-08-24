@@ -47,7 +47,7 @@ $(document).ready(function () {
   var isExpanded = false;
   $("#code").click(function () {
     if (isExpanded) {
-      $(this).animate({ height: "50px" }, 500);
+      $(this).animate({ height: "26px" }, 500);
       isExpanded = false;
     } else {
       $(this).animate({ height: "900px" }, 500);
