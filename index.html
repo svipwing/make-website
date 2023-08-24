@@ -22,6 +22,10 @@
   <script src="./js/main.js"></script>
   <script src="./js/years.js"></script>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/languages/go.min.js"></script>'
+
   <script>
     $(document).ready(function () {
       var timer = setInterval(function () {
@@ -220,7 +224,7 @@
     <xml xmlns="https://developers.google.com/blockly/xml" id="workspaceBlocks" style="display: none"></xml>
   </div>
 
-  <div id="code"></div>
+  <pre><code id="code" class="language-html"></code></pre>
   <div id="look"></div>
 
   <script src="blocks/get.js"></script>
