@@ -173,3 +173,15 @@ Blockly.Blocks['alert'] = {
  this.setHelpUrl("");
   }
 };
+
+Blockly.Blocks['line'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("分割线");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};

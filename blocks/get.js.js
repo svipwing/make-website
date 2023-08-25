@@ -116,3 +116,9 @@ Blockly.JavaScript['alert'] = function(block) {
   var code = 'alert("' + text_text + '");\n';
   return code;
 };
+
+Blockly.JavaScript['line'] = function(block) {
+  // TODO: Assemble JavaScript into code variable.
+  var code = '<hr />\n';
+  return code;
+};
