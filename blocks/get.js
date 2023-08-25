@@ -180,7 +180,7 @@ Blockly.Blocks['line'] = {
         .appendField("分割线");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(230);
+    this.setColour(65);
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -192,7 +192,7 @@ Blockly.Blocks['center_go'] = {
         .appendField("开始居中");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(230);
+    this.setColour(65);
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -204,7 +204,7 @@ Blockly.Blocks['center_end'] = {
         .appendField("结束居中");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(230);
+    this.setColour(65);
  this.setTooltip("");
  this.setHelpUrl("");
   }
