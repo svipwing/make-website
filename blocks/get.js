@@ -224,3 +224,21 @@ Blockly.Blocks['link'] = {
  this.setHelpUrl("");
   }
 };
+
+Blockly.Blocks['image'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("图片，文件路径")
+        .appendField(new Blockly.FieldTextInput("a.png"), "img")
+        .appendField("，高度")
+        .appendField(new Blockly.FieldTextInput("10"), "height")
+        .appendField("像素，宽度")
+        .appendField(new Blockly.FieldTextInput("10"), "width")
+        .appendField("像素");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(180);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
