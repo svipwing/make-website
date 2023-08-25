@@ -36,8 +36,9 @@ function myUpdateFunction(event) {
   
   if(code.indexOf("MC不灭") !== -1 && y){
     y = false;
-    alert("恭喜你找到了彩蛋！");
-    window.open("mc.html");
+    if(confirm("恭喜你找到了彩蛋！")){
+      window.open("mc.html");
+    }
   }
 
   document.getElementById("code").textContent = code;
