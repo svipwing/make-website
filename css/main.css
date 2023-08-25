@@ -113,3 +113,7 @@ body {
   z-index: 9998;
   padding: 10px;
 }
+
+::selection {
+  background-color: #fe7300;
+}
