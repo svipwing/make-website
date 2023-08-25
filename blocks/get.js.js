@@ -134,3 +134,11 @@ Blockly.JavaScript['center_end'] = function(block) {
   var code = '</center>\n';
   return code;
 };
+
+Blockly.JavaScript['link'] = function(block) {
+  var text_text = block.getFieldValue('text');
+  var text_link = block.getFieldValue('link');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '<a href="' + text_link + '">' + text_text + '</a>\n';
+  return code;
+};

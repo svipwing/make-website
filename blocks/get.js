@@ -209,3 +209,18 @@ Blockly.Blocks['center_end'] = {
  this.setHelpUrl("");
   }
 };
+
+Blockly.Blocks['link'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("超链接，提示文本")
+        .appendField(new Blockly.FieldTextInput("百度"), "text")
+        .appendField("，链接")
+        .appendField(new Blockly.FieldTextInput("https://baidu.com"), "link");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
