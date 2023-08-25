@@ -29,11 +29,20 @@ var workspace = Blockly.inject(blocklyDiv, options);
 var workspaceBlocks = document.getElementById("workspaceBlocks");
 Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
 
+y = true;
+
 function myUpdateFunction(event) {
   var code = Blockly.JavaScript.workspaceToCode(workspace);
+  
+  if(code.indexOf("MC不灭") !== -1 && y){
+    y = false;
+    window.open("mc.html");
+  }
+
   document.getElementById("code").textContent = code;
   document.getElementById("look").innerHTML = code;
 
   hljs.highlightAll();
 }
+
 workspace.addChangeListener(myUpdateFunction);
