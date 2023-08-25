@@ -122,3 +122,15 @@ Blockly.JavaScript['line'] = function(block) {
   var code = '<hr />\n';
   return code;
 };
+
+Blockly.JavaScript['center_go'] = function(block) {
+  // TODO: Assemble JavaScript into code variable.
+  var code = '<center>\n';
+  return code;
+};
+
+Blockly.JavaScript['center_end'] = function(block) {
+  // TODO: Assemble JavaScript into code variable.
+  var code = '</center>\n';
+  return code;
+};

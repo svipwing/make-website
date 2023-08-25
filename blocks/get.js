@@ -185,3 +185,27 @@ Blockly.Blocks['line'] = {
  this.setHelpUrl("");
   }
 };
+
+Blockly.Blocks['center_go'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("开始居中");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['center_end'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("结束居中");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
