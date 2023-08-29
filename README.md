@@ -1,6 +1,7 @@
 # 网页开发助手
 
 ![图标](image/logo.png)
+![封面](https://socialify.git.ci/svipwing/make-website/image?description=1&forks=1&issues=1&language=1&logo=https%3A%2F%2Fblockly.svipwing.xyz%2Fassets%2Flogo.png&name=1&owner=1&pattern=Brick%20Wall&pulls=1&stargazers=1&theme=Dark)
 ![预览图1](image/help1.png)
 ![预览图2](image/help2.png)
 
