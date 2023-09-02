@@ -242,3 +242,18 @@ Blockly.Blocks['image'] = {
  this.setHelpUrl("");
   }
 };
+
+Blockly.Blocks['button'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("按钮，文本")
+        .appendField(new Blockly.FieldTextInput("按钮文本"), "text")
+        .appendField("，点击后跳转到链接")
+        .appendField(new Blockly.FieldTextInput("http://baidu.com"), "link");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(210);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};

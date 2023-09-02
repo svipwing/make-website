@@ -151,3 +151,11 @@ Blockly.JavaScript['image'] = function(block) {
   var code = '<img src="' + text_img + '" width="' + text_width + 'px" height="' + text_height + 'px " />\n';
   return code;
 };
+
+Blockly.JavaScript['button'] = function(block) {
+  var text_text = block.getFieldValue('text');
+  var text_link = block.getFieldValue('link');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '<a href="' + text_link + '">\n<button>' + text_text + '</button>\n</a>\n';
+  return code;
+};
