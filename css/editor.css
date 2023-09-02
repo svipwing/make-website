@@ -1,5 +1,5 @@
 #code {
-  height: 26px;
+  height: 900px;
   position: absolute;
   left: 660px;
   top: 80px;
@@ -10,11 +10,23 @@
 }
 
 div#look {
-  height: 50px;
+  height: 900px;
   position: absolute;
   left: 1060px;
   top: 80px;
   width: 380px;
   background-color: pink;
   overflow: scroll;
+}
+
+div#n {
+  height: 1px;
+  position: absolute;
+  left: 1060px;
+  top: 80px;
+  width: 380px;
+  background-color: pink;
+  overflow: scroll;
+  display: hidden;
+  opacity: 0;
 }

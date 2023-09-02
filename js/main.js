@@ -43,45 +43,20 @@ $(document).ready(function () {
     });
   });
 
-  var isExpanded = false;
   $("#code").click(function () {
-    if (isExpanded) {
-      $(this).animate({ height: "26px" }, 500);
-      isExpanded = false;
-    } else {
-      $(this).animate({ height: "900px" }, 500);
-      isExpanded = true;
-    }
+    $(this).hide();
   });
-  var isExpanded1 = false;
+
   $("#look").click(function () {
-    if (isExpanded1) {
-      $(this).animate({ height: "50px" }, 500);
-      isExpanded1 = false;
-    } else {
-      $(this).animate({ height: "900px" }, 500);
-      isExpanded1 = true;
-    }
+    $(this).hide();
   });
 
   $("#code_open").click(function () {
-    if (isExpanded) {
-      $("#code").animate({ height: "50px" }, 500);
-      isExpanded = false;
-    } else {
-      $("#code").animate({ height: "900px" }, 500);
-      isExpanded = true;
-    }
+    $("#code").toggle();
   });
 
   $("#look_open").click(function () {
-    if (isExpanded1) {
-      $("#look").animate({ height: "50px" }, 500);
-      isExpanded1 = false;
-    } else {
-      $("#look").animate({ height: "900px" }, 500);
-      isExpanded1 = true;
-    }
+    $("#look").toggle();
   });
 
   if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
