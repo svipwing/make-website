@@ -43,14 +43,6 @@ $(document).ready(function () {
     });
   });
 
-  $("#code").click(function () {
-    $(this).hide();
-  });
-
-  $("#look").click(function () {
-    $(this).hide();
-  });
-
   $("#code_open").click(function () {
     $("#code").toggle();
   });
