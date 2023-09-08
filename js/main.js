@@ -16,6 +16,52 @@ $(document).ready(function () {
     });
     $.cookie("Starter", false);
   }
+  
+  c = false;
+  $("#dao").click(function () {
+      
+    if(!c){
+      swal({
+        title: "使用说明",
+        text: "您正在打开 导入/导出功能，此功能用于积木数据操作，再次点击右上角的 按钮“导” 关闭页面",
+        icon: "info"
+      });
+    }
+    
+    $("#import").toggle(1000);
+    c = !c;
+  });
+  
+  $("#a").click(function () {
+    var json = JSON.parse($("#data").val());
+    Blockly.serialization.workspaces.load(json, workspace);
+    
+    swal({
+      title: "导入完毕",
+      text: "积木数据导入完毕，请前往工作区查看！",
+      icon: "info"
+    });
+  });
+  
+  $("#b").click(function () {
+    var json = Blockly.serialization.workspaces.save(workspace);
+    $("#json").val(JSON.stringify(json));
+    
+    let transfer = document.createElement('textarea');
+    document.body.appendChild(transfer);
+    transfer.value = JSON.stringify(json);
+    transfer.focus();
+    transfer.select();
+    document.execCommand('copy');
+    transfer.blur();
+    document.body.removeChild(transfer);
+    
+    swal({
+      title: "导出成功！",
+      text: "积木数据导出成功！已复制到剪贴板！",
+      icon: "success"
+    });
+  });
 
   $("#qq").click(function () {
     swal({

@@ -49,6 +49,8 @@
   <button id="copycode">一键复制代码</button>
   <a href="markdown.html"><button id="markdown">markdown编辑器</button></a>
   <a href="code_editor.html"><button id="html_editor">HTML编辑器</button></a>
+  
+  <button id="dao" style="z-index: 1; position: fixed; top: 0; right: 50px; width: 50px; height: 50px;">导</button>
 
   <div class="navbar">
     <ul style="
@@ -266,6 +268,27 @@
   <div id="look"></div>
   
   <div id="n"></div>
+  
+  <div id="import">
+  
+      <h1>导入/导出</h1>
+      
+      <hr>
+      
+      <div class="input-section">
+          <input id="data" type="text" placeholder="请输入积木数据">
+          <button id="a">导入积木</button>
+      </div>
+      
+      <hr>
+      
+      <div class="input-section">
+          <p>积木数据：</p>
+          <input type="text" placeholder="请先导出积木" id="json" disabled>
+          <button id="b">导出积木</button>
+      </div>
+      
+  </div>
 
   <script src="blocks/get.js"></script>
 
