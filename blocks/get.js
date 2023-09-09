@@ -163,9 +163,9 @@ Blockly.Blocks['js'] = {
 
 Blockly.Blocks['alert'] = {
   init: function() {
-    this.appendDummyInput()
-        .appendField("弹出提示框：")
-        .appendField(new Blockly.FieldTextInput("hi"), "text");
+    this.appendValueInput("text")
+        .setCheck(["Number", "String"])
+        .appendField("弹出提示框：");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(330);

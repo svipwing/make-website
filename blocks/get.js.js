@@ -111,9 +111,9 @@ Blockly.JavaScript['js'] = function(block) {
 };
 
 Blockly.JavaScript['alert'] = function(block) {
-  var text_text = block.getFieldValue('text');
+  var value_text = Blockly.JavaScript.valueToCode(block, 'text', Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = 'alert("' + text_text + '");\n';
+  var code = 'alert(' + value_text + ');\n';
   return code;
 };
 
