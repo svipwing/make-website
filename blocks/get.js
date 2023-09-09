@@ -257,3 +257,7 @@ Blockly.Blocks['button'] = {
  this.setHelpUrl("");
   }
 };
+
+for (var key in msg) {
+  Blockly.Msg[key] = msg[key];
+}
