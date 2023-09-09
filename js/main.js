@@ -16,7 +16,10 @@ $(document).ready(function () {
     });
     $.cookie("Starter", false);
   }
-  
+
+  start = JSON.parse('{"blocks":{"languageVersion":0,"blocks":[{"type":"go","id":"xGW#Gs{{#%XM47~?a?mP","x":-838,"y":-492,"fields":{"title":"hello","unicode":"utf-8"},"next":{"block":{"type":"h1","id":"|l8Nf%^q0Q@nB2%-?j^`","fields":{"text":"你好","id":"id"},"next":{"block":{"type":"h2","id":"cr-62Co(OrIvqEYx,iA%","fields":{"text":"这是一个网页","id":"id"},"next":{"block":{"type":"end","id":"5`8u45C8^slJ[PI%[ibM"}}}}}}}]}}');
+  Blockly.serialization.workspaces.load(start, workspace);
+
   c = false;
   $("#dao").click(function () {
       
