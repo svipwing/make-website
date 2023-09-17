@@ -34,6 +34,20 @@ y = true;
 function myUpdateFunction(event) {
   var code = Blockly.JavaScript.workspaceToCode(workspace);
   
+  if(code.split('\n')[0].indexOf("var") !== -1){
+    if(code.indexOf("</title>") !== -1){
+      lines = code.split('\n');
+      lines[0] = "\n<script>\n"+lines[0]+"\n</script>\n";
+      lines.splice(lines.indexOf("</head>")-1, 0, lines.shift());
+      lines.splice(0, 2);
+      code = lines.join('\n');
+    }else{
+      lines = code.split('\n');
+      lines[0] = "<script>\n"+lines[0]+"\n</script>";
+      code = lines.join('\n');
+    }
+  }
+
   if(code.indexOf("MC不灭") !== -1 && y){
     y = false;
     if(confirm("恭喜你找到了彩蛋！")){
