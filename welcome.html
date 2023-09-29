@@ -168,10 +168,24 @@
       >
 
       <b id="sitetime"></b>
+
+      <div class="ignore" style="width:100%;text-align:center;">
+        <span><a href="javascript:translate.changeLanguage('english');">English</a></span>|
+        <span><a href="javascript:translate.changeLanguage('chinese_simplified');">简体中文</a></span>|
+        <span><a href="javascript:translate.changeLanguage('chinese_traditional');">繁體中文</a></span>
+      </div>
+      
     </div>
 
     <div class="msg">
       <p id="msg_text"></p>
     </div>
+
+     <script src="https://res.zvo.cn/translate/translate.js"></script>
+     <script>
+         translate.language.setLocal('chinese_simplified');
+         translate.selectLanguageTag.show = false; 
+         translate.execute();
+     </script>
   </body>
 </html>
