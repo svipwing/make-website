@@ -1,21 +1,21 @@
 #code {
+  display: none;
   height: 900px;
-  position: absolute;
-  left: 660px;
+  position: fixed;
   top: 80px;
-  width: 360px;
+  width: 100%;
   background-color: #e8e9e9;
   color: black;
   overflow: scroll;
 }
 
 div#look {
+  display: none;
   height: 900px;
-  position: absolute;
-  left: 1060px;
+  position: fixed;
   top: 80px;
-  width: 380px;
-  background-color: pink;
+  width: 100%;
+  background-color: #eef2e0;
   overflow: scroll;
 }
 
