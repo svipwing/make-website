@@ -93,11 +93,11 @@ $(document).ready(function () {
   });
 
   $("#code_open").click(function () {
-    $("#code").toggle();
+    $("#code").toggle(1000);
   });
 
   $("#look_open").click(function () {
-    $("#look").toggle();
+    $("#look").toggle(1000);
   });
 
   if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
