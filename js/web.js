@@ -13,7 +13,8 @@ $(document).ready(function () {
           "title":"节日快乐！", 
           "text":"1024程序员节快乐！", 
           "icon":"success", 
-          "button":false
+          "button":false,
+          timer: 3000
         });
      }
 
