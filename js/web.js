@@ -5,6 +5,18 @@ $(document).ready(function () {
     $(".msg").fadeOut(6000);
     $('#year').text(date.getFullYear());
 
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
+          
+    if(month==10 && day==20){
+        swal({
+          "title":"节日快乐！", 
+          "text":"1024程序员节快乐！", 
+          "icon":"success", 
+          "button":false
+        });
+     }
+
     $("#qq").click(function(){
         swal({'title':'提示','text':'QQ交流群的群号：135452025','icon':'success'});
     });
