@@ -1,13 +1,7 @@
 # 网页开发助手
 
 <hr />
-<img src="image/logo.png" width="100px" height="100px" />
-<hr />
 <img src="https://socialify.git.ci/svipwing/make-website/image?description=1&forks=1&issues=1&language=1&logo=https%3A%2F%2Fblockly.svipwing.xyz%2Fassets%2Flogo.png&name=1&owner=1&pattern=Brick%20Wall&pulls=1&stargazers=1&theme=Dark" width="400px" height="300px" />
-<hr />
-<img src="image/one.png" width="400px" height="300px" />
-<hr />
-<img src="image/help1.png" width="400px" height="300px" />
 <hr />
 <img src="image/help2.png" width="400px" height="300px" />
 
@@ -44,6 +38,11 @@
 4. 可执行程序，彩蛋开发者
 
 本仓库使用了jquery和bootstrap框架，markdown编辑器采用markdown.js、html2md.js
+
+#### github仓库状态
+
+[![Stargazers repo roster for @svipwing/make-website](https://reporoster.com/stars/svipwing/make-website)](https://github.com/svipwing/make-website/stargazers)
+[![Forkers repo roster for @svipwing/make-website](https://reporoster.com/forks/svipwing/make-website)](https://github.com/svipwing/make-website/network/members)
 
 #### 参与贡献
 
