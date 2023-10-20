@@ -14,7 +14,7 @@ $(document).ready(function () {
           "text":"1024程序员节快乐！", 
           "icon":"success", 
           "button":false,
-          timer: 3000
+          "timer": 3000
         });
      }
 
