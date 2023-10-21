@@ -7,6 +7,20 @@ $(document).ready(function () {
   '初次使用要看<a style="color:pink;" href="help.html">帮助文档</a>哦！'];
   $("#text").html(sometext[Math.floor(Math.random()*sometext.length)]);
 
+  var date = new Date();
+  var month = date.getMonth() + 1;
+  var day = date.getDate();
+                    
+  if(month==10 && day==21){
+    swal({
+      "title":"节日快乐！", 
+      "text":"1024程序员节快乐！", 
+      "icon":"success", 
+      "button":false,
+      "timer": 3000
+    });
+   }
+
   if ($.cookie("Starter") === undefined) {
     $.growl.notice({
       title: "必看提示",
