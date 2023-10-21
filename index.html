@@ -25,11 +25,14 @@
   <link rel="stylesheet" href="./css/default.min.css">
   <script src="./js/highlight.min.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/intro.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/introjs.min.css" />
+
   <script>
     $(document).ready(function () {
       var timer = setInterval(function () {
         $("#start_page").slideUp(1000);
-      }, 3000);
+      }, 2000);
     });
   </script>
 
@@ -53,9 +56,9 @@
   <a href="markdown.html"><button id="markdown">markdown编辑器</button></a>
   <a href="code_editor.html"><button id="html_editor">HTML编辑器</button></a>
   
-  <button id="dao" style="z-index: 1; position: fixed; top: 0; right: 50px; width: 50px; height: 50px;">导</button>
+  <button id="dao" style="z-index: 1; position: fixed; top: 0; right: 50px; width: 50px; height: 50px;" data-title="导入导出" data-intro='这里可以导入和导出积木数据，方便储存'>导</button>
 
-  <div class="navbar">
+  <div class="navbar" data-title="导航栏" data-intro='这里是站点导航栏，通往不同的页面'>
     <ul style="
           font-size: 25px;
           list-style-type: none;
@@ -82,10 +85,10 @@
       <li style="margin: 0 25px">
         <a href="about.html" style="text-decoration: none; color: white; font-weight: bold">关于我们</a>
       </li>
-      <li style="margin: 0 25px" id="code_open">
+      <li style="margin: 0 25px" id="code_open" data-title="生成代码" data-intro='点这里可以把积木块转化成真实代码'>
         <a style="text-decoration: none; color: white; font-weight: bold">生成代码</a>
       </li>
-      <li style="margin: 0 25px" id="look_open">
+      <li style="margin: 0 25px" id="look_open" data-title="运行代码" data-intro='点这里可以把积木运行起来，查看网站效果'>
         <a style="text-decoration: none; color: white; font-weight: bold">运行代码</a>
       </li>
       <li style="margin: 0 25px">
@@ -104,7 +107,7 @@
     </ul>
   </div> -->
 
-  <div id="blocklyDiv" style="position: fixed; height: 1000px; width: 100%">
+  <div id="blocklyDiv" style="position: fixed; height: 1000px; width: 100%" data-title="工作区" data-intro='你可以在这里拖拽积木，制作网页'>
     <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
       <category name="基本框架" categorystyle="mind-mapping">
 

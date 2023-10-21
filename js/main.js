@@ -1,3 +1,11 @@
+function intro(){
+  var lsys = document.querySelector('[layout="v"]');
+  lsys.setAttribute('data-title', '积木盒子');
+  lsys.setAttribute('data-intro', '这里是装积木的盒子，它们有不同的分类，你可以随意使用');
+
+  introJs().start();
+}
+
 $(document).ready(function () {
   sometext = ['让世界上没有难做的网页！',
   '基于Google blockly开发',
@@ -17,11 +25,13 @@ $(document).ready(function () {
       "text":"1024程序员节快乐！", 
       "icon":"success", 
       "button":false,
-      "timer": 3000
+      "timer": 2000
     });
-   }
+  }
 
   if ($.cookie("Starter") === undefined) {
+    setTimeout(intro, 3000);
+
     $.growl.notice({
       title: "必看提示",
       message:
