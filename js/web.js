@@ -8,7 +8,7 @@ $(document).ready(function () {
     var month = date.getMonth() + 1;
     var day = date.getDate();
           
-    if(month==10 && day==21){
+    if(month==10 && day==24){
         swal({
           "title":"节日快乐！", 
           "text":"1024程序员节快乐！", 
