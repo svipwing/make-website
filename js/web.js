@@ -8,13 +8,13 @@ $(document).ready(function () {
     var month = date.getMonth() + 1;
     var day = date.getDate();
           
-    if(month==10 && day==20){
+    if(month==10 && day==21){
         swal({
           "title":"节日快乐！", 
           "text":"1024程序员节快乐！", 
           "icon":"success", 
           "button":false,
-          "timer": 3000
+          "timer": 1500
         });
      }
 
