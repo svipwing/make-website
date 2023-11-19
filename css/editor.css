@@ -30,3 +30,13 @@ div#n {
   display: hidden;
   opacity: 0;
 }
+
+.blocklyTreeRowContentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blocklyTreeRow {
+  height: initial;
+}
