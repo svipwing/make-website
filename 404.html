@@ -1,40 +1,376 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
-    <title>404 - 找不到您访问的页面</title>
-    <style>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>404 Not Found</title>
 
-        .container {
-            width: 60%;
-            margin: 10% auto 0;
-            background-color: #f0f0f0;
-            padding: 2% 5%;
-            border-radius: 10px
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-            ul li {
-                line-height: 2.3
-            }
-
-        a {
-            color: #20a53a
-        }
-    </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>404，找不到您访问的页面！</h1>
-        <h3>为什么会出现此页面? 因为您访问的 目录/文件 不存在。</h3>
-        <ul>
-            <li>请检查访问地址，确认拼写正确</li>
-            <li>您访问的页面可能已经被删除，可以加QQ群咨询：135452025</li>
-            <li><a href="index.html">点击此处返回首页</a></li>
-        </ul>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#example-navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">网页开发助手</a>
+            </div>
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="https://blockly.svipwing.xyz/about.html">关于我们(*^▽^*)</a></li>
+                    <li><a href="https://blockly.svipwing.xyz/welcome.html">前往官网(≧∇≦)ﾉ</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            相关<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://gitee.com/jsy-1/make-website">Gitee仓库\(￣︶￣*\))</a></li>
+                            <li><a href="https://github.com/svipwing/make-website">Github仓库\(￣︶￣*\))</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <p>
+        <font size="6"><b>你似乎来到了一个没有芝士的空间，上面到处是蜘蛛网！！！</b></font>
+    </p>
+    <p>
+        <font size="5"><b>如果碰到这样的页面，请尝试以下解决办法：</b></font>
+    </p>
+
+    <hr />
+
+    <p>
+        <font size="4" color="red"><b>1、尝试检查网址（50%解决）</b></font>
+    </p>
+    <p>
+        <font size="3">注意标点符号和文字输入是否正确，看开头有没有加上https://</font>
+    </p>
+
+    <p>
+        <font size="4" color="orange"><b>2、尝试刷新网页访问（25%解决）</b></font>
+    </p>
+    <p>
+        <font size="3">该项目处于试验阶段，存在许许多多的Bug，如果访问的网址存在可以尝试这种方法，刷新</font>
+    </p>
+    <p>
+        <font size="3">页面，在刷新页面前，请记得检查数据是否保存，防止丢失。</font>
+    </p>
+
+    <p>
+        <font size="4" color="sky blue"><b>3、进行反馈（100%解决）</b></font>
+    </p>
+    <p>
+        <font size="3">目前已知不能访问的网页寥寥无几，开发者们也无从得知，所以说可以用私信或写邮件的方式</font>
+    </p>
+    <p>
+        <font size="3">来通知开发者修复Bug，以下是开发者们的联系方式：</font>
+    </p>
+    <p>
+        <font size="4" color="lightgreen"><b>QQ：</b></font>
+    </p>
+    <p>
+        <font size="3">技术云QQ：<b>3260130869</b></font>
+    </p>
+    <p>
+        <font size="3">可执行程序QQ：<b>2667174454</b></font>
+    </p>
+    <p>
+        <font size="4" color="lightgreen"><b>邮箱：</b></font>
+    </p>
+    <p>
+        <font size="3">技术云邮箱：<b>3260130869@qq.com</b></font>
+    </p>
+    <p>
+        <font size="3">可执行程序邮箱：<b>2667174454@qq.com</b></font>
+    </p>
+
+    <hr />
+
+    <p>
+        <font size="4" color="LightSlateGray"><b>特殊问题：</b></font>
+    </p>
+    <p>
+        <font size="3">如果是因为彩蛋部分进入的404页面，极大可能是开发者正在更新，请等待10-20分钟即可继续游玩</font>
+    </p>
+
+    <hr />
+
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">我们能给您提供的服务(づ￣ 3￣)づ</h3>
+        </div>
+        <div class="panel-body">
+            用来显示我们能为你服务的事情，更好的帮助你认识这个网站\(@^0^@)/
+        </div>
+        <table class="table">
+            <th>服务</th>
+            <th>可用性 </th>
+            <tr>
+                <td>积木块拖动</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>转为HTML</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>自定义代码</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>运行代码</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>HTML编辑器</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Markdown编辑器</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Gitee仓库开源</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Github仓库开源</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>复制代码</td>
+                <td>✓</td>
+            </tr>
+        </table>
     </div>
+
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+            <h3 class="panel-title">还在改进的工作＞﹏＜</h3>
+        </div>
+        <div class="panel-body">
+            用来显示我们暂时不能帮到你的事情（＞人＜；）
+        </div>
+        <table class="table">
+            <th>服务</th>
+            <th>可用性 </th>
+            <tr>
+                <td>多人协作</td>
+                <td>✗</td>
+            </tr>
+            <tr>
+                <td>配色方案</td>
+                <td>✗</td>
+            </tr>
+            <tr>
+                <td>导入html</td>
+                <td>✗</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr />
+
+    <center>
+        <div class="btn-group">
+            <button class="btn btn-success btn-primary" data-toggle="modal" data-target="#myModal">
+                发送反馈邮件
+            </button>
+            <button class="btn btn-info" data-toggle="modal" data-target="#aboutMe">
+                关于作者可执行程序
+            </button>
+        </div>
+    </center>
+
+    <hr />
+
+    <marquee>勤学如春之苗，不见其长，日有所增。惰学如磨刀之石，不见其减，日有所损。</marquee>
+    <p align="center">
+        <font size="2">Copyright (C) 2020- Technology Cloud Developer Team.</font>
+    </p>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        发送邮件(●ˇ∀ˇ●)
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    已为您打开邮箱并给开发者发信，请填写具体内容，然后发送，请耐心等待回复
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">确定
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="aboutMe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        关于作者可执行程序(～﹃～)~zZ
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    语文课代表，被语文老师天天骂(ノへ￣、)
+                    语文成绩班里前十\(@^0^@)/
+                    体育成绩前十，倒数前十ヽ(*。>Д<)o゜ </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">我看完了作者的介绍了(～﹃～)~zZ
+                            </button>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            (function () {
+                var a_idx = 0;
+                window.onclick = function (event) {
+                    var a = new Array("😂", "😘", "😍", "😊", "😁", "😭", "😜", "😝", "😄",
+                        "😡", "😀", "😥", "🙃", "😋", "👍", "👌", "😱");
+
+                    var heart = document.createElement("b"); //创建b元素
+                    heart.onselectstart = new Function('event.returnValue=false'); //防止拖动
+
+                    document.body.appendChild(heart).innerHTML = a[a_idx]; //将b元素添加到页面上
+                    a_idx = (a_idx + 1) % a.length;
+                    heart.style.cssText = "position: fixed;left:-100%;"; //给p元素设置样式
+
+                    var f = 16, // 字体大小
+                        x = event.clientX - f / 2, // 横坐标
+                        y = event.clientY - f, // 纵坐标
+                        c = randomColor(), // 随机颜色
+                        a = 1, // 透明度
+                        s = 1.2; // 放大缩小
+
+                    var timer = setInterval(function () { //添加定时器
+                        if (a <= 0) {
+                            document.body.removeChild(heart);
+                            clearInterval(timer);
+                        } else {
+                            heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" +
+                                c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
+                                s + ");";
+
+                            y--;
+                            a -= 0.016;
+                            s += 0.002;
+                        }
+                    }, 15)
+
+                }
+                // 随机颜色
+                function randomColor() {
+
+                    return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math
+                        .random() * 255)) + ")";
+
+                }
+            }());
+            !
+                function () {
+                    function n(n, e, t) {
+                        return n.getAttribute(e) || t
+                    }
+                    function e(n) {
+                        return document.getElementsByTagName(n)
+                    }
+                    function t() {
+                        var t = e("script"),
+                            o = t.length,
+                            i = t[o - 1];
+                        return {
+                            l: o,
+                            z: n(i, "zIndex", -1),
+                            o: n(i, "opacity", .5),
+                            c: n(i, "color", "0,0,0"),
+                            n: n(i, "count", 99)
+                        }
+                    }
+                    function o() {
+                        a = m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+                            c = m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+                    }
+                    function i() {
+                        r.clearRect(0, 0, a, c);
+                        var n, e, t, o, m, l;
+                        s.forEach(function (i, x) {
+                            for (i.x += i.xa, i.y += i.ya, i.xa *= i.x > a || i.x < 0 ? -1 : 1, i.ya *= i.y > c || i.y < 0 ? -1 : 1, r.fillRect(i.x - .5, i.y - .5, 1, 1), e = x + 1; e < u.length; e++) n = u[e],
+                                null !== n.x && null !== n.y && (o = i.x - n.x, m = i.y - n.y, l = o * o + m * m, l < n.max && (n === y && l >= n.max / 2 && (i.x -= .03 * o, i.y -= .03 * m), t = (n.max - l) / n.max, r.beginPath(), r.lineWidth = t / 2, r.strokeStyle = "rgba(" + d.c + "," + (t + .2) + ")", r.moveTo(i.x, i.y), r.lineTo(n.x, n.y), r.stroke()))
+                        }),
+                            x(i)
+                    }
+                    var a, c, u, m = document.createElement("canvas"),
+                        d = t(),
+                        l = "c_n" + d.l,
+                        r = m.getContext("2d"),
+                        x = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+                            function (n) {
+                                window.setTimeout(n, 1e3 / 45)
+                            },
+                        w = Math.random,
+                        y = {
+                            x: null,
+                            y: null,
+                            max: 2e4
+                        };
+                    m.id = l,
+                        m.style.cssText = "position:fixed;top:0;left:0;z-index:" + d.z + ";opacity:" + d.o,
+                        e("body")[0].appendChild(m),
+                        o(),
+                        window.onresize = o,
+                        window.onmousemove = function (n) {
+                            n = n || window.event,
+                                y.x = n.clientX,
+                                y.y = n.clientY
+                        },
+                        window.onmouseout = function () {
+                            y.x = null,
+                                y.y = null
+                        };
+                    for (var s = [], f = 0; d.n > f; f++) {
+                        var h = w() * a,
+                            g = w() * c,
+                            v = 2 * w() - 1,
+                            p = 2 * w() - 1;
+                        s.push({
+                            x: h,
+                            y: g,
+                            xa: v,
+                            ya: p,
+                            max: 6e3
+                        })
+                    }
+                    u = s.concat([y]),
+                        setTimeout(function () {
+                            i()
+                        },
+                            100)
+                }();
+        </script>
 </body>
+
 </html>
