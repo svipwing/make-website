@@ -41,7 +41,7 @@ body {
   border-radius: 2px; /*圆角*/
   top: 40px; /*边距*/
   right: 0px;
-  display: none; /*隐藏*/
+  /* display: none; 隐藏 */
 }
 
 .dropdown-content a {
@@ -50,7 +50,7 @@ body {
   display: block; /*块级*/
 }
 
-.dropdown:hover 
+/* .dropdown:hover 
 .dropdown-content {
-  display: block; /*显示下拉框*/
-}
+  display: block;
+} */
