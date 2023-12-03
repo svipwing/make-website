@@ -23,3 +23,10 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+body{
+  background-image: url("https://bing.shangzhenyang.com/api/1080p");
+  backdrop-filter: blur(10px);
+  background-size: 100% 100%;
+  color: white;
+}
