@@ -3,7 +3,7 @@
 <hr />
 <img src="https://socialify.git.ci/svipwing/make-website/image?description=1&forks=1&issues=1&language=1&logo=https%3A%2F%2Fblockly.svipwing.xyz%2Fassets%2Flogo.png&name=1&owner=1&pattern=Brick%20Wall&pulls=1&stargazers=1&theme=Dark" width="400px" height="300px" />
 <hr />
-<img src="image/help2.png" width="400px" height="300px" />
+<img src="./image/help2.png" width="400px" height="300px" />
 
 #### 介绍
 
@@ -27,7 +27,7 @@
 
 #### 注意事项
 
-1.  首次使用或遇到问题，请务必阅读“帮助文档”！！！实在看不懂的话，请加Q群：135452025
+1.  首次使用或遇到问题，请查看“新手指引”，或加q群：135452025
 2.  该工具正在开发阶段，未完工，目前仅供初学者学习所用，请不要用于生产环境！生产环境复杂多变，可能出现各种问题，我不承担任何责任！
 
 #### 贡献人员
