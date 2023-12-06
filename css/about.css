@@ -24,6 +24,8 @@
   margin-bottom: 20px;
 }
 
+html,body{width:100%;height:100%;}
+
 body{
   background-image: url("https://bing.shangzhenyang.com/api/1080p");
   backdrop-filter: blur(10px);
