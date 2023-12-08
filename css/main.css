@@ -52,13 +52,17 @@ body {
   height: 100%;
 }
 
+body{
+  background-color: #eeeeee;
+}
+
 * {
   margin: 0;
 }
 
 
 #start_page {
-  background-color: #6d50f0;
+  background-color: #16baaa;
   width: 100%;
   height: 100%;
   text-align: center;
