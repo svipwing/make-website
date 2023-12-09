@@ -21,10 +21,10 @@ div#nav {
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
+  height: 65px;
   background-color: #393D49;
   box-sizing: border-box;
-  padding: 12px;
+  padding: 10px;
   z-index: 9998;
   text-align: center;
   align-items: center;
@@ -40,6 +40,7 @@ div#nav {
 
 #copy {
   font-family: CaskaydiaCoveNerdFont;
+  font-size: 12px;
 }
 
 #code {
@@ -89,19 +90,9 @@ body{
   background-color: #6d50f0;
   color: white;
   position: fixed;
-  bottom: 10px;
-  right: 60px;
-  z-index: 9998;
-  padding: 10px;
-}
-
-#copycode {
-  border-radius: 10px;
-  background-color: #6d50f0;
-  color: white;
-  position: fixed;
-  bottom: 10px;
-  right: 170px;
+  bottom: 20px;
+  left: 30px;
+  border: none;
   z-index: 9998;
   padding: 10px;
 }
@@ -119,8 +110,9 @@ body{
   background-color: #6d50f0;
   color: white;
   position: fixed;
-  bottom: 60px;
+  bottom: 20px;
   right: 40px;
+  border: none;
   z-index: 9998;
   padding: 10px;
 }
@@ -130,8 +122,9 @@ body{
   background-color: #6d50f0;
   color: white;
   position: fixed;
-  bottom: 60px;
+  bottom: 20px;
   right: 170px;
+  border: none;
   z-index: 9998;
   padding: 10px;
 }

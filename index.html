@@ -52,7 +52,6 @@
       alt='Fork me on Gitee'></img></a>
 
   <button id="qq">遇到问题?</button>
-  <button id="copycode">一键复制代码</button>
   <a href="./markdown.html"><button id="markdown">markdown编辑器</button></a>
   <a href="./editor/code_editor.html"><button id="html_editor">HTML编辑器</button></a>
   
@@ -69,27 +68,27 @@
         ">
       <li style="margin: 0 20px">
         <a href="#" style="
-              font-size: 30px;
+              font-size: 25px;
               text-decoration: none;
               color: white;
               font-weight: bold;
               background-color: rgb(199, 29, 36);
-              border-radius: 20px;
+              border-radius: 10px;
               padding: 10px;
               white-space: nowrap;
             ">网页开发助手</a>
-      </li>
-      <li style="margin: 0 25px">
-        <a onclick="intro()" style="text-decoration: none; color: white; font-weight: bold">新手指引</a>
-      </li>
-      <li style="margin: 0 25px">
-        <a href="about.html" style="text-decoration: none; color: white; font-weight: bold">关于我们</a>
       </li>
       <li style="margin: 0 25px" id="code_open" data-title="生成代码" data-intro='点这里可以把积木块转化成真实代码'>
         <a style="text-decoration: none; color: white; font-weight: bold">生成代码</a>
       </li>
       <li style="margin: 0 25px" id="look_open" data-title="运行代码" data-intro='点这里可以把积木运行起来，查看网站效果'>
         <a style="text-decoration: none; color: white; font-weight: bold">运行代码</a>
+      </li>
+      <li style="margin: 0 25px">
+        <a style="text-decoration: none; color: white; font-weight: bold" id="copycode">复制代码</a>
+      </li>
+      <li style="margin: 0 25px">
+        <a onclick="intro()" style="text-decoration: none; color: white; font-weight: bold">新手指引</a>
       </li>
       <li style="margin: 0 25px">
         <a href="welcome.html" style="text-decoration: none; color: white; font-weight: bold">前往官网</a>
@@ -314,10 +313,6 @@
       Copyright (C) 2020-<span id="years"></span> JSY Developer Team.
     </h5>
   </div>
-  
-  <p style="position: fixed; bottom: 25px; left: 0; z-index: 9998;" id="fps"></p>
-    
-  <script src="fps.js"></script>
   
 </body>
 
