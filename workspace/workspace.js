@@ -4,7 +4,7 @@ var options = {
   comments: false,
   disable: false,
   maxBlocks: Infinity,
-  trashcan: false,
+  trashcan: true,
   horizontalLayout: false,
   toolboxPosition: "start",
   css: true,
