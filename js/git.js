@@ -24,3 +24,11 @@ fetch("https://gitee.com/api/v5/repos/jsy-1/make-website/commits?page=1&per_page
         }
     })
     .catch(error => console.log(error));
+    
+fetch("https://gitee.com/api/v5/repos/jsy-1/make-website/tags?sort=updated&direction=asc&page=1&per_page=100")
+    .then(response => response.json())
+    .then(data => {
+        let text = document.getElementById("version");
+        text.innerHTML = data.reverse()[0]["name"]
+    })
+    .catch(error => console.log(error));
