@@ -1,4 +1,4 @@
-let result = {};
+/*let result = {};
 
 fetch("https://gitee.com/api/v5/repos/jsy-1/make-website/commits?page=1&per_page=5")
     .then(response => response.json())
@@ -31,4 +31,4 @@ fetch("https://gitee.com/api/v5/repos/jsy-1/make-website/tags?sort=updated&direc
         let text = document.getElementById("version");
         text.innerHTML = data.reverse()[0]["name"]
     })
-    .catch(error => console.log(error));
+    .catch(error => console.log(error));*/

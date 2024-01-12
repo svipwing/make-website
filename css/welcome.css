@@ -72,7 +72,7 @@ html,body{
    margin:10px;
    text-align:center;
    box-shadow:5px 5px 10px rgba(0, 0, 0, 0.6), -5px -5px 10px rgba(255, 255, 255, 0.5);
-   background: linear-gradient(180deg, #FFFFFF 0%, #D6DBDC 100%);
+   background: linear-gradient(10deg, #FFFFFF 0%, #D6DBDC 100%);
    border: 2px solid #D6DBDC;
    /*box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);*/
    transition: all 0.3s ease-in-out;
@@ -99,7 +99,7 @@ html,body{
    border: 2px solid #D6DBDC;
    /*box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);*/
    transition: all 0.3s ease-in-out;
-   width:90%;
+   width:85%;
    margin-top:80px;
    margin-bottom:80px;
    height:700px;
@@ -165,7 +165,7 @@ html,body{
    text-align:center;
    align-items:center;
    margin-top:80px;
-   width:90%;
+   width:85%;
    background-color:white;
    border: 2px solid #D6DBDC;
    padding:20px;
