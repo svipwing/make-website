@@ -111,7 +111,7 @@ body{
   color: white;
   position: fixed;
   bottom: 20px;
-  right: 40px;
+  right: 20px;
   border: none;
   z-index: 9998;
   padding: 10px;
@@ -182,4 +182,12 @@ body{
     border: none;
     padding: 5px 10px;
     cursor: pointer;
+}
+
+#take-photo {
+  border-radius: 10px;
+  background-color: #2F4056;
+  color: white;
+  padding: 5px;
+  font-size: 20px;
 }

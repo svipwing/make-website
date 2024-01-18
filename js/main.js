@@ -97,6 +97,24 @@ $(document).ready(function () {
       icon: "success",
     });
   });
+  
+  $("#take-photo").click(function () {
+    html2canvas(document.querySelector('body'), {
+	  useCORS: true,
+   	  allowTaint: false
+    }).then(canvas => {
+      imgurl = canvas.toDataURL('image/png');
+      target = document.createElement('a');
+      
+      target.href = imgurl;
+      target.download = '积木图片.png';
+      
+      document.body.appendChild(target);
+      
+      target.click();
+      target.remove();
+    });
+  });
 
   $("#copycode").click(function () {
     let transfer = document.createElement('textarea');
