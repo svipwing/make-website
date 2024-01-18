@@ -99,6 +99,13 @@ $(document).ready(function () {
   });
   
   $("#take-photo").click(function () {
+    $.growl.error({
+      title: "系统提示",
+      message:
+        "使用前请先运行一次代码，否则无法生成截图。生成时间较长，耐心等待。",
+      duration: 10000,
+    });
+    
     html2canvas(document.querySelector('#look'), {
 	  useCORS: true,
    	  allowTaint: false
