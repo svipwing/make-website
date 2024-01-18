@@ -107,7 +107,7 @@ $(document).ready(function () {
       target = document.createElement('a');
       
       target.href = imgurl;
-      target.download = '积木图片.png';
+      target.download = '预览区图片.png';
       
       document.body.appendChild(target);
       
