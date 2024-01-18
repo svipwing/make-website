@@ -37,7 +37,7 @@
 3. king2022，开发者
 4. 可执行程序，彩蛋开发者
 
-本仓库使用了jquery和bootstrap框架，markdown编辑器采用markdown.js、html2md.js
+本仓库使用了jquery和bootstrap框架，markdown编辑器采用markdown.js、html2md.js，预览区截图采用html2canvas.js
 
 #### github仓库状态
 

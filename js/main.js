@@ -99,7 +99,7 @@ $(document).ready(function () {
   });
   
   $("#take-photo").click(function () {
-    html2canvas(document.querySelector('body'), {
+    html2canvas(document.querySelector('#look'), {
 	  useCORS: true,
    	  allowTaint: false
     }).then(canvas => {
