@@ -1,52 +1,313 @@
-<title>网页开发助手 - 帮助文档</title>
+<!DOCTYPE html>
+<html>
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="css/main.css" />
+<head>
+    <meta charset="utf-8">
+    <title>网页开发助手 使用教程</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #fffff0;
+        }
+    </style>
+</head>
 
-<script src="./js/years.js"></script>
+<body>
+    <a style="z-index: 1; position: fixed; top: 0; right: 0" href="https://gitee.com/jsy-1/make-website"><img src="https://gitee.com/jsy-1/make-website/widgets/widget_5.svg" alt="Fork me on Gitee"></a>
+   
+    <div class="page-header">
+        <h1>网页开发助手 使用教程
+            <small><br />结合图形化积木与html，讲解网页开发知识</small>
+        </h1>
+    </div>
+    <p>
+        <font size="4" color="red"><b>开头</b></font>
+    </p>
+    <p>HTML是一种网页编写语言（在某种定义上，HTML不算编程语言）</p>
+    <p>在HTML里,你编写HTML的第一步需要创建框架</p>
+    <P>积木块如下:</P>
+    <img src="./image/block/start.png" width="300" height="84">
+    <p>然后才能运行你的代码,代码如下:</p>
+    <pre>
+    &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+            &lt;head&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;
 
-<link rel="shortcut icon" href="favicon.ico" >
+</pre>
+    <p>然后你就可以快乐的写代码了！</p>
+    <p>
+        <font size="4" color="orange"><b>文本</b></font>
+    </p>
+    <p>在HTML里，有一种东西叫做文本</p>
+    <p>他可以将你写的东西展现在浏览器上</p>
+    <p>并且他可以设置文字的大小、颜色、粗体</p>
+    <p>积木块如下：</p>
+    <img src="./image/block/text.png" width="300" height="54">
+    <p>这里我们给出一段文字的默认代码，代码如下：</p>
+    <p class="text-danger">注意，我们的大部分代码是要写在你的body里面，而不是head或其他地方</p>
+    <pre>
+    &lt;p&gt;在这里写上你喜欢的文字！&lt;/p&gt;
+</pre>
+    <p>就会出现一段你写的文字:</p>
+    <pre>
+    在这里写上你喜欢的文字！
+</pre>
+    还有一种设置颜色的
+    <pre>
+    &lt;p&gt;&lt;font size="2" color="orange"&gt;在这里写上你喜欢的文字！&lt;/font&gt;&lt;/p&gt;
+</pre>
+    <p>就会出现一段橙色的文字</p>
+    <p>积木块如下：</p>
+    <img src="./image/block/color_text.png" width="450" height="154">
+    <p>
+        <font size="2" color="orange">在这里写上你喜欢的文字！</font>
+    </p>
+    <P>当然，如果你想要强调这个文本，你就可以使用粗体代码</P>
+    <P>只需在p里面加上b，就可以达到粗体的效果，代码如下：</P>
+    <pre>
+    &lt;p&gt;&lt;b&gt;在这里写上你喜欢的文字！&lt;/p&gt;&lt;/b&gt;
+</pre>
+    <p>你就会得到一段加粗的文字：</p>
+    <p><b>在这里写上你喜欢的文字！</b></p>
+    <p>
+        <font size="4" color="pink"><b>文字标题</b></font>
+    </p>
+    <p>在HTML里，有一种东西叫做文字标题</p>
+    <p>如果你想要为这个网页加一个文字标题，那么标题代码就很适合你</p>
+    <P>积木块如下:</P>
+    <img src="./image/block/h1.png" width="300" height="54">
+    <p>这里我们给出一段最基本的代码，代码如下：</p>
+    <pre>
+    &lt;h1&gt;这是一个大标题&lt;/h1&gt;
+</pre>
+    <p>就会出现你梦寐以求的大标题：</p>
+    <h2>这是一个大标题</h2>
+    <p>当然，你可以在h1的基础上叠加h2\h3\h4这些大标题</p>
+    <p>
+        <font size="4" color="green"><b>按钮</b></font>
+    </p>
+    <p>按钮是一个很神奇的东西</p>
+    <p>它可以在你点下的时候，为你做出响应</p>
+    <p>比如说：弹出弹窗，打开另外一个网页······</p>
+    <p>当然，按钮的样式和功能也是千差万别</p>
+    <p>网上现在有很多对HTML美化的插件</p>
+    <p>今天，我们先看一下HTML自带的按钮，代码如下：</p>
+    <pre>
+    &lt;button type="button" onclick="alert('Hello world!')"&gt;在这里写上你喜欢的文字！&lt;/button&gt;
+</pre>
+    <p>积木块如下：</p>
+    <img src="./image/block/button.png" width="420" height="54">
+    <p>这样我们就召唤出了一个很简陋的按钮：</p>
+    <button type="button" onclick="alert('Hello world！')">点我</button>
+    <p>但是，在下一个章节，我们会接触到Bootstrap，来美化我们的按钮</p>
+    <p>
+        <font size="4" color="teal"><b>Bootstrap</b></font>
+    </p>
+    <p>前面的章节说过，如何给这个前面的按钮美化</p>
+    <p>比如说，加个颜色，起到提示的作用</p>
+    <p>或者说，为这个按钮的弹窗美化一下···</p>
+    <p>这些Bootstrap都可以帮到你</p>
+    <p>比如说按钮，这里我们拿Bootstrap3演示一下：</p>
+    
+    <button type="button" class="btn btn-default">默认标准的按钮</button>
+    
+    <button type="button" class="btn btn-primary">原始按钮</button>
+    
+    <button type="button" class="btn btn-success">成功按钮</button>
+    
+    <button type="button" class="btn btn-info">信息按钮</button>
+    
+    <button type="button" class="btn btn-warning">警告按钮</button>
+    
+    <button type="button" class="btn btn-danger">危险按钮</button>
+    
+    <button type="button" class="btn btn-link">链接按钮</button>
+    <p>还有Bootstrap的弹窗：</p>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#Modal">
+        点击我演示弹窗o(*￣▽￣*)o
+    </button>
+    
+    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        这是一个经过Bootstrap美化的弹窗
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    这个弹窗改变了背景，使背景不在被卡住，还改变了按钮
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">关闭(。・∀・)ノ
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>这里因为篇幅太长，所以有需要的朋友可以上网搜搜看</p>
+    <p>这里简单介绍一下Bootstrap：</p>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Bootstrap</h3>
+        </div>
+        <div class="panel-body">
+            Bootstrap是美国Twitter公司的设计师Mark Otto和Jacob Thornton合作基于HTML、CSS、JavaScript 开发的简洁、直观、强悍的前端开发框架，使得 Web 开发更加快捷。
+            Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。Bootstrap一经推出后颇受欢迎，一直是GitHub上的热门开源项目，包括NASA的MSNBC（微软全国广播公司）的Breaking News都使用了该项目。
+            国内一些移动开发者较为熟悉的框架，如WeX5前端开源框架等，也是基于Bootstrap源码进行性能优化而来。
+            Bootstrap中包含了丰富的Web组件，根据这些组件，可以快速的搭建一个漂亮、功能完备的网站，其中包括以下组件：
+            下拉菜单、按钮组、按钮下拉菜单、导航、导航条、路径导航、分页、排版、缩略图、警告对话框、进度条、媒体对象等
+        </div>
+    </div>
+    <p>Bootstrap为开发者提供了很多插件，如果想要看更多，可以去看一下<a href="http://runoob.com/bootstrap">菜鸟教程</a></p>
+    
+    <p align="center">
+        <font size="2">Copyright (C) 2020-<span id="years">现在</span> JSY Developer Team.</font>
+        <br />
+        @可执行程序 在编写本页时在网络上收集了相关资源并摘录，如侵犯了您的版权，请及时联系3260130869@qq.com
+    </p>
+    
+    <script>
+        document.getElementById("years").innerText = new Date().getFullYear();
+    
+        (function() {
+            var a_idx = 0;
+            window.onclick = function(event) {
+                var a = new Array("😂", "😘", "😍", "😊", "😁", "😭", "😜", "😝", "😄",
+                    "😡", "😀", "😥", "🙃", "😋", "😑", "😶", "😱", "🤔", "😐");
 
-<style>
-  p#notice {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-</style>
+                var heart = document.createElement("b"); //创建b元素
+                heart.onselectstart = new Function('event.returnValue=false'); //防止拖动
 
-<a style="z-index: 1; position: fixed; top: 0; right: 0" href='https://gitee.com/jsy-1/make-website'><img src='https://gitee.com/jsy-1/make-website/widgets/widget_5.svg'
-  alt='Fork me on Gitee'></img></a>
+                document.body.appendChild(heart).innerHTML = a[a_idx]; //将b元素添加到页面上
+                a_idx = (a_idx + 1) % a.length;
+                heart.style.cssText = "position: fixed;left:-100%;"; //给p元素设置样式
 
-<canvas id="c_n9" width="1920" height="990" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.1;"></canvas>
-<script src="js/lz.js"></script>
+                var f = 16, // 字体大小
+                    x = event.clientX - f / 2, // 横坐标
+                    y = event.clientY - f, // 纵坐标
+                    c = randomColor(), // 随机颜色
+                    a = 1, // 透明度
+                    s = 1.2; // 放大缩小
 
-<center>
-  <h1 style="margin-bottom: 20px;">帮助文档</h1>
+                var timer = setInterval(function() { //添加定时器
+                    if (a <= 0) {
+                        document.body.removeChild(heart);
+                        clearInterval(timer);
+                    } else {
+                        heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" +
+                            c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
+                            s + ");";
 
-  <img src="image/help1.png" width="500" height="300" />
+                        y--;
+                        a -= 0.016;
+                        s += 0.002;
+                    }
+                }, 15)
 
-  <p id="notice">
-    看看上面这张图片，然后咱们来详细介绍每个区域<br /><br />
-    ①区域：导航栏，有很多选项，“帮助文档”里面有各种教程和介绍，“关于我们”里面有“网页开发助手”的简介，<br />
-    “生成代码”点击后会 展开/收起 “代码生成区”，“运行代码”点击后会 展开/收起
-    “效果预览区”<br /><br />
-    ②区域：2.1是“代码生成区”，用于 查看、复制
-    代码，2.2是“效果预览区”，用于实时查看代码运行效果<br />
-    “代码生成区”可以通过点击“生成代码”按钮来
-    展开/收起，也可以点击露出来的小部分来 展开/收缩<br />
-    “效果预览区”可以通过点击“运行代码”按钮来
-    展开/收起，也可以点击露出来的小部分来 展开/收缩<br /><br />
-    ③区域：积木盒子区，里面有很多积木给你选择，你可以用鼠标（移动设备用手指）拖拽积木到“积木编辑区”，然后开始编辑<br /><br />
-    ④区域：积木编辑区，用于编辑积木
-  </p>
+            }
+            // 随机颜色
+            function randomColor() {
 
+                return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math
+                    .random() * 255)) + ")";
 
-  <img src="image/help2.png" width="500" height="300" />
+            }
+        }());
+        !
+        function() {
+            function n(n, e, t) {
+                return n.getAttribute(e) || t
+            }
 
-  <p id="notice">
-    上面是“代码生成区”和“效果预览区”展开后的效果<br /><br />
-    如果要删除积木，可以把积木拖拽到“积木盒子区”，然后松开鼠标（移动设备就放开手指），就可以删除了
-  </p>
+            function e(n) {
+                return document.getElementsByTagName(n)
+            }
 
-  <h5 id="copy">Copyright (C) 2020-<span id="years"></span> JSY Developer Team.</h5>
-</center>
+            function t() {
+                var t = e("script"),
+                    o = t.length,
+                    i = t[o - 1];
+                return {
+                    l: o,
+                    z: n(i, "zIndex", -1),
+                    o: n(i, "opacity", .5),
+                    c: n(i, "color", "0,0,0"),
+                    n: n(i, "count", 99)
+                }
+            }
+
+            function o() {
+                a = m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+                    c = m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+            }
+
+            function i() {
+                r.clearRect(0, 0, a, c);
+                var n, e, t, o, m, l;
+                s.forEach(function(i, x) {
+                        for (i.x += i.xa, i.y += i.ya, i.xa *= i.x > a || i.x < 0 ? -1 : 1, i.ya *= i.y > c || i.y < 0 ? -1 : 1, r.fillRect(i.x - .5, i.y - .5, 1, 1), e = x + 1; e < u.length; e++) n = u[e],
+                            null !== n.x && null !== n.y && (o = i.x - n.x, m = i.y - n.y, l = o * o + m * m, l < n.max && (n === y && l >= n.max / 2 && (i.x -= .03 * o, i.y -= .03 * m), t = (n.max - l) / n.max, r.beginPath(), r.lineWidth = t / 2, r.strokeStyle = "rgba(" + d.c + "," + (t + .2) + ")", r.moveTo(i.x, i.y), r.lineTo(n.x, n.y), r.stroke()))
+                    }),
+                    x(i)
+            }
+            var a, c, u, m = document.createElement("canvas"),
+                d = t(),
+                l = "c_n" + d.l,
+                r = m.getContext("2d"),
+                x = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+                function(n) {
+                    window.setTimeout(n, 1e3 / 45)
+                },
+                w = Math.random,
+                y = {
+                    x: null,
+                    y: null,
+                    max: 2e4
+                };
+            m.id = l,
+                m.style.cssText = "position:fixed;top:0;left:0;z-index:" + d.z + ";opacity:" + d.o,
+                e("body")[0].appendChild(m),
+                o(),
+                window.onresize = o,
+                window.onmousemove = function(n) {
+                    n = n || window.event,
+                        y.x = n.clientX,
+                        y.y = n.clientY
+                },
+                window.onmouseout = function() {
+                    y.x = null,
+                        y.y = null
+                };
+            for (var s = [], f = 0; d.n > f; f++) {
+                var h = w() * a,
+                    g = w() * c,
+                    v = 2 * w() - 1,
+                    p = 2 * w() - 1;
+                s.push({
+                    x: h,
+                    y: g,
+                    xa: v,
+                    ya: p,
+                    max: 6e3
+                })
+            }
+            u = s.concat([y]),
+                setTimeout(function() {
+                        i()
+                    },
+                    100)
+        }();
+    </script>
+</body>
+
+</html>

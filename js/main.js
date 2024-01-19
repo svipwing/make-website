@@ -4,6 +4,19 @@ function intro(){
   lsys.setAttribute('data-intro', '这里是装积木的盒子，它们有不同的分类，你可以随意使用');
 
   introJs().start();
+  
+  swal({
+		title: "指引", 
+		text: "是否需要打开详细的帮助文档?", 
+		icon: "info",
+        buttons: ["不用了","是的"]
+	}).then((y) => {
+      if (y) {
+        window.open("help.html");
+      } else {
+        swal("好的，您可在导航栏再次打开");
+      }
+  });
 }
 
 $(document).ready(function () {
