@@ -1,136 +1,164 @@
 @font-face {
-  font-family: CaskaydiaCoveNerdFont;
-  src: url(../static/CaskaydiaCoveNerdFontMono-Bold.ttf);
-  font-weight: normal;
-  font-style: normal;
+    font-family: CaskaydiaCoveNerdFont;
+    src: url(../static/CaskaydiaCoveNerdFontMono-Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
 }
 
 div#nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f8f8f8;
-  padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 10px;
 }
 
 .navbar {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 65px;
-  background-color: #ca9d1d;
-  box-sizing: border-box;
-  padding: 10px;
-  z-index: 9998;
-  text-align: center;
-  align-items: center;
-  color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background-color: #2196F3;
+    box-sizing: border-box;
+    padding: 10px;
+    z-index: 9998;
+    text-align: center;
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+}
+
+.navbar ul {
+    font-size: 17px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.navbar li a {
+    padding: 20px 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar li a svg {
+    height: 20px;
+    width: 20px;
+    fill: #fff;
 }
 
 @font-face {
-  font-family: consola;
-  src: url(../static/consola.ttf);
-  font-weight: normal;
-  font-style: normal;
+    font-family: consola;
+    src: url(../static/consola.ttf);
+    font-weight: normal;
+    font-style: normal;
 }
 
 #copy {
-  font-family: CaskaydiaCoveNerdFont;
-  font-size: 12px;
+    font-family: CaskaydiaCoveNerdFont, serif;
+    font-size: 12px;
 }
 
 #code {
-  font-family: consola;
+    font-family: consola, serif;
 }
 
 html,
 body {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
-body{
-  background-color: #eeeeee;
+body {
+    background-color: #eeeeee;
 }
 
 * {
-  margin: 0;
+    margin: 0;
 }
 
 
 #start_page {
-  background-color: #16baaa;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  color: white;
-  position: fixed;
-  z-index: 9999;
+    background-color: #16baaa;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: fixed;
+    z-index: 9999;
 }
 
 #start_page h1 {
-  margin-bottom: 20px;
-  font-size: 80px;
+    margin-bottom: 20px;
+    font-size: 80px;
 }
 
 #start_page h3 {
-  font-size: 50px;
+    font-size: 50px;
 }
 
 #qq {
-  border-radius: 10px;
-  background-color: #6d50f0;
-  color: white;
-  position: fixed;
-  bottom: 20px;
-  left: 30px;
-  border: none;
-  z-index: 9998;
-  padding: 10px;
+    border-radius: 10px;
+    background-color: #6d50f0;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    border: none;
+    z-index: 9998;
+    padding: 10px;
 }
 
 #dao {
-  border-radius: 10px;
-  background-color: #31bdec;
-  color: white;
-  padding: 5px;
-  font-size: 20px;
+    border-radius: 10px;
+    background-color: #31bdec;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
 }
 
 #markdown {
-  border-radius: 10px;
-  background-color: #6d50f0;
-  color: white;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  border: none;
-  z-index: 9998;
-  padding: 10px;
+    border-radius: 10px;
+    background-color: #6d50f0;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    z-index: 9998;
+    padding: 10px;
 }
 
 #html_editor {
-  border-radius: 10px;
-  background-color: #6d50f0;
-  color: white;
-  position: fixed;
-  bottom: 20px;
-  right: 170px;
-  border: none;
-  z-index: 9998;
-  padding: 10px;
+    border-radius: 10px;
+    background-color: #6d50f0;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 170px;
+    border: none;
+    z-index: 9998;
+    padding: 10px;
 }
 
 ::selection {
-  background-color: #fe7300;
+    background-color: #fe7300;
 }
 
 #import {
@@ -185,9 +213,51 @@ body{
 }
 
 #take-photo {
-  border-radius: 10px;
-  background-color: #2F4056;
-  color: white;
-  padding: 5px;
-  font-size: 20px;
+    border-radius: 10px;
+    background-color: #2F4056;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+}
+
+#blocklyDiv {
+    position: fixed;
+    width: 100%;
+    height: calc(100% - 65px);
+    margin-top: 65px;
+}
+
+#blocklyDiv .blocklyToolboxDiv {
+    background-color: #fff !important;
+    border-right: 1px solid #e5e7eb;
+}
+
+#blocklyDiv .blocklyMainBackground {
+    fill: #f2f3f7 !important;
+}
+
+#blocklyDiv .blocklyFlyoutBackground {
+    fill: #fff !important;
+    opacity: 1 !important;
+    fill-opacity: 1 !important;
+}
+
+#blocklyDiv .blocklyTreeRow {
+    height: 100%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+#blocklyDiv .blocklyTreeSeparator {
+    margin: 0;
+}
+
+.gitrepo {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    right: 5px;
 }

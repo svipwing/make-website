@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>在线代码编辑器</title>
-  
-  <link rel="stylesheet" href="./editor_css.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>在线代码编辑器</title>
+
+    <link href="./editor_css.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
 </head>
 <body>
-  <div class="panel">
+<div class="panel">
     <div id="editor">欢迎来到在线代码编辑器</div>
     <div class="button-panel">
-      
-      <input type="file" id="importFile" accept=".html" style="display:none;">
-      <label for="importFile" class="button">导入</label>
-      
-      <div class="dropdown">
-        <button class="button">新建</button>
-        <div class="dropdown-content">
-          <a id="html">HTML</a>
+
+        <input id="importFile" accept=".html" style="display:none;" type="file">
+        <label class="button" for="importFile">导入</label>
+
+        <div class="dropdown">
+            <button class="button">新建</button>
+            <div class="dropdown-content">
+                <a id="html">HTML</a>
+            </div>
         </div>
-      </div>
-      
-      <button class="button" id="exportButton">导出为文件</button>
+
+        <button id="exportButton" class="button">导出为文件</button>
 
     </div>
-  </div>
-  
-  <script src="./editor_script.js"></script>
+</div>
+
+<script src="./editor_script.js"></script>
 </body>
 </html>

@@ -1,39 +1,46 @@
 .osc_pro_color {
-  color: #393222 !important;
+    color: #393222 !important;
 }
+
 .osc_panel_color {
-  background-color: #ebdfc1 !important;
+    background-color: #ebdfc1 !important;
 }
+
 .osc_background_color {
-  background-color: #fffae5 !important;
+    background-color: #fffae5 !important;
 }
+
 .osc_border_color {
-  border-color: #d8ca9f !important;
+    border-color: #d8ca9f !important;
 }
+
 .osc_desc_color {
-  color: #393222 !important;
+    color: #393222 !important;
 }
+
 .osc_link_color * {
-  color: #a28b40 !important;
-}
-#copy{
-  margin-top: 20px;
-}
-#osc-gitee-widget-tag{
-  margin-top: 20px;
-  margin-bottom: 20px;
+    color: #a28b40 !important;
 }
 
-html,body{
-  width:100%;
-  height:100%;
+#copy {
+    margin-top: 20px;
 }
 
-body{
-  background-image: url("https://bing.shangzhenyang.com/api/1080p");
-  backdrop-filter: blur(10px);
-  background-size: 100% 100%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  color: white;
+#osc-gitee-widget-tag {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: url("https://bing.shangzhenyang.com/api/1080p");
+    backdrop-filter: blur(10px);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
 }
