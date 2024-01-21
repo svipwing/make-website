@@ -9,7 +9,7 @@ class CustomCategory extends Blockly.ToolboxCategory {
         // 这里的name属性获取的内容是toolbox定义的中的categorystyle，也可以是别的值/属性
         img.name = this.toolboxItemDef_.categorystyle;
         // 设置图标大小
-        img.size = "22";
+        img.size = "15";
         // 最后返回的应是一个元素
         return img;
     }

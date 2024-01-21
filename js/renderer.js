@@ -8,7 +8,7 @@ class CustomConstantsProvider extends Blockly.zelos.ConstantProvider {
 
         this.CORNER_RADIUS = 4
 
-        this.FIELD_TEXT_FONTSIZE = 13
+        this.FIELD_TEXT_FONTSIZE = 10
         this.FIELD_TEXT_FONTWEIGHT = '500'
 
         this.TOP_ROW_MIN_HEIGHT = 2

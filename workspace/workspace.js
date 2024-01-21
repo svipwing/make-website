@@ -16,7 +16,7 @@ var options = {
     zoom: {
         controls: true, wheel: true,
     },
-    theme: "zelos",
+    theme: 'zelos',
     renderer: "codemao",
 };
 var blocklyDiv = document.getElementById("blocklyDiv");
