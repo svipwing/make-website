@@ -24,7 +24,7 @@
     </h1>
 </div>
 <p>
-    <font color="red" size="4"><b>开头</b></font>
+    <font color="red" size="4"><b>开头 <span class="label label-success">基础</span></b></font>
 </p>
 <p>HTML是一种网页编写语言（在某种定义上，HTML不算编程语言）</p>
 <p>在HTML里,你编写HTML的第一步需要创建框架</p>
@@ -43,7 +43,7 @@
 </pre>
 <p>然后你就可以快乐的写代码了！</p>
 <p>
-    <font color="orange" size="4"><b>文本</b></font>
+    <font color="orange" size="4"><b>文本 <span class="label label-success">基础</span></b></font>
 </p>
 <p>在HTML里，有一种东西叫做文本</p>
 <p>他可以将你写的东西展现在浏览器上</p>
@@ -77,7 +77,7 @@
 <p>你就会得到一段加粗的文字：</p>
 <p><b>在这里写上你喜欢的文字！</b></p>
 <p>
-    <font color="pink" size="4"><b>文字标题</b></font>
+    <font color="pink" size="4"><b>文字标题 <span class="label label-success">基础</span></b></font>
 </p>
 <p>在HTML里，有一种东西叫做文字标题</p>
 <p>如果你想要为这个网页加一个文字标题，那么标题代码就很适合你</p>
@@ -91,7 +91,7 @@
 <h2>这是一个大标题</h2>
 <p>当然，你可以在h1的基础上叠加h2\h3\h4这些大标题</p>
 <p>
-    <font color="green" size="4"><b>按钮</b></font>
+    <font color="green" size="4"><b>按钮 <span class="label label-success">基础</span></b></font>
 </p>
 <p>按钮是一个很神奇的东西</p>
 <p>它可以在你点下的时候，为你做出响应</p>
@@ -108,7 +108,7 @@
 <button onclick="alert('Hello world！')" type="button">点我</button>
 <p>但是，在下一个章节，我们会接触到Bootstrap，来美化我们的按钮</p>
 <p>
-    <font color="teal" size="4"><b>Bootstrap</b></font>
+    <font color="teal" size="4"><b>Bootstrap <span class="label label-primary">扩展</span></b></font>
 </p>
 <p>前面的章节说过，如何给这个前面的按钮美化</p>
 <p>比如说，加个颜色，起到提示的作用</p>
@@ -155,22 +155,89 @@
         </div>
     </div>
 </div>
+<p>以及漂亮的进度条···</p>
+<div class="progress progress-striped active">
+	<div class="progress-bar progress-bar-success" role="progressbar"
+		 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+		 style="width: 40%;">
+		<span class="sr-only">40% 完成</span>
+	</div>
+</div>
+<p>还有这个简洁的提示窗···</p>
+<div class="container" style="padding: 100px 50px 10px;" >
+	<button type="button" class="btn btn-default" title="Popover title"  
+			data-container="body" data-toggle="popover" data-placement="left" 
+			data-content="左侧的 Popover 中的一些内容">
+		左侧的 Popover
+	</button>
+	<button type="button" class="btn btn-primary" title="Popover title"  
+			data-container="body" data-toggle="popover" data-placement="top" 
+			data-content="顶部的 Popover 中的一些内容">
+		顶部的 Popover
+	</button>
+	<button type="button" class="btn btn-success" title="Popover title"  
+			data-container="body" data-toggle="popover" data-placement="bottom" 
+			data-content="底部的 Popover 中的一些内容">
+		底部的 Popover
+	</button>
+	<button type="button" class="btn btn-warning" title="Popover title"  
+			data-container="body" data-toggle="popover" data-placement="right" 
+			data-content="右侧的 Popover 中的一些内容">
+		右侧的 Popover
+	</button>
+</div>
+<script>
+$(function () { 
+	$("[data-toggle='popover']").popover();
+});
+</script>
 <p>这里因为篇幅太长，所以有需要的朋友可以上网搜搜看</p>
 <p>这里简单介绍一下Bootstrap：</p>
 <div class="panel panel-primary">
-    <div class="panel-heading">
-        <h3 class="panel-title">Bootstrap</h3>
-    </div>
-    <div class="panel-body">
-        Bootstrap是美国Twitter公司的设计师Mark Otto和Jacob Thornton合作基于HTML、CSS、JavaScript 开发的简洁、直观、强悍的前端开发框架，使得
-        Web 开发更加快捷。
-        Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。Bootstrap一经推出后颇受欢迎，一直是GitHub上的热门开源项目，包括NASA的MSNBC（微软全国广播公司）的Breaking
-        News都使用了该项目。
+	<div class="panel-heading">
+		<h3 class="panel-title">Bootstrap</h3>
+	</div>
+	<div class="panel-body">
+		Bootstrap是美国Twitter公司的设计师Mark Otto和Jacob Thornton合作基于HTML、CSS、JavaScript 开发的简洁、直观、强悍的前端开发框架，使得 Web 开发更加快捷。
+        Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。Bootstrap一经推出后颇受欢迎，一直是GitHub上的热门开源项目，包括NASA的MSNBC（微软全国广播公司）的Breaking News都使用了该项目。
         国内一些移动开发者较为熟悉的框架，如WeX5前端开源框架等，也是基于Bootstrap源码进行性能优化而来。
         Bootstrap中包含了丰富的Web组件，根据这些组件，可以快速的搭建一个漂亮、功能完备的网站，其中包括以下组件：
         下拉菜单、按钮组、按钮下拉菜单、导航、导航条、路径导航、分页、排版、缩略图、警告对话框、进度条、媒体对象等
-    </div>
+	</div>
 </div>
+<div class="panel panel-info">
+	<div class="panel-heading">
+		<h3 class="panel-title">版本形态</h3>
+	</div>
+	<div class="panel-body">
+		使用较广的是版本2、3和4，其中2的最新版本的是2.3.2，3的最新版本是3.4.1，4的最新版本是4.4.1
+在2018年1月下旬，Bootstrap团队发布了Bootstrap 4 正式版，4的最主要变化包括以下方面：
+从 Less 迁移到 Sass
+改进网格系统
+缺少弹性框支持
+Dropped wells, thumbnails, and panels for cards
+合并所有 HTML resets 到一个新的模块中：Reboot
+全新自定义选项
+不再支持 IE8
+重写所有的 JavaScript 插件
+改进工具提示和 popovers 的自动定位
+改进文档
+其他大量改进
+	</div>
+</div>
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h3 class="panel-title">包含内容</h3>
+	</div>
+	<div class="panel-body">
+		基本结构：Bootstrap 提供了一个带有网格系统、链接样式、背景的基本结构。这将在Bootstrap 基本结构部分详细讲解。
+CSS：Bootstrap 自带以下特性：全局的 CSS设置、定义基本的 HTML 元素样式、可扩展的 class，以及一个先进的网格系统。这将在Bootstrap CSS部分详细讲解。
+组件：Bootstrap 包含了十几个可重用的组件，用于创建图像、下拉菜单、导航、警告框、弹出框等等。这将在布局组件部分详细讲解。
+JavaScript 插件：Bootstrap包含了十几个自定义的jQuery 插件。您可以直接包含所有的插件，也可以逐个包含这些插件。这将在Bootstrap插件部分详细讲解。
+定制：您可以定制Bootstrap的组件、LESS 变量和jQuery 插件来得到您自己的版本。
+	</div>
+</div>
+
 <p>Bootstrap为开发者提供了很多插件，如果想要看更多，可以去看一下<a href="http://runoob.com/bootstrap">菜鸟教程</a></p>
 
 <p align="center">
