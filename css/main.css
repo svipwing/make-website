@@ -232,7 +232,7 @@ body {
 #blocklyDiv {
     position: fixed;
     width: 100%;
-    height: calc(100% - 65px);
+    height: calc(100% - 50px);
     margin-top: 50px;
 }
 
