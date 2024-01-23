@@ -1,0 +1,42 @@
+#code {
+    display: none;
+    height: 900px;
+    position: fixed;
+    top: 55px;
+    width: 100%;
+    background-color: #e8e9e9;
+    color: black;
+    overflow: scroll;
+}
+
+div#look {
+    display: none;
+    height: 900px;
+    position: fixed;
+    top: 55px;
+    width: 100%;
+    background-color: #eef2e0;
+    overflow: scroll;
+}
+
+div#n {
+    height: 1px;
+    position: absolute;
+    left: 1060px;
+    top: 80px;
+    width: 380px;
+    background-color: pink;
+    overflow: scroll;
+    display: none;
+    opacity: 0;
+}
+
+.blocklyTreeRowContentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blocklyTreeRow {
+    height: initial;
+}
