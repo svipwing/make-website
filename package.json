@@ -1,0 +1,14 @@
+{
+  "name": "make-website-g",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install && node index.js"
+  },
+  "author": "jsy",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "ejs": "^3.1.9"
+  }
+}
