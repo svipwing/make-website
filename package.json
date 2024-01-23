@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm install && node index.js"
+    "build": "node index.js"
   },
   "author": "jsy",
   "license": "GPL-3.0-or-later",
