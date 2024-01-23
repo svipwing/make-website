@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+          name="viewport"/>
+
+    <link href="favicon.ico" rel="shortcut icon">
+
+    <title><%= projectName %></title>
+
+    <link href="./css/welcome.css" rel="stylesheet"/>
+
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <script src="./js/jquery.min.js"></script>
+
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="./js/jquery.cookie.js"></script>
+
+    <script src="./js/jquery.growl.js" type="text/javascript"></script>
+    <link href="./css/jquery.growl.css" rel="stylesheet" type="text/css"/>
+
+    <script src="./js/web.js"></script>
+    <script src="./js/sweetalert.js"></script>
+</head>
+
+<body>
+<a href='<%= giteeRepo %>' style="z-index: 9999; position: fixed; top: 0; right: 0"><img
+        alt='Fork me on Gitee' src='<%= giteeRepo %>/widgets/widget_5.svg'></img></a>
+
+<div class="nav">
+    <br/><b>
+    <big> <%= projectName %> </big>
+
+    <a id="startuse" href="../index.html"> 开始使用 </a>
+
+    <a id="aboutme" href="../about.html"> 关于我们 </a>
+
+    <a id="qq" style="float: right"> 加入QQ群 </a>
+
+    <a class="gitee_1" href="<%= giteeRepo %>" style="float: right"> gitee仓库 </a>
+</b>
+</div>
+
+<div class="title">
+    <h1 style="color:#EE601E;margin-top: 50px;margin-bottom:0;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <%= projectName %>
+        <p id="version" style="display:inline;font-size:12px;color:white;margin-bottom:0;"><%= version %></p>
+    </h1>
+
+    <h2 style="color:#DB9999;margin-top:8px;">
+        <%= projectView %>
+    </h2>
+    <a href="../index.html">
+        <button style="margin-top: 15px; margin-bottom: 35px">立即体验</button>
+    </a>
+
+    <div id="nav-pc" class="da" style="width: 100%">
+        <div class="blocka">
+            <%- merit1 %>
+        </div>
+        <div class="blocka">
+            <%- merit2 %>
+        </div>
+        <div class="blocka">
+            <%- merit3 %>
+        </div>
+        <div class="blocka">
+            <%- merit4 %>
+        </div>
+        <div class="blocka">
+            <%- merit5 %>
+        </div>
+    </div>
+</div>
+
+<center>
+    <div class="about">
+        <h2>关于我们</h2>
+        <h3>
+            <%- about %>
+        </h3>
+    </div>
+</center>
+
+<center>
+    <div class="about">
+        <h2>发展历史</h2>
+        <br/>
+        <h3 id="history"><%- history %></h3>
+    </div>
+</center>
+
+<center>
+    <div class="members" style="height:auto;">
+        <h1 style="margin-bottom: 20px">我们的团队成员</h1>
+        <div class="da">
+            <div id="r" class="blockb" style="height: auto; padding: 10px">
+                <img height="100px;" src="<%= member1avatar %>" style="margin-top: 15px"
+                     width="100px"/>
+                <h2><%= member1 %></h2>
+                <h3><%- member1ability %></h3>
+            </div>
+            <div class="blockb" style="height: auto; padding: 10px">
+                <img height="100px;" src="<%= member2avatar %>" style="margin-top: 15px"
+                     width="100px"/>
+                <h2><%= member2 %></h2>
+                <h3><%- member2ability %></h3>
+            </div>
+        </div>
+
+        <div class="da">
+            <div id="r" class="blockb" style="height: auto; padding: 10px">
+                <img height="100px;" src="<%= member3avatar %>" style="margin-top: 15px"
+                     width="100px"/>
+                <h2><%= member3 %></h2>
+                <h3><%- member3ability %></h3>
+            </div>
+
+            <div class="blockb" style="height: auto; padding: 10px">
+                <img height="100px;" src="<%= member4avatar %>" style="margin-top: 15px"
+                     width="100px"/>
+                <h2><%= member4 %></h2>
+                <h3><%- member4ability %></h3>
+            </div>
+        </div>
+    </div>
+</center>
+
+<div class="banquan">
+    <b id="banquan-time">&copy;2020～<span id="year">现在</span> <%= team %>
+        版权所有！</b>
+
+    <b id="sitetime"></b>
+
+    <div class="ignore" style="width:100%;text-align:center;">
+        <span><a href="javascript:translate.changeLanguage('english');">English</a></span>|
+        <span><a href="javascript:translate.changeLanguage('chinese_simplified');">简体中文</a></span>|
+        <span><a href="javascript:translate.changeLanguage('chinese_traditional');">繁體中文</a></span>
+    </div>
+
+</div>
+
+<div class="msg">
+    <p id="msg_text"></p>
+</div>
+
+<script src="https://res.zvo.cn/translate/translate.js"></script>
+<script>
+    translate.language.setLocal('chinese_simplified');
+    translate.selectLanguageTag.show = false;
+    translate.ignore.class.push('gitee_1');
+    translate.execute();
+</script>
+
+<script src="./js/sitetime.js"></script>
+</body>
+
+</html>

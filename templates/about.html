@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title><%= projectName %> - 关于我们</title>
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <link href="./css/main.css" rel="stylesheet"/>
+    <link href="./css/about.css" rel="stylesheet"/>
+
+    <link href="favicon.ico" rel="shortcut icon">
+
+    <a href='<%= giteeRepo %>' style="z-index: 1; position: fixed; top: 0; right: 0"><img
+            alt='Fork me on Gitee' src='<%= giteeRepo %>/widgets/widget_5.svg'></img></a>
+</head>
+
+<body>
+<script src="./js/years.js"></script>
+
+<center>
+    <h1 style="margin-bottom: 10px;">关于我们</h1>
+
+    <h2 style="margin-top: 10px; margin-bottom: 10px;"><%= projectName %></h2>
+
+    <%- aboutProject %>
+    <hr/>
+
+    <h5 id="copy">
+        Copyright (C) 2020-<span id="years"></span> <%= team %>
+    </h5>
+</center>
+</body>
+
+</html>
