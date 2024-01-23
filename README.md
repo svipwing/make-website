@@ -16,9 +16,11 @@ nodejs编写，采用ejs。开源许可证：GPL-3
 2. 配置nodejs环境，按需设置npm镜像源
 3. 编写`config.json`配置文件
 4. 运行构建指令，首次使用需手动执行`npm install`
+
 ```
 npm run build
 ```
+
 5. 将网站运行目录设为`public`
 
 #### 注意事项
