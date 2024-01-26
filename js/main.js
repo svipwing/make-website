@@ -12,7 +12,7 @@ function intro() {
         buttons: ["不用了", "是的"]
     }).then((y) => {
         if (y) {
-            window.open("help.html");
+            window.open("https://docs.svipwing.xyz/guide/user/help.html");
         } else {
             swal("好的，您可在导航栏再次打开");
         }
