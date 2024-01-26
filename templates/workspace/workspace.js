@@ -24,8 +24,6 @@ var workspace = Blockly.inject(blocklyDiv, options);
 var workspaceBlocks = document.getElementById("workspaceBlocks");
 Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
 
-y = true;
-
 function myUpdateFunction(event) {
     var code = Blockly.JavaScript.workspaceToCode(workspace);
 
@@ -40,13 +38,6 @@ function myUpdateFunction(event) {
             lines = code.split('\n');
             lines[0] = "<script>\n" + lines[0] + "\n</script>";
             code = lines.join('\n');
-        }
-    }
-
-    if (code.indexOf("MC不灭") !== -1 && y) {
-        y = false;
-        if (confirm("恭喜你找到了彩蛋！")) {
-            window.open("mc.html");
         }
     }
 
