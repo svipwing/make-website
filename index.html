@@ -26,10 +26,9 @@
 
     <script src="./js/main.js"></script>
     <script src="./js/years.js"></script>
-
-    <link href="./css/default.min.css" rel="stylesheet">
-    <script src="./js/highlight.min.js"></script>
-
+    
+    <link href="./highlight/prism-okaidia.min.css" rel="stylesheet" />
+    
     <script src="./introjs/intro.js"></script>
     <link href="./introjs/intro.css" rel="stylesheet" />
 
@@ -299,7 +298,7 @@
         <xml id="workspaceBlocks" style="display: none" xmlns="https://developers.google.com/blockly/xml"></xml>
     </div>
 
-    <pre><code id="code" class="language-html"></code></pre>
+    <pre ><code id="code" class="language-html"></code></pre>
     <div id="look"></div>
 
     <div id="n"></div>
@@ -332,6 +331,9 @@
     <script src="./blocks/get.js"></script>
 
     <script src="./blocks/get.js.js"></script>
+    
+        
+    <script src="./highlight/prism.min.js"></script>
 
     <script src="./workspace/workspace.js"></script>
 
@@ -340,6 +342,8 @@
             Copyright (C) 2020-<span id="years"></span> JSY Developer Team.
         </h5>
     </div>
+    
+    <script>Prism.highlightAll();</script>
 
 </body>
 

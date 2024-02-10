@@ -53,7 +53,7 @@ function myUpdateFunction(event) {
     document.getElementById("code").textContent = code;
     document.getElementById("look").innerHTML = code;
 
-    hljs.highlightAll();
+    Prism.highlightAll();
 }
 
 workspace.addChangeListener(myUpdateFunction);

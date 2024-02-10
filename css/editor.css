@@ -3,10 +3,12 @@
     height: 900px;
     position: fixed;
     top: 55px;
+    left: 0;
     width: 100%;
-    background-color: #e8e9e9;
-    color: black;
+    background-color: #1D1F21;
+    color: white;
     overflow: scroll;
+    padding: 10px;
 }
 
 div#look {
