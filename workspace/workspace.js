@@ -26,7 +26,7 @@ Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
 
 y = true;
 
-function myUpdateFunction(event) {
+async function myUpdateFunction(_event) {
     var code = Blockly.JavaScript.workspaceToCode(workspace);
 
     if (code.split('\n')[0].indexOf("var") !== -1) {
@@ -49,6 +49,11 @@ function myUpdateFunction(event) {
             window.open("mc.html");
         }
     }
+
+    code = await prettier.format(code, {
+        parser: "html",
+        plugins: prettierPlugins,
+    })
 
     document.getElementById("code").textContent = code;
     document.getElementById("look").innerHTML = code;
