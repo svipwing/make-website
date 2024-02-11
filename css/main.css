@@ -233,8 +233,8 @@ body {
 #blocklyDiv {
     position: fixed;
     width: 100%;
-    height: calc(100% - 50px);
-    margin-top: 50px;
+    height: calc(100% - 42px);
+    margin-top: 42px;
 }
 
 #blocklyDiv .blocklyToolboxDiv {

@@ -2,7 +2,7 @@
     display: none;
     height: 900px;
     position: fixed;
-    top: 55px;
+    top: 50px;
     left: 0;
     width: 100%;
     background-color: #1D1F21;
@@ -15,7 +15,7 @@ div#look {
     display: none;
     height: 900px;
     position: fixed;
-    top: 55px;
+    top: 50px;
     width: 100%;
     background-color: #eef2e0;
     overflow: scroll;
