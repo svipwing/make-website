@@ -159,3 +159,26 @@ Blockly.JavaScript['button'] = function (block) {
     var code = '<a href="' + text_link + '">\n<button>' + text_text + '</button>\n</a>\n';
     return code;
 };
+
+Blockly.JavaScript['dom_get_value'] = function(block) {
+    var text_id = block.getFieldValue('id');
+    // TODO: Assemble JavaScript into code variable.
+    var code = 'document.getElementById("'+text_id+'").value';
+    return [code, Blockly.JavaScript.ORDER_NONE];
+  };
+
+Blockly.JavaScript['input'] = function(block) {
+    var text_id = block.getFieldValue('id');
+    var dropdown_type = block.getFieldValue('type');
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<input type="'+dropdown_type+'" id="'+text_id+'" />\n';
+    return code;
+};
+
+Blockly.JavaScript['button_onclick'] = function(block) {
+    var text_id = block.getFieldValue('id');
+    var statements_onclick = Blockly.JavaScript.statementToCode(block, 'onclick');
+    // TODO: Assemble JavaScript into code variable.
+    var code = 'document.getElementById("'+text_id+'").onclick=function(){\n'+statements_onclick+'\n};\n';
+    return code;
+  };
