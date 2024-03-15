@@ -259,48 +259,115 @@ Blockly.Blocks['button'] = {
 };
 
 Blockly.Blocks['dom_get_value'] = {
-    init: function() {
-      this.appendDummyInput()
-          .appendField("获取id为")
-          .appendField(new Blockly.FieldTextInput("a"), "id")
-          .appendField("的输入框的内容");
-      this.setOutput(true, null);
-      this.setColour(230);
-   this.setTooltip("");
-   this.setHelpUrl("");
+    init: function () {
+        this.appendDummyInput()
+            .appendField("获取id为")
+            .appendField(new Blockly.FieldTextInput("a"), "id")
+            .appendField("的输入框的内容");
+        this.setOutput(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
     }
-  };
+};
 
 Blockly.Blocks['input'] = {
-    init: function() {
-      this.appendDummyInput()
-          .appendField("普通输入框，id为")
-          .appendField(new Blockly.FieldTextInput("a"), "id")
-          .appendField("，内容类型为")
-          .appendField(new Blockly.FieldDropdown([["文本","text"], ["密码","password"]]), "type");
-      this.setPreviousStatement(true, null);
-      this.setNextStatement(true, null);
-      this.setColour(210);
-   this.setTooltip("");
-   this.setHelpUrl("");
+    init: function () {
+        this.appendDummyInput()
+            .appendField("普通输入框，id为")
+            .appendField(new Blockly.FieldTextInput("a"), "id")
+            .appendField("，内容类型为")
+            .appendField(new Blockly.FieldDropdown([["文本", "text"], ["密码", "password"]]), "type");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(210);
+        this.setTooltip("");
+        this.setHelpUrl("");
     }
 };
 
 Blockly.Blocks['button_onclick'] = {
-    init: function() {
-      this.appendStatementInput("onclick")
-          .setCheck(null)
-          .appendField("id为")
-          .appendField(new Blockly.FieldTextInput("a"), "id")
-          .appendField("的按钮被点击后");
-      this.setPreviousStatement(true, null);
-      this.setNextStatement(true, null);
-      this.setColour(90);
-   this.setTooltip("");
-   this.setHelpUrl("");
+    init: function () {
+        this.appendStatementInput("onclick")
+            .setCheck(null)
+            .appendField("id为")
+            .appendField(new Blockly.FieldTextInput("a"), "id")
+            .appendField("的按钮被点击后");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(90);
+        this.setTooltip("");
+        this.setHelpUrl("");
     }
-  };
+};
 
+Blockly.Blocks['radius'] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("圆角")
+            .appendField(new Blockly.FieldTextInput("10"), "r")
+            .appendField("像素");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(330);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    }
+};
+
+Blockly.Blocks['bg_color'] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("背景色为")
+            .appendField(new Blockly.FieldTextInput("red"), "color")
+            .appendField("(颜色英文或十六进制代码）");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(330);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    }
+};
+
+Blockly.Blocks['css_width'] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("宽度为")
+            .appendField(new Blockly.FieldTextInput("100"), "width")
+            .appendField("像素");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(330);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    }
+};
+
+Blockly.Blocks['css_height'] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("高度为")
+            .appendField(new Blockly.FieldTextInput("10"), "height")
+            .appendField("像素");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(330);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    }
+};
+
+Blockly.Blocks['br'] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("换行");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(65);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    }
+};
 
 for (var key in msg) {
     Blockly.Msg[key] = msg[key];

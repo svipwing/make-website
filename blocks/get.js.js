@@ -160,25 +160,59 @@ Blockly.JavaScript['button'] = function (block) {
     return code;
 };
 
-Blockly.JavaScript['dom_get_value'] = function(block) {
+Blockly.JavaScript['dom_get_value'] = function (block) {
     var text_id = block.getFieldValue('id');
     // TODO: Assemble JavaScript into code variable.
-    var code = 'document.getElementById("'+text_id+'").value';
+    var code = 'document.getElementById("' + text_id + '").value';
     return [code, Blockly.JavaScript.ORDER_NONE];
-  };
+};
 
-Blockly.JavaScript['input'] = function(block) {
+Blockly.JavaScript['input'] = function (block) {
     var text_id = block.getFieldValue('id');
     var dropdown_type = block.getFieldValue('type');
     // TODO: Assemble JavaScript into code variable.
-    var code = '<input type="'+dropdown_type+'" id="'+text_id+'" />\n';
+    var code = '<input type="' + dropdown_type + '" id="' + text_id + '" />\n';
     return code;
 };
 
-Blockly.JavaScript['button_onclick'] = function(block) {
+Blockly.JavaScript['button_onclick'] = function (block) {
     var text_id = block.getFieldValue('id');
     var statements_onclick = Blockly.JavaScript.statementToCode(block, 'onclick');
     // TODO: Assemble JavaScript into code variable.
-    var code = 'document.getElementById("'+text_id+'").onclick=function(){\n'+statements_onclick+'\n};\n';
+    var code = 'document.getElementById("' + text_id + '").onclick=function(){\n' + statements_onclick + '\n};\n';
     return code;
-  };
+};
+
+Blockly.JavaScript['radius'] = function (block) {
+    var text_r = block.getFieldValue('r');
+    // TODO: Assemble JavaScript into code variable.
+    var code = 'border-radius: ' + text_r + 'px;\n';
+    return code;
+};
+
+Blockly.JavaScript['bg_color'] = function (block) {
+    var text_color = block.getFieldValue('color');
+    // TODO: Assemble JavaScript into code variable.
+    var code = 'background-color: ' + text_color + ';\n';
+    return code;
+};
+
+Blockly.JavaScript['css_width'] = function (block) {
+    var text_width = block.getFieldValue('width');
+    // TODO: Assemble JavaScript into code variable.
+    var code = 'width: ' + text_width + 'px;\n';
+    return code;
+};
+
+Blockly.JavaScript['css_height'] = function (block) {
+    var text_height = block.getFieldValue('height');
+    // TODO: Assemble JavaScript into code variable.
+    var code = 'height: ' + text_height + 'px;\n';
+    return code;
+};
+
+Blockly.JavaScript['br'] = function (block) {
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<br>\n';
+    return code;
+};
