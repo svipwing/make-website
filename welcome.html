@@ -166,11 +166,19 @@
     <p id="msg_text"></p>
 </div>
 
-<script src="https://res.zvo.cn/translate/translate.js"></script>
+<script src="./translate.js"></script>
 <script>
     translate.language.setLocal('chinese_simplified');
     translate.selectLanguageTag.show = false;
     translate.ignore.class.push('gitee_1');
+    translate.service.use('client.edge');
+    translate.nomenclature.append('chinese_simplified','english',`
+        技术云=jishuyun
+        界面清爽=beautiful ui
+        简洁的界面=simple
+        文档详细，小白易懂=docs is easy to understand
+        操作简单=Use
+    `);
     translate.execute();
 </script>
 
