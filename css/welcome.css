@@ -54,7 +54,7 @@ html, body {
     text-align: center;
     align-items: center;
     padding: 10px;
-    background-image: url('https://myhkw.cn/open/img/mojave');
+    background-image: url('../assets/welcome.jpeg');
     background-size: 100% 100%;
     height: auto;
     width: auto;

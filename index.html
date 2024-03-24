@@ -8,6 +8,7 @@
     <title>网页开发助手 - make website</title>
 
     <link href="favicon.ico" rel="shortcut icon">
+    <link rel="manifest" href="manifest.json" />
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="description" content="一个简洁、美观的图形化网页编辑器">
@@ -484,6 +485,14 @@
     </div>
 
     <script>Prism.highlightAll();</script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(reg => console.log('service worker registered'))
+                .catch(err => console.log('service worker not registered', err));
+        }
+    </script>
 
 </body>
 
