@@ -5,7 +5,7 @@
     "start_url": "/",
     "theme_color": "#2196f3",
     "background_color": "#2196f3",
-    
+    "lang": "zh-CN",
     "icons": [
       {
         "src": "./assets/144x144.png",
