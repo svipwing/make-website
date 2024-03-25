@@ -5,10 +5,11 @@
     "start_url": "/",
     "theme_color": "#2196f3",
     "background_color": "#2196f3",
+    
     "icons": [
       {
         "src": "./assets/144x144.png",
-        "sizes": "256x256",
+        "sizes": "144x144",
         "type": "image/png"
       }
     ]
