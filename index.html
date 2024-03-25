@@ -9,6 +9,7 @@
 
     <link href="favicon.ico" rel="shortcut icon">
     <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#2196f3" />
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="description" content="一个简洁、美观的图形化网页编辑器">
@@ -491,6 +492,9 @@
             navigator.serviceWorker.register('/sw.js')
                 .then(reg => console.log('service worker registered'))
                 .catch(err => console.log('service worker not registered', err));
+            window.addEventListener('beforeinstallprompt', event => {
+              event.userChoice.then(result => {console.log(result.outcome);});
+            });
         }
     </script>
 
