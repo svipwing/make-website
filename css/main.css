@@ -127,18 +127,6 @@ body {
     z-index: 9999
 }
 
-#html_editor,#markdown {
-    background-color: #6d50f0;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9998;
-    padding: 7px
-}
-
-#html_editor {
-    right: 170px
-}
-
 ::selection {
     background-color: #fe7300
 }
