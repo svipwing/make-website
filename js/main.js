@@ -20,6 +20,13 @@ function intro() {
 }
 
 $(document).ready(function () {
+    if (window.history && window.history.pushState && window.history.replaceState) {
+        $(document).pjax('a', 'body');
+        //alert("ok");
+    } else {
+        console.log("浏览器不支持pjax。将使用传统的页面刷新方式。");
+    }
+    
     sometext = ['让世界上没有难做的网页！',
         '基于Google blockly开发',
         'jQuery简单又好用',

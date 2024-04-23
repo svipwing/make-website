@@ -1,8 +1,8 @@
 $(document).ready(function () {
     var date = new Date();
     $("#msg_text").text("欢迎！");
-    $(".msg").fadeIn(3000);
-    $(".msg").fadeOut(6000);
+    $(".msg").fadeIn(500);
+    $(".msg").fadeOut(1000);
     $('#year').text(date.getFullYear());
 
     var month = date.getMonth() + 1;
