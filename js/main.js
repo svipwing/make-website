@@ -19,14 +19,52 @@ function intro() {
     });
 }
 
+function save_to_cloud(){
+    swal({
+      content: {
+      element: "input",
+      attributes: {
+        placeholder: "项目名称，如需覆盖请输入原项目名",
+        type: "text",
+      },
+    },
+    }).then(function(res){
+        if(res){
+            var projectName = res;
+            $.post("/api/new_block.php",{name:projectName,data:JSON.stringify(Blockly.serialization.workspaces.save(workspace))},function(res){
+                swal({title: "保存成功",text:"请牢记项目名称！需凭借名称取回项目",icon:"success"});
+            });
+        }
+    });
+}
+
+function read_on_cloud(){
+    swal({
+      content: {
+      element: "input",
+      attributes: {
+        placeholder: "保存时填写的项目名称，若遗忘请联系管理员",
+        type: "text",
+      },
+    },
+    }).then(function(res){
+        if(res){
+            var projectName = res;
+            $.post("/api/get_block.php",{name:projectName},function(res){
+                if(res=="404"){
+                    swal({title:"获取失败",text:"找不到此作品，可能 输入的名称有误 或 违规被删除",icon:"error"})
+                }else{
+                    Blockly.serialization.workspaces.load(JSON.parse(res.split("30d2f82d098dd5ce23e336ebf22605e7:")[0]), workspace);
+                    workspace.scrollCenter();
+                
+                    swal({title: "获取成功",text:"开始创作吧！坚持不懈才能做出好作品！",icon:"success"});
+                }
+            });
+        }
+    });
+}
+
 $(document).ready(function () {
-    if (window.history && window.history.pushState && window.history.replaceState) {
-        $(document).pjax('a', 'body');
-        //alert("ok");
-    } else {
-        console.log("浏览器不支持pjax。将使用传统的页面刷新方式。");
-    }
-    
     sometext = ['让世界上没有难做的网页！',
         '基于Google blockly开发',
         'jQuery简单又好用',
