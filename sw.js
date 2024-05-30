@@ -1,11 +1,11 @@
-var cacheName = 't'
+var cacheName = 'v1';
 
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(cacheName)
-    .then(cache => cache.addAll([
-      'index.html'
-    ]))
+      .then(cache => cache.addAll([
+        'index.html'
+      ]))
   )
 });
 
