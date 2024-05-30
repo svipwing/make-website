@@ -4,6 +4,8 @@
 <img src="./image/cover.png" width="400px" height="300px" />
 <hr />
 <img src="./image/help2.png" width="400px" height="300px" />
+<hr />
+[![OSS Compass Analyze](https://compass.gitee.com/chart/svzp5m02.svg?metric=overview&y_trans=1&range=6M)](https://compass.gitee.com/analyze/svzp5m02#topic_overview)
 
 #### 介绍
 
