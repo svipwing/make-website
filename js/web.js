@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var date = new Date();
-    $("#msg_text").text("欢迎！");
+    $("#msg_text").text("欢迎！Welcome！");
     $(".msg").fadeIn(500);
     $(".msg").fadeOut(1000);
     $('#year').text(date.getFullYear());
