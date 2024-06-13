@@ -13,7 +13,7 @@ var translate = {
     useVersion: 'v2',	//当前使用的版本，默认使用v2. 可使用 setUseVersion2(); //来设置使用v2 ，已废弃，主要是区分是否是v1版本来着，v2跟v3版本是同样的使用方式
     setUseVersion2: function () {
         translate.useVersion = 'v2';
-        console.log('提示：自 v2.10 之后的版本默认就是使用V2版本（当前版本为:' + translate.version + '）， translate.setUseVersion2() 可以不用再加这一行了。当然加了也无所谓，只是加了跟不加是完全一样的。');
+        //console.log('提示：自 v2.10 之后的版本默认就是使用V2版本（当前版本为:' + translate.version + '）， translate.setUseVersion2() 可以不用再加这一行了。当然加了也无所谓，只是加了跟不加是完全一样的。');
     },
     /*
      * 翻译的对象，也就是 new google.translate.TranslateElement(...)
