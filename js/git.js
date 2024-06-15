@@ -20,7 +20,6 @@ fetch("https://gitee.com/api/v5/repos/jsy-1/make-website/commits?page=1&per_page
                 s = s.split("Signed-off-by:")[0];
             }
             text.innerHTML += result[i].date.substring(0, 10) + " " + s + "<br><br>";
-            //+ " by " + result[i].author 
         }
     })
     .catch(error => console.log(error));
