@@ -1,6 +1,6 @@
 let result = {};
 
-fetch("https://gitee.com/api/v5/repos/jsy-1/make-website/commits?page=1&per_page=5")
+fetch("https://coco.codemao.cn/http-widget-proxy/https@SEP@gitee.com/api/v5/repos/jsy-1/make-website/commits?page=1&per_page=5")
     .then(response => response.json())
     .then(data => {
         for (let item of data) {
@@ -24,7 +24,7 @@ fetch("https://gitee.com/api/v5/repos/jsy-1/make-website/commits?page=1&per_page
     })
     .catch(error => console.log(error));
 
-fetch("https://gitee.com/api/v5/repos/jsy-1/make-website/tags?sort=updated&direction=asc&page=1&per_page=100")
+fetch("https://coco.codemao.cn/http-widget-proxy/https@SEP@gitee.com/api/v5/repos/jsy-1/make-website/tags?sort=updated&direction=asc&page=1&per_page=100")
     .then(response => response.json())
     .then(data => {
         let text = document.getElementById("version");
