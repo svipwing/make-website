@@ -20,35 +20,6 @@ function intro() {
 }
 
 $(document).ready(function () {
-    var elements = document.getElementsByTagName("*");
-    var isMusicPlaying = false; // 标志变量，用于判断音乐是否正在播放
-    var bgmusic = "";
-
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].addEventListener('click', function (event) {
-            if (!isMusicPlaying) {
-                event.stopPropagation(); // 停止事件传播
-
-                bgmusic = new Audio('static/bg.mp3');
-                bgmusic.loop = true;
-                bgmusic.volume = 0.25;
-                bgmusic.play();
-
-                isMusicPlaying = true; // 将标志变量设置为 true，表示音乐正在播放
-            }
-        });
-    }
-
-    var bgmusic_isplay = true;
-    $("#copy").click(function () {
-        if(bgmusic_isplay){
-            bgmusic.pause();
-            bgmusic_isplay = false;
-        }else{
-            bgmusic.play();
-            bgmusic_isplay = true;
-        }
-    });
 
     if (window.history && window.history.pushState && window.history.replaceState) {
         $(document).pjax('a', 'body');
