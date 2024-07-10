@@ -8,7 +8,7 @@
     <title>网页开发助手 - make website</title>
 
     <link href="favicon.ico" rel="shortcut icon">
-    <link rel="manifest" href="manifest.json" />
+    <!-- <link rel="manifest" href="manifest.json" /> -->
     <meta name="theme-color" content="#2196f3" />
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -82,18 +82,9 @@
     <header class="navbar" data-intro="这里是站点导航栏，通往不同的页面" data-title="导航栏">
         <ul>
             <li>
-                <a href="#" style="
-              font-size: 15px;
-              text-decoration: none;
-              color: white;
-              font-weight: bold;
-              background-color: rgb(199, 29, 36);
-              border-radius: 10px;
-              padding: 10px;
-              margin-right: 20px;
-              white-space: nowrap;
-            ">网页开发助手</a>
+                <img src="./static/logo_new.png" width="30px" height="30px" style="border-radius: 5px;margin-left: 2px;margin-right: 10px;" />
             </li>
+            <li><b style="margin-right: 10px;">网页开发助手</b><b style="margin-right: 5px;">|</b></li>
             <li id="code_open" data-intro="点这里可以把积木块转化成真实代码" data-title="生成代码" title="生成代码">
                 <a href="javascript:void(0)">
                     <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -488,7 +479,7 @@
 
     <script>Prism.highlightAll();</script>
 
-    <script>
+    <!-- <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js')
                 .then(reg => console.log('service worker registered'))
@@ -497,7 +488,7 @@
               event.userChoice.then(result => {console.log(result.outcome);});
             });
         }
-    </script>
+    </script> -->
 
 </body>
 
