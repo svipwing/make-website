@@ -145,28 +145,27 @@ $(document).ready(function () {
     });
 
     $("#take-photo").click(function () {
-        $.growl.error({
-            title: "系统提示",
-            message:
-                "使用前请先运行一次代码，否则无法生成截图。生成时间较长，耐心等待。",
-            duration: 10000,
-        });
 
-        html2canvas(document.querySelector('#look'), {
-            useCORS: true,
-            allowTaint: false
-        }).then(canvas => {
-            imgurl = canvas.toDataURL('image/png');
-            target = document.createElement('a');
+        if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+            $.growl.error({
+                title: "提示",
+                message:
+                    "移动端不支持webrtc，即将启用html2canvas截图功能，兼容性不好，请见谅（请下载图片，而不是选择“√”按钮）",
+                duration: 5000,
+            });
 
-            target.href = imgurl;
-            target.download = '预览区图片.png';
+            new screenShotPlugin({ enableWebRtc: false , writeBase64: false });
+        }else{
+            $.growl.notice({
+                title: "提示",
+                message:
+                    "即将弹出授权窗口，请允许，否则无法截图",
+                duration: 5000,
+            });
 
-            document.body.appendChild(target);
+            new screenShotPlugin({ enableWebRtc: true });
+        }
 
-            target.click();
-            target.remove();
-        });
     });
 
     $("#copycode").click(function () {
