@@ -227,3 +227,24 @@ body {
 .gitrepo {
     right: 5px
 }
+
+#box-parent {
+    display: none;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#theme-box {
+    border-radius: 10px;
+    position: fixed;
+    background-color: rgb(214, 220, 227);
+    padding: 20px;
+    width: 75%;
+    height: 75%;
+}

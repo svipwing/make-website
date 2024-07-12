@@ -202,4 +202,26 @@ $(document).ready(function () {
             duration: 10000,
         });
     }
+
+    if ($.cookie("theme") === undefined) {
+        $.cookie("theme", "#2196f3");
+    }else{
+        $(".navbar").css("background-color", $.cookie("theme"));
+    }
+
+    $("#theme-blue").click(function () {
+        $(".navbar").css("background-color", "#2196f3");
+        $.cookie("theme", "#2196f3");
+        $("#box-parent").css("display","none");
+    });
+    $("#theme-purple").click(function () {
+        $(".navbar").css("background-color", "#6d50f0");
+        $.cookie("theme", "#6d50f0");
+        $("#box-parent").css("display","none");
+    });
+    $("#theme-black").click(function () {
+        $(".navbar").css("background-color", "#23292e");
+        $.cookie("theme", "#23292e");
+        $("#box-parent").css("display","none");
+    });
 });
