@@ -13,7 +13,7 @@
 
 #### 公告
 
-由于开发者学业原因，暂时暂停更新，预计7月中旬恢复更新，感谢大家一直以来的支持！
+已恢复更新，暑假期间将发布新功能，敬请期待！
 
 #### 软件架构
 
@@ -44,7 +44,7 @@
 4. 可执行程序，彩蛋开发者
 5. Fgaoxing，界面UI设计、开发者
 
-本仓库使用了jquery和bootstrap框架，markdown编辑器采用markdown.js、html2md.js，预览区截图采用html2canvas.js
+本仓库使用了jquery和bootstrap框架，markdown编辑器采用markdown.js、html2md.js，代码高亮采用highlight.js，截图功能使用js-screen-shot
 
 #### github仓库状态
 
