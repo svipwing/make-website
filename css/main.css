@@ -5,7 +5,8 @@
     font-style: normal
 }
 
-.navbar,div#nav {
+.navbar,
+div#nav {
     left: 0;
     width: 100%;
     padding: 10px;
@@ -30,7 +31,9 @@ div#nav {
     justify-content: flex-start
 }
 
-.navbar li a,.navbar ul,div#nav {
+.navbar li a,
+.navbar ul,
+div#nav {
     display: flex;
     justify-content: center;
     align-items: center
@@ -56,19 +59,24 @@ div#nav {
 }
 
 @font-face {
-    font-family:consola;src:url(../static/consola.ttf);font-weight:400;font-style:normal
+    font-family: consola;
+    src: url(../static/consola.ttf);
+    font-weight: 400;
+    font-style: normal
 }
 
 #copy {
-    font-family: CaskaydiaCoveNerdFont,serif;
+    font-family: CaskaydiaCoveNerdFont, serif;
     font-size: 12px
 }
 
 #code {
-    font-family: consola,serif
+    font-family: consola, serif
 }
 
-#start_page,body,html {
+#start_page,
+body,
+html {
     width: 100%;
     height: 100%
 }
@@ -111,7 +119,10 @@ body {
     padding: 7px
 }
 
-#dao,#html_editor,#markdown,#qq {
+#dao,
+#html_editor,
+#markdown,
+#qq {
     border-radius: 10px;
     color: #fff;
     position: fixed;
@@ -161,7 +172,8 @@ body {
     margin-right: 10px
 }
 
-#exit,#import button {
+#exit,
+#import button {
     background-color: #fff;
     color: #6dbd63;
     border: 0;
@@ -174,7 +186,8 @@ body {
     margin: 10px 0
 }
 
-#take-photo,.gitrepo {
+#take-photo,
+.gitrepo {
     z-index: 9999;
     position: fixed;
     top: 0
@@ -196,19 +209,15 @@ body {
     margin-top: 42px
 }
 
-#blocklyDiv .blocklyToolboxDiv {
-    background-color: #fff!important;
-    border-right: 1px solid #e5e7eb
-}
-
-#blocklyDiv .blocklyMainBackground {
-    fill: #f2f3f7!important
-}
-
 #blocklyDiv .blocklyFlyoutBackground {
-    fill: #fff!important;
-    opacity: .5!important;
-    fill-opacity: 1!important
+    fill: #fff !important;
+    opacity: .5 !important;
+    fill-opacity: 1 !important
+}
+
+#blocklyDiv .blocklyToolboxDiv {
+    background-color: #fff;
+    border-right: 1px solid #e5e7eb;
 }
 
 #blocklyDiv .blocklyTreeRow {

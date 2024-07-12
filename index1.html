@@ -16,16 +16,16 @@
     <meta name="keywords" content="网页开发,图形化,blockly,积木编程,编辑器,网页开发助手">
     <meta name="author" content="技术云科技开发团队">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <meta name="mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="网页开发助手" />
     <meta name="apple-mobile-web-app-title" content="网页开发助手" />
 
     <link href="./css/editor.css" rel="stylesheet" />
-    
+
     <script src="./js/f12.js"></script>
-    
+
     <script src="./js/blockly.min.js"></script>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/sweetalert.js"></script>
@@ -56,7 +56,7 @@
     </script>
 
     <script src="./js/html2canvas.js"></script>
-    
+
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.js"></script>
 
 </head>
@@ -65,13 +65,16 @@
     <div id="box-parent">
         <div id="theme-box">
             <p style="font-size: 20px;margin-top:10px;margin-bottom: 20px;">主题皮肤切换</p>
-            <hr/>
+            <hr />
 
-            <p id="theme-blue" style="margin-top: 20px;margin-bottom: 20px;">天蓝色 - &nbsp;&nbsp;&nbsp;<b style="background-color: #2196f3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></p>
-            <p id="theme-purple" style="margin-top: 20px;margin-bottom: 20px;">深紫色 - &nbsp;&nbsp;&nbsp;<b style="background-color: #6d50f0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></p>
-            <p id="theme-black" style="margin-top: 20px;margin-bottom: 20px;">深黑色 - &nbsp;&nbsp;&nbsp;<b style="background-color: #23292e;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></p>
-        
-            <hr/>
+            <p id="theme-blue" style="margin-top: 20px;margin-bottom: 20px;">天蓝色 - &nbsp;&nbsp;&nbsp;<b
+                    style="background-color: #2196f3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></p>
+            <p id="theme-purple" style="margin-top: 20px;margin-bottom: 20px;">深紫色 - &nbsp;&nbsp;&nbsp;<b
+                    style="background-color: #6d50f0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></p>
+            <p id="theme-black" style="margin-top: 20px;margin-bottom: 20px;">深黑色 - &nbsp;&nbsp;&nbsp;<b
+                    style="background-color: #494949;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></p>
+
+            <hr />
             <p>请选择颜色，点击后将自动切换并关闭此窗口</p>
         </div>
     </div>
@@ -98,7 +101,8 @@
     <header class="navbar" data-intro="这里是站点导航栏，通往不同的页面" data-title="导航栏">
         <ul>
             <li>
-                <img src="./static/logo_new.png" width="30px" height="30px" style="border-radius: 5px;margin-left: 2px;margin-right: 10px;" />
+                <img src="./static/logo_new.png" width="30px" height="30px"
+                    style="border-radius: 5px;margin-left: 2px;margin-right: 10px;" />
             </li>
             <li><b style="margin-right: 10px;">网页开发助手</b><b style="margin-right: 5px;">|</b></li>
             <li id="code_open" data-intro="点这里可以把积木块转化成真实代码" data-title="生成代码" title="生成代码">
@@ -144,7 +148,42 @@
             </li>
             <li title="主题切换">
                 <a onclick='$("#box-parent").css("display","flex");'>
-                    <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6C18 9.31371 20.6863 12 24 12C27.3137 12 30 9.31371 30 6H35.4545L42 15.8182L36.2727 20.7273V42H11.7273V20.7273L6 15.8182L12.5455 6H18Z" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/></svg>
+                    <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 6C18 9.31371 20.6863 12 24 12C27.3137 12 30 9.31371 30 6H35.4545L42 15.8182L36.2727 20.7273V42H11.7273V20.7273L6 15.8182L12.5455 6H18Z"
+                            fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </li>
+
+            <script>
+                function moon() {
+                    if($.cookie("theme") != "#494949"){
+                        $.cookie("theme", "#494949");
+                        $(".navbar").css("background-color", "#494949");
+                        document.querySelector('#blocklyDiv .blocklyMainBackground').style.fill = '#1f1f1f';
+                        var toolboxDiv = document.querySelector('#blocklyDiv .blocklyToolboxDiv');
+                        toolboxDiv.style.backgroundColor = '#c2c2c2';
+                        toolboxDiv.style.borderRight = '1px solid #e5e7eb';
+                    }else{
+                        $(".navbar").css("background-color", "#2196f3");
+                        $.cookie("theme", "#2196f3");
+                        document.querySelector('#blocklyDiv .blocklyMainBackground').style.fill = '#f2f3f7';
+                        var toolboxDiv = document.querySelector('#blocklyDiv .blocklyToolboxDiv');
+                        toolboxDiv.style.backgroundColor = '#fff';
+                        toolboxDiv.style.borderRight = '1px solid #e5e7eb';
+                    }
+                }
+            </script>
+            <li title="暗黑模式">
+                <a onclick='moon();'>
+                    <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M28.0527 4.41085C22.5828 5.83695 18.5455 10.8106 18.5455 16.7273C18.5455 23.7564 24.2436 29.4545 31.2727 29.4545C37.1894 29.4545 42.1631 25.4172 43.5891 19.9473C43.8585 21.256 44 22.6115 44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C25.3885 4 26.744 4.14149 28.0527 4.41085Z"
+                            fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" />
+                    </svg>
                 </a>
             </li>
         </ul>
@@ -217,7 +256,7 @@
                 <block type="input">
                     <field name="id">a</field>
                     <field name="type">text</field>
-                  </block>
+                </block>
             </category>
 
             <sep></sep>
@@ -284,7 +323,7 @@
 
                 <block type="logic_compare">
                     <field name="OP">EQ</field>
-                  </block>
+                </block>
 
                 <block type="logic_boolean">
                     <field name="BOOL">TRUE</field>
@@ -349,38 +388,38 @@
 
                 <block type="text_join">
                     <mutation items="2"></mutation>
-                  </block>
-                  <block type="text_append">
+                </block>
+                <block type="text_append">
                     <field name="VAR" id="iU-*P7oUT:jYZNJ_g1mf">项目</field>
                     <value name="TEXT">
-                      <shadow type="text">
-                        <field name="TEXT"></field>
-                      </shadow>
+                        <shadow type="text">
+                            <field name="TEXT"></field>
+                        </shadow>
                     </value>
-                  </block>
-                  <block type="text_print">
+                </block>
+                <block type="text_print">
                     <value name="TEXT">
-                      <shadow type="text">
-                        <field name="TEXT">abc</field>
-                      </shadow>
+                        <shadow type="text">
+                            <field name="TEXT">abc</field>
+                        </shadow>
                     </value>
-                  </block>
-                  <block type="text_prompt_ext">
+                </block>
+                <block type="text_prompt_ext">
                     <mutation type="TEXT"></mutation>
                     <field name="TYPE">TEXT</field>
                     <value name="TEXT">
-                      <shadow type="text">
-                        <field name="TEXT">abc</field>
-                      </shadow>
+                        <shadow type="text">
+                            <field name="TEXT">abc</field>
+                        </shadow>
                     </value>
-                  </block>
-                  <block type="dom_get_value">
+                </block>
+                <block type="dom_get_value">
                     <field name="id">a</field>
-                  </block>
+                </block>
 
-                  <block type="button_onclick">
+                <block type="button_onclick">
                     <field name="id">a</field>
-                  </block>
+                </block>
 
             </category>
 

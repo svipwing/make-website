@@ -1,7 +1,22 @@
+const theme1 = Blockly.Theme.defineTheme('dark', {
+    base: Blockly.Themes.Zelos,
+    componentStyles: {
+        workspaceBackgroundColour: "#1f1f1f",
+        toolboxBackgroundColour: "#c2c2c2"
+    },
+    name: "dark"
+});
+
+if($.cookie("theme")=="#494949"){
+    themename = "dark";
+}else{
+    themename = "zelos";
+}
+
 var options = {
     toolbox: document.getElementById("toolbox"),
-    collapse: false,
-    comments: false,
+    collapse: true,
+    comments: true,
     disable: false,
     maxBlocks: Infinity,
     trashcan: true,
@@ -16,7 +31,7 @@ var options = {
     zoom: {
         controls: true, wheel: true,
     },
-    theme: 'zelos',
+    theme: themename,
     renderer: "codemao",
 };
 var blocklyDiv = document.getElementById("blocklyDiv");

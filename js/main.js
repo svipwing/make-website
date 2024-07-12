@@ -209,6 +209,10 @@ $(document).ready(function () {
 
     if ($.cookie("theme") === undefined) {
         $.cookie("theme", "#2196f3");
+        document.querySelector('#blocklyDiv .blocklyMainBackground').style.fill = '#f2f3f7';
+        var toolboxDiv = document.querySelector('#blocklyDiv .blocklyToolboxDiv');
+        toolboxDiv.style.backgroundColor = '#fff';
+        toolboxDiv.style.borderRight = '1px solid #e5e7eb';
     }else{
         $(".navbar").css("background-color", $.cookie("theme"));
     }
@@ -216,16 +220,28 @@ $(document).ready(function () {
     $("#theme-blue").click(function () {
         $(".navbar").css("background-color", "#2196f3");
         $.cookie("theme", "#2196f3");
+        document.querySelector('#blocklyDiv .blocklyMainBackground').style.fill = '#f2f3f7';
+        var toolboxDiv = document.querySelector('#blocklyDiv .blocklyToolboxDiv');
+        toolboxDiv.style.backgroundColor = '#fff';
+        toolboxDiv.style.borderRight = '1px solid #e5e7eb';
         $("#box-parent").css("display","none");
     });
     $("#theme-purple").click(function () {
         $(".navbar").css("background-color", "#6d50f0");
         $.cookie("theme", "#6d50f0");
+        document.querySelector('#blocklyDiv .blocklyMainBackground').style.fill = '#f2f3f7';
+        var toolboxDiv = document.querySelector('#blocklyDiv .blocklyToolboxDiv');
+        toolboxDiv.style.backgroundColor = '#fff';
+        toolboxDiv.style.borderRight = '1px solid #e5e7eb';
         $("#box-parent").css("display","none");
     });
     $("#theme-black").click(function () {
-        $(".navbar").css("background-color", "#23292e");
-        $.cookie("theme", "#23292e");
+        $.cookie("theme", "#494949");
+        $(".navbar").css("background-color", "#494949");
+        document.querySelector('#blocklyDiv .blocklyMainBackground').style.fill = '#1f1f1f';
+        var toolboxDiv = document.querySelector('#blocklyDiv .blocklyToolboxDiv');
+        toolboxDiv.style.backgroundColor = '#c2c2c2';
+        toolboxDiv.style.borderRight = '1px solid #e5e7eb';
         $("#box-parent").css("display","none");
     });
 });
