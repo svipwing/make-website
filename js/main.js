@@ -203,6 +203,10 @@ $(document).ready(function () {
         });
     }
 
+    setTimeout(() => {
+        $("#nav").fadeOut(1000);
+    }, 1500);
+
     if ($.cookie("theme") === undefined) {
         $.cookie("theme", "#2196f3");
     }else{
