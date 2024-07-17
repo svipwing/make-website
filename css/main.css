@@ -210,9 +210,10 @@ body {
 }
 
 #blocklyDiv .blocklyFlyoutBackground {
-    fill: #fff !important;
-    opacity: .5 !important;
-    fill-opacity: 1 !important
+    fill: #fff;
+    opacity: .9 !important;
+    fill-opacity: .7 !important;
+    backdrop-filter: blur(100px) !important;
 }
 
 #blocklyDiv .blocklyToolboxDiv {
