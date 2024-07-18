@@ -206,14 +206,17 @@ body {
     position: fixed;
     width: 100%;
     height: calc(100% - 42px);
-    margin-top: 42px
+    margin-top: 42px;
 }
 
-#blocklyDiv .blocklyFlyoutBackground {
-    fill: #fff;
-    opacity: .9 !important;
-    fill-opacity: .7 !important;
-    backdrop-filter: blur(100px) !important;
+.blocklyFlyout {
+    backdrop-filter: blur(50px);
+    border-radius: 4px;
+    border-right: 0.001px solid rgba(255, 253, 253,0.7);
+}
+
+.blocklyFlyoutBackground {
+    opacity: 0;
 }
 
 #blocklyDiv .blocklyToolboxDiv {
