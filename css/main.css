@@ -212,7 +212,7 @@ body {
 .blocklyFlyout {
     backdrop-filter: blur(50px);
     border-radius: 4px;
-    border-right: 0.001px solid rgba(255, 253, 253,0.7);
+    border-right: 0.001px solid rgba(255, 253, 253, 0.7);
 }
 
 .blocklyFlyoutBackground {
@@ -230,7 +230,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0
+    margin: 0;
+}
+
+.blocklyToolboxContents {
+    padding: .5em;
+}
+
+.blocklyTreeRow {
+    padding: 3px;
+    margin-bottom: .5em;
+    border-radius: 4px;
 }
 
 #blocklyDiv .blocklyTreeSeparator {

@@ -12,7 +12,7 @@ class CustomCategory extends Blockly.ToolboxCategory {
         const img = document.createElement("iconpark-icon");
         img.name = this.toolboxItemDef_.categorystyle;
 
-        img.size = "15";
+        img.size = "20";
         return img;
     }
 }
