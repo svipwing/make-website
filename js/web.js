@@ -1,19 +1,19 @@
 $(document).ready(function () {
     var elements = document.getElementsByTagName("*");
-    var isMusicPlaying = false; // 标志变量，用于判断音乐是否正在播放
+    var isMusicPlaying = false;
     var bgmusic = "";
 
     for (var i = 0; i < elements.length; i++) {
         elements[i].addEventListener('click', function (event) {
             if (!isMusicPlaying) {
-                event.stopPropagation(); // 停止事件传播
+                event.stopPropagation();
 
                 bgmusic = new Audio('static/bg.mp3');
                 bgmusic.loop = true;
                 bgmusic.volume = 0.25;
                 bgmusic.play();
 
-                isMusicPlaying = true; // 将标志变量设置为 true，表示音乐正在播放
+                isMusicPlaying = true;
             }
         });
     }

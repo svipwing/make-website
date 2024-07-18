@@ -50,6 +50,7 @@
 
 [![Stargazers repo roster for @svipwing/make-website](https://reporoster.com/stars/svipwing/make-website)](https://github.com/svipwing/make-website/stargazers)
 [![Forkers repo roster for @svipwing/make-website](https://reporoster.com/forks/svipwing/make-website)](https://github.com/svipwing/make-website/network/members)
+[![Star History Chart](https://coco.codemao.cn/http-widget-proxy/https@SEP@api.star-history.com/svg?repos=svipwing/make-website&type=Date)](https://star-history.com/#svipwing/make-website&Date)
 
 #### 参与贡献
 
