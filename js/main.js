@@ -20,6 +20,10 @@ function intro() {
 }
 
 $(document).ready(function () {
+
+    window.onbeforeunload = function(){
+        return "是否要离开";
+    }    
     
     sometext = ['让世界上没有难做的网页！',
         '基于Google blockly开发',

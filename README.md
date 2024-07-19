@@ -1,15 +1,30 @@
-# 网页开发助手
+<h1 align="center">
+  网页开发助手
+</h1>
 
-<hr />
+<p align="center">
+  <a href="/blob/master/README.md">中文</a> | <a href="/blob/master/README-EN.md">English</a>
+</p>
+
+<p align="center">
+  助你快速开发网页，让世界上没有难做的网页！
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/license/svipwing/make-website" alt="License">
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
+  <img src="https://img.shields.io/badge/Powered%20by-Jishuyun%20Team-blue"/>
+</p>
+
+<hr/>
+
+<center>
 <img src="./image/cover.png" width="400px" height="300px" />
 <hr />
 <img src="./image/help2.png" width="400px" height="300px" />
 <hr />
 <img src="https://compass.gitee.com/chart/svzp5m02.svg?metric=overview&y_trans=1&range=6M" alt="OSS Compass Analyze" />
-
-#### 介绍
-
-助你快速开发网页，让世界上没有难做的网页！
+</center>
 
 #### 公告
 
