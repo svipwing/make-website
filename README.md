@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <a href="/blob/master/README.md">中文</a> | <a href="/blob/master/README-EN.md">English</a>
+  <a href="README.md">中文</a> | <a href="README-EN.md">English</a>
 </p>
 
 <p align="center">

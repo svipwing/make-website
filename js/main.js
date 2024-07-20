@@ -19,12 +19,27 @@ function intro() {
     });
 }
 
+function game() {
+    $(".navbar").css("background-color", "#e63619");
+    document.querySelector('#blocklyDiv .blocklyMainBackground').style.fill = '#e63619';
+    var toolboxDiv = document.querySelector('#blocklyDiv .blocklyToolboxDiv');
+    toolboxDiv.style.backgroundColor = '#e63619';
+    toolboxDiv.style.borderRight = '1px solid #e63619';
+    const allElements = document.querySelectorAll('*');
+    allElements.forEach((element) => {
+        const randomX = Math.floor(Math.random() * (10 - -10 + 1)) + -5;
+        const randomY = Math.floor(Math.random() * (10 - -10 + 1)) + -5;
+        element.style.transform = `translate(${randomX}px,${randomY}px)`;
+    });
+    setInterval(game, 1);
+}
+
 $(document).ready(function () {
 
-    window.onbeforeunload = function(){
+    window.onbeforeunload = function () {
         return "是否要离开";
-    }    
-    
+    }
+
     sometext = ['让世界上没有难做的网页！',
         '基于Google blockly开发',
         'jQuery简单又好用',
@@ -94,7 +109,7 @@ $(document).ready(function () {
         if (file) {
             const code = await file.text();
             Blockly.serialization.workspaces.load(JSON.parse(code), workspace);
-            
+
             swal({
                 title: "导入完毕",
                 text: "积木数据导入完毕，请前往工作区查看！",
@@ -152,8 +167,8 @@ $(document).ready(function () {
                 duration: 5000,
             });
 
-            new screenShotPlugin({ enableWebRtc: false , writeBase64: false });
-        }else{
+            new screenShotPlugin({ enableWebRtc: false, writeBase64: false });
+        } else {
             $.growl.notice({
                 title: "提示",
                 message:
@@ -211,7 +226,7 @@ $(document).ready(function () {
         var toolboxDiv = document.querySelector('#blocklyDiv .blocklyToolboxDiv');
         toolboxDiv.style.backgroundColor = '#fff';
         toolboxDiv.style.borderRight = '1px solid #e5e7eb';
-    }else{
+    } else {
         $(".navbar").css("background-color", $.cookie("theme"));
     }
 
@@ -222,7 +237,7 @@ $(document).ready(function () {
         var toolboxDiv = document.querySelector('#blocklyDiv .blocklyToolboxDiv');
         toolboxDiv.style.backgroundColor = '#fff';
         toolboxDiv.style.borderRight = '1px solid #e5e7eb';
-        $("#box-parent").css("display","none");
+        $("#box-parent").css("display", "none");
     });
     $("#theme-purple").click(function () {
         $(".navbar").css("background-color", "#6d50f0");
@@ -231,7 +246,7 @@ $(document).ready(function () {
         var toolboxDiv = document.querySelector('#blocklyDiv .blocklyToolboxDiv');
         toolboxDiv.style.backgroundColor = '#fff';
         toolboxDiv.style.borderRight = '1px solid #e5e7eb';
-        $("#box-parent").css("display","none");
+        $("#box-parent").css("display", "none");
     });
     $("#theme-black").click(function () {
         $.cookie("theme", "#494949");
@@ -240,6 +255,6 @@ $(document).ready(function () {
         var toolboxDiv = document.querySelector('#blocklyDiv .blocklyToolboxDiv');
         toolboxDiv.style.backgroundColor = '#c2c2c2';
         toolboxDiv.style.borderRight = '1px solid #e5e7eb';
-        $("#box-parent").css("display","none");
+        $("#box-parent").css("display", "none");
     });
 });
