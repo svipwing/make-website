@@ -118,7 +118,7 @@
                     </svg>
                 </a>
             </li>
-            <li title="复制代码">
+            <li data-intro="点这里可以复制代码" data-title="复制代码" title="复制代码">
                 <a id="copycode" href="javascript:void(0)">
                     <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
 
@@ -143,7 +143,7 @@
                     </svg>
                 </a>
             </li>
-            <li title="主题切换">
+            <li data-intro="点这里可以切换主题皮肤" data-title="主题切换" title="主题切换">
                 <a onclick='$("#box-parent").css("display","flex");'>
                     <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -173,7 +173,7 @@
                     }
                 }
             </script>
-            <li title="暗黑模式">
+            <li data-intro="点这里可以切换暗黑模式" data-title="暗黑模式" title="暗黑模式">
                 <a onclick='moon();'>
                     <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -181,6 +181,12 @@
                             d="M28.0527 4.41085C22.5828 5.83695 18.5455 10.8106 18.5455 16.7273C18.5455 23.7564 24.2436 29.4545 31.2727 29.4545C37.1894 29.4545 42.1631 25.4172 43.5891 19.9473C43.8585 21.256 44 22.6115 44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C25.3885 4 26.744 4.14149 28.0527 4.41085Z"
                             fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" />
                     </svg>
+                </a>
+            </li>
+            
+            <li data-intro="点这里可以打包apk" data-title="打包APK" title="打包apk">
+                <a onclick='$("#g-apk").css("display","flex");'>
+                    <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M41.4004 11.551L36.3332 5H11.6666L6.58398 11.551" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 13C6 11.8954 6.89543 11 8 11H40C41.1046 11 42 11.8954 42 13V40C42 41.6569 40.6569 43 39 43H9C7.34315 43 6 41.6569 6 40V13Z" fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/><path d="M32 27L24 35L16 27" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M23.9917 19V35" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
             </li>
 
@@ -541,6 +547,17 @@
     </div>
 
     <script>Prism.highlightAll();</script>
+
+    <div id="g-apk">
+        <div id="g-apk-child">
+            <p style="font-size: 30px;margin-bottom: 20px;">作品打包apk</p>
+            <hr/>
+            <p style="font-size: 20px; margin-top: 20px;">应用名称：<input type="text" id="app_name" style="border: 1px solid #ccc; border-radius: 5px; padding: 8px; font-size: 16px;" placeholder="请输入应用名称"></p>
+            <p style="font-size: 20px; margin-top: 20px;margin-bottom: 20px;"><p style="margin-bottom: 20px;font-size: 20px;">应用图标（推荐512x512，一定要是正方形）：</p><input type="file" id="app_icon"></p>
+            <button id="apk_g" style="margin-top: 30px;padding: 7px;border-radius: 10px;background-color: #33c8b9;border: 0;width: 70px;color: white;margin-left: 10%;">打包</button>
+            <button onclick='$("#g-apk").css("display","none");' style="margin-left: 10%;padding: 7px;border-radius: 10px;background-color: #c83333;border: 0;width: 70px;color: white;margin-left: 20%;">取消</button>
+        </div>
+    </div>
 
     <!-- <script>
         if ('serviceWorker' in navigator) {
