@@ -347,7 +347,7 @@ $(document).ready(function () {
       package_name: pname,
       version: "1.0.0",
     };
-    const pack_server = "http://134.175.52.125:1145";
+    const pack_server = "https://apk.svipwing.xyz";
     console.log(JSON.stringify(reqData));
     fetch(pack_server + "/pack", {
       method: "POST",
