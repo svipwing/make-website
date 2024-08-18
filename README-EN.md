@@ -58,6 +58,8 @@ Based on Google Blockly, using the jQuery framework, using the GPL3.0 open sourc
 3. king2022，Developers
 4. kezhixingchengxv，Instant game developers
 5. Fgaoxing，UI designer、Developers
+6. WA - Developers
+7. zaona - UI designer
 
 #### Github repo status
 

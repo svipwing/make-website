@@ -46,7 +46,7 @@ a {
     margin-top: 60px;
     text-align: center;
     align-items: center;
-    background-image: url('../assets/welcome.jpeg');
+    background-image: url('https://cdn.myhkw.cn/open/img/mojave');
     background-size: cover;
     background-position: center;
     height: auto;

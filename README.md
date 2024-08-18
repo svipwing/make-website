@@ -58,6 +58,8 @@
 3. king2022，开发者
 4. 可执行程序，彩蛋开发者
 5. Fgaoxing，界面UI设计、开发者
+6. WA - APK打包功能 开发者
+7. 海藻酸钠 - 官网UI优化的设计师、开发者
 
 本仓库使用了jquery和bootstrap框架，markdown编辑器采用markdown.js、html2md.js，代码高亮采用highlight.js，截图功能使用js-screen-shot
 
