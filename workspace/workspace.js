@@ -71,7 +71,7 @@ async function myUpdateFunction(_event) {
     })
 
     document.getElementById("code").textContent = code;
-    document.getElementById("look").innerHTML = code;
+    document.getElementById("look_html").srcdoc = code;
 
     Prism.highlightAll();
 }

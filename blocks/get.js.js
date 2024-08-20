@@ -216,3 +216,132 @@ Blockly.JavaScript['br'] = function (block) {
     var code = '<br>\n';
     return code;
 };
+
+Blockly.JavaScript['h1_xy'] = function(block) {
+    var text_text = block.getFieldValue('text');
+    var text_id = block.getFieldValue('id');
+    var text_x = block.getFieldValue('x');
+    var text_y = block.getFieldValue('y');
+    // TODO: Assemble JavaScript into code variable.
+    var code =
+        '<h1 id="' +
+        text_id +
+        '" style="position: fixed; left: ' +
+        text_x + '%; top: '+
+        text_y +
+        '%;">' +
+        text_text +
+        "</h1>\n";
+    return code;
+};
+
+Blockly.JavaScript['h2_xy'] = function(block) {
+    var text_text = block.getFieldValue('text');
+    var text_id = block.getFieldValue('id');
+    var text_x = block.getFieldValue('x');
+    var text_y = block.getFieldValue('y');
+    // TODO: Assemble JavaScript into code variable.
+    var code =
+        '<h2 id="' +
+        text_id +
+        '" style="position: fixed; left: ' +
+        text_x + '%; top: '+
+        text_y +
+        '%;">' +
+        text_text +
+        "</h2>";
+    return code;
+};
+
+
+Blockly.JavaScript['h3_xy'] = function(block) {
+    var text_text = block.getFieldValue('text');
+    var text_id = block.getFieldValue('id');
+    var text_x = block.getFieldValue('x');
+    var text_y = block.getFieldValue('y');
+    // TODO: Assemble JavaScript into code variable.
+    var code =
+        '<h3 id="' +
+        text_id +
+        '" style="position: fixed; left: ' +
+        text_x + '%; top: '+
+        text_y +
+        '%;">' +
+        text_text +
+        "</h3>";
+    return code;
+};
+
+Blockly.JavaScript["p_xy"] = function (block) {
+    var text_text = block.getFieldValue("text");
+    var text_id = block.getFieldValue("id");
+    var text_x = block.getFieldValue("x");
+    var text_y = block.getFieldValue("y");
+    // TODO: Assemble JavaScript into code variable.
+    var code =
+        '<p id="' +
+        text_id +
+        '" style="position: fixed; left: ' +
+        text_x + '%; top: '+
+        text_y +
+        '%;">' +
+        text_text +
+        "</p>\n";
+    return code;
+};
+
+Blockly.JavaScript['link_xy'] = function (block) {
+    var text_text = block.getFieldValue('text');
+    var text_link = block.getFieldValue('link');
+    var text_x = block.getFieldValue('x');
+    var text_y = block.getFieldValue('y');
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<a href="' + text_link +
+    '" style="position: fixed; left: ' +
+    text_x + '%; top: '+
+    text_y +
+    '%;">'+ text_text + '</a>\n';
+    return code;
+};
+
+Blockly.JavaScript['image_xy'] = function (block) {
+    var text_img = block.getFieldValue('img');
+    var text_height = block.getFieldValue('height');
+    var text_width = block.getFieldValue('width');
+    var text_x = block.getFieldValue('x');
+    var text_y = block.getFieldValue('y');
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<img src="' + text_img + '" width="' + text_width + 'px" height="' + text_height + 'px" '+
+    ' style="position: fixed; left: ' +
+    text_x + '%; top: '+
+    text_y +
+    '%;" />\n';
+    return code;
+};
+
+Blockly.JavaScript['button_xy'] = function (block) {
+    var text_text = block.getFieldValue('text');
+    var text_link = block.getFieldValue('link');
+    var text_x = block.getFieldValue('x');
+    var text_y = block.getFieldValue('y');
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<a href="' + text_link + '"'+
+    ' style="position: fixed; left: ' +
+    text_x + '%; top: '+
+    text_y +
+    '%;">'+'\n<button>' + text_text + '</button>\n</a>\n';
+    return code;
+};
+
+Blockly.JavaScript['input_xy'] = function (block) {
+    var text_id = block.getFieldValue('id');
+    var dropdown_type = block.getFieldValue('type');
+    var text_x = block.getFieldValue('x');
+    var text_y = block.getFieldValue('y');
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<input type="' + dropdown_type + '" id="' + text_id + '" '+
+    ' style="position: fixed; left: ' +
+    text_x + '%; top: ' + text_y +
+    '%;" />\n';
+    return code;
+};

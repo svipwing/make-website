@@ -204,7 +204,7 @@ body {
 
 #blocklyDiv {
     position: fixed;
-    width: 100%;
+    width: 60%;
     height: calc(100% - 42px);
     margin-top: 42px;
 }
@@ -222,6 +222,11 @@ body {
 #blocklyDiv .blocklyToolboxDiv {
     background-color: #fff;
     border-right: 1px solid #e5e7eb;
+}
+
+#blocklyDiv {
+    position: absolute;
+    left: 40% !important;
 }
 
 #blocklyDiv .blocklyTreeRow {

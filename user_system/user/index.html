@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>与Woxy互联</title>
+    <link rel="stylesheet" href="css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="css/iziModal.min.css"
+    />
+  </head>
+  <body>
+    <div class="form-structor">
+      <div class="signup">
+        <h2 class="form-title" id="signup"><span>或</span>登录</h2>
+        <div class="login_holder form-holder">
+          <input type="email" class="input" placeholder="邮箱" />
+          <input type="password" class="input" placeholder="密码" />
+        </div>
+        <button class="submit-btn" id="login_btn">登录</button>
+        <!-- 底部弹窗 -->
+      </div>
+
+      <div class="login slide-up">
+        <div class="center">
+          <h2 class="form-title" id="login"><span>或</span>注册</h2>
+          <div class="signup_holder form-holder">
+            <input type="email" class="input" placeholder="邮箱" />
+            <input type="password" class="input" placeholder="密码" />
+          </div>
+          <button class="submit-btn" id="signup_btn">注册</button>
+        </div>
+      </div>
+    </div>
+    <div id="loginModal" id="iziModal" data-izimodal-title="登录结果"></div>
+    <div id="regModal" id="iziModal" data-izimodal-title="注册结果"></div>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.js"></script>
+    <!-- 引入 iziModal 的 JS 文件 -->
+    <script src="js/iziModal.min.js"></script>
+  </body>
+</html>

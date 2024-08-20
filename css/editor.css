@@ -8,17 +8,67 @@
     background-color: #1D1F21;
     color: white;
     overflow: scroll;
-    padding: 10px;
+    padding: 50px;
+    z-index: 9999;
 }
 
 div#look {
-    display: none;
-    height: 900px;
-    position: fixed;
-    top: 50px;
-    width: 100%;
-    background-color: #eef2e0;
-    overflow: scroll;
+    /* display: none; */
+    height: 70%;
+    position: absolute;
+    top: calc(15% + 5px);
+    left: 14.5%;
+    width: 22%;
+    outline: rgb(22, 93, 255) solid 2px;
+    border-radius: 18px;
+    padding: 10px;
+    background-color: #f0f1ec;
+    /* overflow: scroll; */
+}
+
+div#look_pos {
+    height: 70%;
+    position: absolute;
+    top: calc(15% + 5px);
+    left: 14.5%;
+    width: 22%;
+    padding: 10px;
+    /* visibility: hidden; */
+    /* pointer-events: none; */
+    /* background-color: #1D1F21; */
+    opacity: 0;
+}
+
+div#package_list{
+    position: absolute;
+    top: calc(15% + 5px);
+    left: 1.25%;
+    background-color: #f0f0f0;
+    box-shadow: 10px 10px 5px #888888;
+    height: 60%;
+    width: 8%;
+
+    border-radius: 18px;
+
+    padding: 20px;
+}
+
+div#package_list .move-card{
+    background-color: rgb(204, 217, 227);
+    height: 10%;
+    width: 80%;
+
+    margin-bottom: 10%;
+
+    padding: 10px;
+
+    border-radius: 18px;
+}
+
+div#package_list .move-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 div#n {
