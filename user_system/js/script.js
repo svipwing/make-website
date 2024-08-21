@@ -1,5 +1,5 @@
 console.clear();
-const url = "http://api.svipwing.xyz/"
+const url = "https://api.svipwing.xyz/"
 const loginBtn = document.getElementById('login');
 const signupBtn = document.getElementById('signup');
 const login = document.getElementById('login_btn');
@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         fetch(url + "login", {
             method: "POST",
+            credentials: 'include', // 包含 Cookie
             headers: {
                 "Content-Type": "application/json"
             },
@@ -88,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         fetch(url + "register", {
             method: "POST",
+            credentials: 'include', // 包含 Cookie
             headers: {
                 "Content-Type": "application/json"
             },

@@ -152,7 +152,8 @@ body {
     color: #fff;
     padding: 20px;
     box-sizing: border-box;
-    display: none
+    display: none;
+    z-index: 999;
 }
 
 #import h1 {
