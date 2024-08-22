@@ -60,6 +60,7 @@ Based on Google Blockly, using the jQuery framework, using the GPL3.0 open sourc
 5. Fgaoxing，UI designer、Developers
 6. WA - Developers
 7. zaona - UI designer
+8. lokria - Developers
 
 #### Github repo status
 

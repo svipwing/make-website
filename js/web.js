@@ -53,11 +53,9 @@ $(document).ready(function () {
     });
 
     if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
-        $("#nav-pc").hide();
-        $("#helpme").hide();
-        $("#aboutme").hide();
-        $("#startuse").hide();
-        $('.da').removeClass("da");
+        $("#pc").hide();
+        $("#gitee_repo_pc").hide();
+        $('.double').removeClass("double");
 
         $.growl.notice({
             title: "提示",
