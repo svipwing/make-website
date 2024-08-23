@@ -75,6 +75,53 @@ function game() {
 }
 
 $(document).ready(function () {
+
+  $("#save").click(function () {
+    const jsonString = JSON.stringify(Blockly.serialization.workspaces.save(workspace));
+    workname = $("#workname").val();
+
+    if(workname==""||workname==" "){
+      workname = "未命名作品"+Math.floor(Math.random()*1000);
+    }
+
+    const blob = new Blob([jsonString], { type: 'application/json' });
+
+    const url = `https://api.svipwing.xyz/create/${encodeURIComponent(workname)}`;
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('PUT', url, true);
+    xhr.setRequestHeader("Content-Type", "application/octet-stream");
+
+    xhr.withCredentials = true;
+
+    xhr.send(blob);
+
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        $("#cloudwork").css("display","none");
+        swal("保存成功", "您可以在我的作品中找到它", "success");
+      } else {
+        $("#cloudwork").css("display","none");
+        swal("保存失败", xhr.responseText, "error");
+      }
+    };
+  });
+
+  $.ajax({
+    url: "https://api.svipwing.xyz/user",
+    method: "GET",
+    xhrFields: {
+      withCredentials: true
+    },
+    success: function (data, status) {
+      if (data.status == true) {
+        $("#username").text("用户" + data.data.uid);
+      }
+    }
+  });
+
+
+
   window.onbeforeunload = function () {
     return "是否要离开";
   };
@@ -361,7 +408,7 @@ $(document).ready(function () {
         if (json.success) {
           downloadFile(
             pack_server +
-              `/apks/${json.package_name}/${json.pack_uuid}/${json.apk_name}`,
+            `/apks/${json.package_name}/${json.pack_uuid}/${json.apk_name}`,
             json.apk_name
           );
           alert(`打包成功,文件已下载`);
