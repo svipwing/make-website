@@ -172,6 +172,11 @@ body {
     padding: 5px;
     margin-right: 10px
 }
+input button[type=file] {
+    flex: 1;
+    padding: 5px;
+    margin-right: 10px
+}
 
 #exit,
 #import button {
@@ -293,7 +298,7 @@ body {
 #g-apk-child {
     border-radius: 10px;
     position: fixed;
-    background-color: rgb(214, 220, 227);
+    background-color: rgb(255, 255, 255);
     padding: 30px;
     width: 40%;
     height: 45%;
@@ -314,8 +319,29 @@ body {
 #cloudwork-child {
     border-radius: 10px;
     position: fixed;
-    background-color: rgb(214, 220, 227);
+    background-color: rgb(255, 255, 255);
     padding: 30px;
     width: 40%;
     height: 45%;
+}
+.datainput {
+    padding: .75rem 1rem;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    color: var(--text);
+    font-size: .875rem;
+    line-height: 1.25rem;
+    background-color: var(--background);
+    margin: .5em;
+    outline: 0;
+    width: calc(100% - 3em - 2px);
+    transition: border .8s;
+    box-shadow: var(--box-shadow);
+    
+}
+body {
+    background-image: url(https://static.codemao.cn/pickduck/rJ74KWDs0.jpg?hash=FsP728EZjY33-BSUhdk1AAvoYiRY);
+}
+.g-apk-card {
+    background-color: white;
 }

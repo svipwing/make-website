@@ -20,6 +20,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="网页开发助手" />
     <meta name="apple-mobile-web-app-title" content="网页开发助手" />
+    <link href="https://unpkg.com/layui@2.9.16/dist/css/layui.css" rel="stylesheet">
+    <script src="https://unpkg.com/layui@2.9.16/dist/layui.js"></script>
 
     <link href="./css/editor.css" rel="stylesheet" />
 
@@ -32,6 +34,9 @@
     <script src="./js/jquery.growl.js" type="text/javascript"></script>
     <link href="./css/jquery.growl.css" rel="stylesheet" type="text/css" />
     <link href="./css/main.css" rel="stylesheet" />
+    <link href="./css/sober-theme.css" rel="stylesheet" />
+    <script src="./js/sobar_theme_color.js" type="text/javascript"></script>
+
 
     <script src="./js/screen.js"></script>
 
@@ -45,6 +50,7 @@
 
     <script src="./format/standalone.js"></script>
     <script src="./format/plugins/html.js"></script>
+    <script src="./js/cs.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -96,6 +102,7 @@
     <button id="take-photo" data-intro="点击此处将你的效果预览区截图并保存，分享给你的好友" data-title="预览区截图">拍照</button>
 
     <header class="navbar" data-intro="这里是站点导航栏，通往不同的页面" data-title="导航栏">
+        <s-page style="background: none; color: white;" theme="primary">
         <ul>
             <li>
                 <img src="./static/logo_new.png" width="30px" height="30px"
@@ -104,37 +111,55 @@
             <li><b style="margin-right: 10px;">网页开发助手</b><b style="margin-right: 25px;"> </b></li>
 
             <li><b style="margin-right: 10px;">|</b></li>
+            <s-popup-menu style="border: white; z-index: 99999999; border-radius: 12px;" >
+                <s-button slot="trigger" type="text" style="color: white; border-radius: 12px;">代码</s-button>
+                <s-popup-menu-item  href="javascript:void(0)"  id="code_open">
+                    <s-icon slot="start" style="color: black; margin-left: 16px; width: 18px; height: 18px;">
+                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M305.4 21.8c-1.3-10.4-9.1-18.8-19.5-20C276.1 .6 266.1 0 256 0c-11.1 0-22.1 .7-32.8 2.1c-10.3 1.3-18 9.7-19.3 20l-2.9 23.1c-.8 6.4-5.4 11.6-11.5 13.7c-9.6 3.2-19 7.2-27.9 11.7c-5.8 3-12.8 2.5-18-1.5l-18-14c-8.2-6.4-19.7-6.8-27.9-.4c-16.6 13-31.5 28-44.4 44.7c-6.3 8.2-5.9 19.6 .5 27.8l14.2 18.3c4 5.1 4.4 12 1.5 17.8c-4.4 8.8-8.2 17.9-11.3 27.4c-2 6.2-7.3 10.8-13.7 11.6l-22.8 2.9c-10.3 1.3-18.7 9.1-20 19.4C.7 234.8 0 245.3 0 256c0 10.6 .6 21.1 1.9 31.4c1.3 10.3 9.7 18.1 20 19.4l22.8 2.9c6.4 .8 11.7 5.4 13.7 11.6c3.1 9.5 6.9 18.7 11.3 27.5c2.9 5.8 2.4 12.7-1.5 17.8L54 384.8c-6.4 8.2-6.8 19.6-.5 27.8c12.9 16.7 27.8 31.7 44.4 44.7c8.2 6.4 19.7 6 27.9-.4l18-14c5.1-4 12.2-4.4 18-1.5c9 4.6 18.3 8.5 27.9 11.7c6.1 2.1 10.7 7.3 11.5 13.7l2.9 23.1c1.3 10.3 9 18.7 19.3 20c10.7 1.4 21.7 2.1 32.8 2.1c10.1 0 20.1-.6 29.9-1.7c10.4-1.2 18.2-9.7 19.5-20l2.8-22.5c.8-6.5 5.5-11.8 11.7-13.8c10-3.2 19.7-7.2 29-11.8c5.8-2.9 12.7-2.4 17.8 1.5L385 457.9c8.2 6.4 19.6 6.8 27.8 .5c2.8-2.2 5.5-4.4 8.2-6.7L451.7 421c1.8-2.2 3.6-4.4 5.4-6.6c6.5-8.2 6-19.7-.4-27.9l-14-17.9c-4-5.1-4.4-12.2-1.5-18c4.8-9.4 9-19.3 12.3-29.5c2-6.2 7.3-10.8 13.7-11.6l22.8-2.8c10.3-1.3 18.8-9.1 20-19.4c.2-1.7 .4-3.5 .6-5.2V230.1c-.2-1.7-.4-3.5-.6-5.2c-1.3-10.3-9.7-18.1-20-19.4l-22.8-2.8c-6.4-.8-11.7-5.4-13.7-11.6c-3.4-10.2-7.5-20.1-12.3-29.5c-3-5.8-2.5-12.8 1.5-18l14-17.9c6.4-8.2 6.8-19.7 .4-27.9c-1.8-2.2-3.6-4.4-5.4-6.6L421 60.3c-2.7-2.3-5.4-4.5-8.2-6.7c-8.2-6.4-19.6-5.9-27.8 .5L366.7 68.3c-5.1 4-12.1 4.4-17.8 1.5c-9.3-4.6-19-8.6-29-11.8c-6.2-2-10.9-7.3-11.7-13.7l-2.8-22.5zM287.8 162.6l-32 192c-1.5 8.7-9.7 14.6-18.4 13.2s-14.6-9.7-13.2-18.4l32-192c1.5-8.7 9.7-14.6 18.4-13.2s14.6 9.7 13.2 18.4zM187.3 227.3L158.6 256l28.7 28.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-40-40c-6.2-6.2-6.2-16.4 0-22.6l40-40c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6zm160-22.6l40 40c6.2 6.2 6.2 16.4 0 22.6l-40 40c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L353.4 256l-28.7-28.7c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0z" />
+                        </svg>
+                    </s-icon>
+                    生成代码
+                </s-popup-menu-item>
+                <s-popup-menu-item  id="copycode" href="javascript:void(0)">
+                    <s-icon slot="start" style="color: black; margin-left: 16px; width: 18px; height: 18px;">
+                        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
 
-            <li id="code_open" data-intro="点这里可以把积木块转化成真实代码" data-title="生成代码" title="生成代码">
-                <a href="javascript:void(0)">
-                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M305.4 21.8c-1.3-10.4-9.1-18.8-19.5-20C276.1 .6 266.1 0 256 0c-11.1 0-22.1 .7-32.8 2.1c-10.3 1.3-18 9.7-19.3 20l-2.9 23.1c-.8 6.4-5.4 11.6-11.5 13.7c-9.6 3.2-19 7.2-27.9 11.7c-5.8 3-12.8 2.5-18-1.5l-18-14c-8.2-6.4-19.7-6.8-27.9-.4c-16.6 13-31.5 28-44.4 44.7c-6.3 8.2-5.9 19.6 .5 27.8l14.2 18.3c4 5.1 4.4 12 1.5 17.8c-4.4 8.8-8.2 17.9-11.3 27.4c-2 6.2-7.3 10.8-13.7 11.6l-22.8 2.9c-10.3 1.3-18.7 9.1-20 19.4C.7 234.8 0 245.3 0 256c0 10.6 .6 21.1 1.9 31.4c1.3 10.3 9.7 18.1 20 19.4l22.8 2.9c6.4 .8 11.7 5.4 13.7 11.6c3.1 9.5 6.9 18.7 11.3 27.5c2.9 5.8 2.4 12.7-1.5 17.8L54 384.8c-6.4 8.2-6.8 19.6-.5 27.8c12.9 16.7 27.8 31.7 44.4 44.7c8.2 6.4 19.7 6 27.9-.4l18-14c5.1-4 12.2-4.4 18-1.5c9 4.6 18.3 8.5 27.9 11.7c6.1 2.1 10.7 7.3 11.5 13.7l2.9 23.1c1.3 10.3 9 18.7 19.3 20c10.7 1.4 21.7 2.1 32.8 2.1c10.1 0 20.1-.6 29.9-1.7c10.4-1.2 18.2-9.7 19.5-20l2.8-22.5c.8-6.5 5.5-11.8 11.7-13.8c10-3.2 19.7-7.2 29-11.8c5.8-2.9 12.7-2.4 17.8 1.5L385 457.9c8.2 6.4 19.6 6.8 27.8 .5c2.8-2.2 5.5-4.4 8.2-6.7L451.7 421c1.8-2.2 3.6-4.4 5.4-6.6c6.5-8.2 6-19.7-.4-27.9l-14-17.9c-4-5.1-4.4-12.2-1.5-18c4.8-9.4 9-19.3 12.3-29.5c2-6.2 7.3-10.8 13.7-11.6l22.8-2.8c10.3-1.3 18.8-9.1 20-19.4c.2-1.7 .4-3.5 .6-5.2V230.1c-.2-1.7-.4-3.5-.6-5.2c-1.3-10.3-9.7-18.1-20-19.4l-22.8-2.8c-6.4-.8-11.7-5.4-13.7-11.6c-3.4-10.2-7.5-20.1-12.3-29.5c-3-5.8-2.5-12.8 1.5-18l14-17.9c6.4-8.2 6.8-19.7 .4-27.9c-1.8-2.2-3.6-4.4-5.4-6.6L421 60.3c-2.7-2.3-5.4-4.5-8.2-6.7c-8.2-6.4-19.6-5.9-27.8 .5L366.7 68.3c-5.1 4-12.1 4.4-17.8 1.5c-9.3-4.6-19-8.6-29-11.8c-6.2-2-10.9-7.3-11.7-13.7l-2.8-22.5zM287.8 162.6l-32 192c-1.5 8.7-9.7 14.6-18.4 13.2s-14.6-9.7-13.2-18.4l32-192c1.5-8.7 9.7-14.6 18.4-13.2s14.6 9.7 13.2 18.4zM187.3 227.3L158.6 256l28.7 28.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-40-40c-6.2-6.2-6.2-16.4 0-22.6l40-40c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6zm160-22.6l40 40c6.2 6.2 6.2 16.4 0 22.6l-40 40c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L353.4 256l-28.7-28.7c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0z" />
-                    </svg>
-                </a>
-            </li>
-            <li data-intro="点这里可以复制代码" data-title="复制代码" title="复制代码">
-                <a id="copycode" href="javascript:void(0)">
-                    <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M384 336H192c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16l140.1 0L400 115.9V320c0 8.8-7.2 16-16 16zM192 384H384c35.3 0 64-28.7 64-64V115.9c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1H192c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H256c35.3 0 64-28.7 64-64V416H272v32c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192c0-8.8 7.2-16 16-16H96V128H64z" />
+                        </svg>
+                    </s-icon>
+                    复制代码
+                </s-popup-menu-item>
+              </s-popup-menu>
 
-                        <path
-                            d="M384 336H192c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16l140.1 0L400 115.9V320c0 8.8-7.2 16-16 16zM192 384H384c35.3 0 64-28.7 64-64V115.9c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1H192c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H256c35.3 0 64-28.7 64-64V416H272v32c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192c0-8.8 7.2-16 16-16H96V128H64z" />
-                    </svg>
-                </a>
-            </li>
-
-            <li><b style="margin-right: 10px;margin-left: 10px;">|</b></li>
-
-            <li data-intro="点这里可以切换主题皮肤" data-title="主题切换" title="主题切换">
-                <a onclick='$("#box-parent").css("display","flex");'>
-                    <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+            <li><b style="margin-right: 10px;margin-left: 10px; display: none;">|</b></li>
+            <s-popup-menu style="border: white; z-index: 99999999; border-radius: 12px;" >
+                <s-button slot="trigger" type="text" style="color: white; border-radius: 12px;">主题</s-button>
+                <s-popup-menu-item  href="javascript:void(0)" onclick='$("#box-parent").css("display","flex");'>
+                    <s-icon slot="start" style="color: black; margin-left: 16px; width: 18px; height: 18px;">
+                        <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M18 6C18 9.31371 20.6863 12 24 12C27.3137 12 30 9.31371 30 6H35.4545L42 15.8182L36.2727 20.7273V42H11.7273V20.7273L6 15.8182L12.5455 6H18Z"
-                            fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" />
+                            fill="#000000" stroke="#000000" stroke-width="4" stroke-linejoin="round" />
                     </svg>
-                </a>
-            </li>
+                    </s-icon>
+                    主题设置
+                </s-popup-menu-item>
+                <s-popup-menu-item href="javascript:void(0)"  onclick='moon();'>
+                    <s-icon slot="start" style="color: black; margin-left: 16px; width: 18px; height: 18px;">
+                        <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M28.0527 4.41085C22.5828 5.83695 18.5455 10.8106 18.5455 16.7273C18.5455 23.7564 24.2436 29.4545 31.2727 29.4545C37.1894 29.4545 42.1631 25.4172 43.5891 19.9473C43.8585 21.256 44 22.6115 44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C25.3885 4 26.744 4.14149 28.0527 4.41085Z"
+                            fill="#000000" stroke="#000000" stroke-width="4" stroke-linejoin="round" />
+                    </svg>
+                    </s-icon>
+                    切换暗色模式
+                </s-popup-menu-item>
+              </s-popup-menu>
 
             <script>
                 function moon() {
@@ -155,57 +180,65 @@
                     }
                 }
             </script>
-            <li data-intro="点这里可以切换暗黑模式" data-title="暗黑模式" title="暗黑模式">
-                <a onclick='moon();'>
-                    <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M28.0527 4.41085C22.5828 5.83695 18.5455 10.8106 18.5455 16.7273C18.5455 23.7564 24.2436 29.4545 31.2727 29.4545C37.1894 29.4545 42.1631 25.4172 43.5891 19.9473C43.8585 21.256 44 22.6115 44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C25.3885 4 26.744 4.14149 28.0527 4.41085Z"
-                            fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" />
-                    </svg>
+
+            <li><b style="margin-right: 10px;margin-left: 10px; display: none;">|</b></li>
+            <s-popup-menu style="border: white; z-index: 99999999; border-radius: 12px;" >
+                <s-button slot="trigger" type="text" style="color: white; border-radius: 12px;">其他</s-button>
+                <s-popup-menu-item  href="javascript:void(0)"  onclick="intro()">
+                    <s-icon slot="start" style="color: black; margin-left: 16px; width: 18px; height: 18px;">
+                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+                        </svg>
+                    </s-icon>
+                    帮助文档
+                </s-popup-menu-item>
+                <s-popup-menu-item  href="index.html">
+                    <s-icon slot="start" style="color: black; margin-left: 16px; width: 18px; height: 18px;">
+                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M352 256c0 22.2-1.2 43.6-3.3 64H281.8l12.6-42.8c10.7-36.4-23.1-70.3-59.6-59.6l-74.6 21.9c.4-16.3 1.5-32.2 3.1-47.5H348.7c2.2 20.4 3.3 41.8 3.3 64zM20.4 280.6c-7.1 2.1-13.1 5.5-18.1 9.9C.8 279.2 0 267.7 0 256c0-22.1 2.8-43.5 8.1-64H131.2c-1.9 18.4-2.9 37.4-3.1 57L20.4 280.6zM231.4 491.6L272.4 352h71.9c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512c-7.2 0-16.3-3.1-27.3-13.4c1-2.2 1.9-4.6 2.7-7.1zM380.8 192H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-325.7 0c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7H167.7zm-32.4 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM493.4 352c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4zM39 308.5l204.8-60.2c12.1-3.6 23.4 7.7 19.9 19.9L203.5 473c-4.1 13.9-23.2 15.6-29.7 2.6l-28.7-57.3c-.7-1.3-1.5-2.6-2.5-3.7l-88 88c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l88-88c-1.1-1-2.3-1.9-3.7-2.5L36.4 338.2c-13-6.5-11.3-25.6 2.6-29.7z" />
+                        </svg>
+                    </s-icon>
+                <a href="index.html" style="color: black; text-decoration:none;">
+                    官方网站
                 </a>
-            </li>
+                </s-popup-menu-item>
+                <s-popup-menu group="start">
+                    <s-popup-menu-item slot="trigger">
+                      发癫
+                      <s-icon slot="end" type="arrow_drop_right"></s-icon>
+                    </s-popup-menu-item>
+                    <s-popup-menu-item  onclick='game_start();'>
+                        <s-icon slot="start" style="color: black; margin-left: 16px; width: 18px; height: 18px;">
+                            <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.0039 27C25.6608 27 27.0039 25.6569 27.0039 24C27.0039 22.3431 25.6608 21 24.0039 21C22.3471 21 21.0039 22.3431 21.0039 24C21.0039 25.6569 22.3471 27 24.0039 27Z" fill="#ffffff"/><path d="M19.0405 31.476C20.4626 32.4194 22.1673 32.9688 24 32.9688C25.8327 32.9688 27.5374 32.4194 28.9595 31.476L35.021 40.6827C31.861 42.7792 28.0727 44 24 44C19.9273 44 16.139 42.7792 12.979 40.6827L19.0405 31.476ZM15.0159 24.484L4.03531 25.145C4.01188 24.7474 4 24.3467 4 23.9432C4 16.0911 8.49944 9.29287 15.0538 6L19.9742 15.8688C17.0247 17.3506 15 20.4098 15 23.9432C15 24.1248 15.0053 24.3051 15.0159 24.484ZM28.0258 15.8688L32.9462 6C39.5006 9.29287 44 16.0911 44 23.9432C44 24.3467 43.9881 24.7474 43.9647 25.145L32.9841 24.484C32.9947 24.3051 33 24.1248 33 23.9432C33 20.4098 30.9753 17.3506 28.0258 15.8688Z" fill="#000000" stroke="#000000" stroke-width="4" stroke-linejoin="round"/></svg>
+                        </s-icon>
+                        千万别点！！！
+                    </s-popup-menu-item>
+                  </s-popup-menu>
+              </s-popup-menu>
 
             <li><b style="margin-right: 10px;margin-left: 10px;">|</b></li>
-
-            <li title="新手教程">
-                <a onclick="intro()">
-                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
-                    </svg>
-                </a>
-            </li>
-            <li title="官网">
-                <a href="index.html">
-                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M352 256c0 22.2-1.2 43.6-3.3 64H281.8l12.6-42.8c10.7-36.4-23.1-70.3-59.6-59.6l-74.6 21.9c.4-16.3 1.5-32.2 3.1-47.5H348.7c2.2 20.4 3.3 41.8 3.3 64zM20.4 280.6c-7.1 2.1-13.1 5.5-18.1 9.9C.8 279.2 0 267.7 0 256c0-22.1 2.8-43.5 8.1-64H131.2c-1.9 18.4-2.9 37.4-3.1 57L20.4 280.6zM231.4 491.6L272.4 352h71.9c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512c-7.2 0-16.3-3.1-27.3-13.4c1-2.2 1.9-4.6 2.7-7.1zM380.8 192H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-325.7 0c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7H167.7zm-32.4 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM493.4 352c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4zM39 308.5l204.8-60.2c12.1-3.6 23.4 7.7 19.9 19.9L203.5 473c-4.1 13.9-23.2 15.6-29.7 2.6l-28.7-57.3c-.7-1.3-1.5-2.6-2.5-3.7l-88 88c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l88-88c-1.1-1-2.3-1.9-3.7-2.5L36.4 338.2c-13-6.5-11.3-25.6 2.6-29.7z" />
-                    </svg>
-                </a>
-            </li>
+            <s-popup-menu style="border: white; z-index: 99999999; border-radius: 12px;" >
+                <s-button slot="trigger" type="text" style="color: white; border-radius: 12px;">打包</s-button>
+                <s-popup-menu-item  href="javascript:void(0)" onclick='$("#g-apk").css("display","flex");'>
+                    <s-icon slot="start" style="color: black; margin-left: 16px; width: 18px; height: 18px;">
+                        <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M41.4004 11.551L36.3332 5H11.6666L6.58398 11.551" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 13C6 11.8954 6.89543 11 8 11H40C41.1046 11 42 11.8954 42 13V40C42 41.6569 40.6569 43 39 43H9C7.34315 43 6 41.6569 6 40V13Z" fill="none" stroke="#000000" stroke-width="4" stroke-linejoin="round"/><path d="M32 27L24 35L16 27" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M23.9917 19V35" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </s-icon>
+                    安卓打包
+                </s-popup-menu-item>
+              </s-popup-menu>
 
             <li><b style="margin-right: 10px;margin-left: 10px;">|</b></li>
-            
-            <li data-intro="点这里可以打包apk" data-title="打包APK" title="打包apk">
-                <a onclick='$("#g-apk").css("display","flex");'>
-                    <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M41.4004 11.551L36.3332 5H11.6666L6.58398 11.551" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 13C6 11.8954 6.89543 11 8 11H40C41.1046 11 42 11.8954 42 13V40C42 41.6569 40.6569 43 39 43H9C7.34315 43 6 41.6569 6 40V13Z" fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/><path d="M32 27L24 35L16 27" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M23.9917 19V35" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
-            </li>
-
-            <li title="别点我！！！">
-                <a onclick='game_start();'>
-                    <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.0039 27C25.6608 27 27.0039 25.6569 27.0039 24C27.0039 22.3431 25.6608 21 24.0039 21C22.3471 21 21.0039 22.3431 21.0039 24C21.0039 25.6569 22.3471 27 24.0039 27Z" fill="#ffffff"/><path d="M19.0405 31.476C20.4626 32.4194 22.1673 32.9688 24 32.9688C25.8327 32.9688 27.5374 32.4194 28.9595 31.476L35.021 40.6827C31.861 42.7792 28.0727 44 24 44C19.9273 44 16.139 42.7792 12.979 40.6827L19.0405 31.476ZM15.0159 24.484L4.03531 25.145C4.01188 24.7474 4 24.3467 4 23.9432C4 16.0911 8.49944 9.29287 15.0538 6L19.9742 15.8688C17.0247 17.3506 15 20.4098 15 23.9432C15 24.1248 15.0053 24.3051 15.0159 24.484ZM28.0258 15.8688L32.9462 6C39.5006 9.29287 44 16.0911 44 23.9432C44 24.3467 43.9881 24.7474 43.9647 25.145L32.9841 24.484C32.9947 24.3051 33 24.1248 33 23.9432C33 20.4098 30.9753 17.3506 28.0258 15.8688Z" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/></svg>
-                </a>
-            </li>
-
-            <li><b style="margin-right: 10px;margin-left: 10px;">|</b></li>
-
-            <li>
-                <a  onclick='$("#cloudwork").css("display","flex");'>
-                    <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9C6 7.34315 7.34315 6 9 6H34.2814L42 13.2065V39C42 40.6569 40.6569 42 39 42H9C7.34315 42 6 40.6569 6 39V9Z" fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24.0083 6L24 13.3846C24 13.7245 23.5523 14 23 14H15C14.4477 14 14 13.7245 14 13.3846L14 6" fill="none"/><path d="M24.0083 6L24 13.3846C24 13.7245 23.5523 14 23 14H15C14.4477 14 14 13.7245 14 13.3846L14 6H24.0083Z" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/><path d="M9 6H34.2814" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 26H34" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 34H24.0083" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
-            </li>
+            <s-popup-menu style="border: white; z-index: 99999999; border-radius: 12px;" >
+                <s-button slot="trigger" type="text" style="color: white; border-radius: 12px;">云端</s-button>
+                <s-popup-menu-item  href="javascript:void(0)" onclick='$("#cloudwork").css("display","flex");'>
+                    <s-icon slot="start" style="color: black; margin-left: 16px; width: 18px; height: 18px;">
+                        <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9C6 7.34315 7.34315 6 9 6H34.2814L42 13.2065V39C42 40.6569 40.6569 42 39 42H9C7.34315 42 6 40.6569 6 39V9Z" fill="none" stroke="#000000" stroke-width="4" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24.0083 6L24 13.3846C24 13.7245 23.5523 14 23 14H15C14.4477 14 14 13.7245 14 13.3846L14 6" fill="none"/><path d="M24.0083 6L24 13.3846C24 13.7245 23.5523 14 23 14H15C14.4477 14 14 13.7245 14 13.3846L14 6H24.0083Z" stroke="#000000" stroke-width="4" stroke-linejoin="round"/><path d="M9 6H34.2814" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 26H34" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 34H24.0083" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </s-icon>
+                    保存至云端
+                </s-popup-menu-item>
+              </s-popup-menu>
 
             <li style="position: fixed;right:20%;">
                 <div>
@@ -215,7 +248,9 @@
                     </a>
                 </div>
             </li>
-        </ul>
+        </ul>            
+        </s-page>
+
     </header>
 
     <div id="blocklyDiv" data-intro="你可以在这里拖拽积木，制作网页" data-title="工作区">
@@ -607,7 +642,7 @@
         <hr>
 
         <div class="input-section">
-            <input id="data" placeholder="请输入积木数据" type="text">
+            <input id="data" placeholder="请输入积木数据" type="text" class="datainput">
             <button id="a" style="margin-right: 10px;">导入积木</button>
             <input id="importFile" accept=".json" type="file">
         </div>
@@ -644,24 +679,30 @@
 
     <script>Prism.highlightAll();</script>
 
-    <div id="g-apk">
-        <div id="g-apk-child">
-            <p style="font-size: 30px;margin-bottom: 20px;">作品打包apk</p>
+    <div id="g-apk" class="g-apk-card">
+        <div id="g-apk-child" class="g-apk-card">
+            <p style="font-size: 24px;margin-bottom: 20px; font-weight: 900;">作品打包 - 安卓</p>
             <hr/>
-            <p style="font-size: 20px; margin-top: 20px;">应用名称：<input type="text" id="app_name" style="border: 1px solid #ccc; border-radius: 5px; padding: 8px; font-size: 16px;" placeholder="请输入应用名称"></p>
-            <p style="font-size: 20px; margin-top: 20px;margin-bottom: 20px;"><p style="margin-bottom: 20px;font-size: 20px;">应用图标（推荐512x512，一定要是正方形）：</p><input type="file" id="app_icon"></p>
-            <button id="apk_g" style="margin-top: 30px;padding: 7px;border-radius: 10px;background-color: #33c8b9;border: 0;width: 70px;color: white;margin-left: 10%;">打包</button>
-            <button onclick='$("#g-apk").css("display","none");' style="margin-left: 10%;padding: 7px;border-radius: 10px;background-color: #c83333;border: 0;width: 70px;color: white;margin-left: 20%;">取消</button>
+            <p style="font-size: 16px; margin-top: 20px; margin-bottom: 6px;">应用名称</p>
+                <input type="text" id="app_name" style="border: 1px solid #ccc; border-radius: 5px; padding: 8px; font-size: 16px; outline: none;" placeholder="请输入应用名称">
+            <p style="font-size: 16px; margin-top: 20px;margin-bottom: 20px;"><p style="margin-bottom: 20px;font-size: 16px;">应用图标（推荐512x512，一定要是正方形）</p>
+            <input type="file" id="app_icon">
+
+        </p>  
+            <button id="apk_g" style="margin-top: 32px;padding: 7px;border-radius: 10px;background-color: #33c8b9;border: 0;width: 70px;color: white;margin-left: 0%;">打包</button>
+            <button onclick='$("#g-apk").css("display","none");' style="margin-left: 10%;padding: 7px;border-radius: 10px;background-color: #c83333;border: 0;width: 70px;color: white;margin-left: 3%;">取消</button>
         </div>
     </div>
 
     <div id="cloudwork">
         <div id="cloudwork-child">
-            <p style="font-size: 30px;margin-bottom: 20px;">保存为云作品</p>
+            <p style="font-size: 24px;margin-bottom: 20px; font-weight: 900;">保存为云作品</p>
             <hr/>
-            <p style="font-size: 20px; margin-top: 20px;">作品名称：<input type="text" id="workname" style="border: 1px solid #ccc; border-radius: 5px; padding: 8px; font-size: 16px;" placeholder="请输入应用名称"></p>
-            <button id="save" style="margin-top: 30px;padding: 7px;border-radius: 10px;background-color: #33c8b9;border: 0;width: 70px;color: white;margin-left: 10%;">保存</button>
-            <button onclick='$("#cloudwork").css("display","none");' style="margin-left: 10%;padding: 7px;border-radius: 10px;background-color: #c83333;border: 0;width: 70px;color: white;margin-left: 20%;">取消</button>
+            <p style="font-size: 16px; margin-top: 20px; margin-bottom: 0px;">作品名称<br>
+                <input type="text" id="workname" style="margin-top: 6px; border: 1px solid #ccc; border-radius: 5px; padding: 8px; font-size: 16px;" placeholder="请输入应用名称">
+            </p>    
+            <button id="save" style="margin-top: 30px;padding: 7px;border-radius: 10px;background-color: #33c8b9;border: 0;width: 70px;color: white;margin-left: 0%;">保存</button>
+            <button onclick='$("#cloudwork").css("display","none");' style="margin-left: 10%;padding: 7px;border-radius: 10px;background-color: #c83333;border: 0;width: 70px;color: white;margin-left: 3%;">取消</button>
         </div>
     </div>
 
@@ -675,7 +716,8 @@
             });
         }
     </script> -->
-
+   
+    
 </body>
 
 </html>

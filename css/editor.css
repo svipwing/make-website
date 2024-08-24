@@ -43,13 +43,15 @@ div#package_list{
     position: absolute;
     top: calc(15% + 5px);
     left: 1.25%;
-    background-color: #f0f0f0;
-    box-shadow: 10px 10px 5px #888888;
+    background-color: #ffffff65;
     height: 60%;
     width: 8%;
-
+    backdrop-filter: blur(20px);
     border-radius: 18px;
-
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
     padding: 20px;
 }
 
@@ -69,6 +71,9 @@ div#package_list .move-card {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    background-color: #ffffff65;
 }
 
 div#n {
