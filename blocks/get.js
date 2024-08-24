@@ -14,7 +14,6 @@ Blockly.Blocks["h1"] = {
         this.setHelpUrl("");
     },
 };
-
 Blockly.Blocks["h2"] = {
     init: function () {
         this.appendDummyInput()
@@ -59,7 +58,22 @@ Blockly.Blocks["p"] = {
         this.setHelpUrl("");
     },
 };
-
+Blockly.Blocks["div"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("块标签")
+            .appendField(new Blockly.FieldTextInput("text"), "text")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id")
+            .appendField(",颜色")
+            .appendField(new Blockly.FieldTextInput("color"), "color");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
 Blockly.Blocks["go"] = {
     init: function () {
         this.appendDummyInput()
@@ -315,7 +329,24 @@ Blockly.Blocks["radius"] = {
         this.setHelpUrl("");
     },
 };
-
+Blockly.Blocks["shadow"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("阴影 x偏移")
+            .appendField(new Blockly.FieldTextInput("-2"), "x")
+            .appendField("y偏移")
+            .appendField(new Blockly.FieldTextInput("-2"), "y")
+            .appendField("模糊")
+            .appendField(new Blockly.FieldTextInput("10"), "m")
+            .appendField("颜色")
+            .appendField(new Blockly.FieldTextInput("red"), "c");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(330);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
 Blockly.Blocks["bg_color"] = {
     init: function () {
         this.appendDummyInput()
@@ -357,7 +388,19 @@ Blockly.Blocks["css_height"] = {
         this.setHelpUrl("");
     },
 };
-
+Blockly.Blocks["z-index"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("设置图层为")
+            .appendField(new Blockly.FieldTextInput("10"), "c")
+            .appendField("层(数值越大显示越上)");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(330);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
 Blockly.Blocks["br"] = {
     init: function () {
         this.appendDummyInput().appendField("换行");

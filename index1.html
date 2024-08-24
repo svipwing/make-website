@@ -138,14 +138,14 @@
 
             <script>
                 function moon() {
-                    if($.cookie("theme") != "#494949"){
+                    if ($.cookie("theme") != "#494949") {
                         $.cookie("theme", "#494949");
                         $(".navbar").css("background-color", "#494949");
                         document.querySelector('#blocklyDiv .blocklyMainBackground').style.fill = '#1f1f1f';
                         var toolboxDiv = document.querySelector('#blocklyDiv .blocklyToolboxDiv');
                         toolboxDiv.style.backgroundColor = '#c2c2c2';
                         toolboxDiv.style.borderRight = '1px solid #e5e7eb';
-                    }else{
+                    } else {
                         $(".navbar").css("background-color", "#2196f3");
                         $.cookie("theme", "#2196f3");
                         document.querySelector('#blocklyDiv .blocklyMainBackground').style.fill = '#f2f3f7';
@@ -186,31 +186,77 @@
             </li>
 
             <li><b style="margin-right: 10px;margin-left: 10px;">|</b></li>
-            
+
             <li data-intro="点这里可以打包apk" data-title="打包APK" title="打包apk">
                 <a onclick='$("#g-apk").css("display","flex");'>
-                    <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M41.4004 11.551L36.3332 5H11.6666L6.58398 11.551" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 13C6 11.8954 6.89543 11 8 11H40C41.1046 11 42 11.8954 42 13V40C42 41.6569 40.6569 43 39 43H9C7.34315 43 6 41.6569 6 40V13Z" fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/><path d="M32 27L24 35L16 27" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M23.9917 19V35" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M41.4004 11.551L36.3332 5H11.6666L6.58398 11.551" stroke="#ffffff" stroke-width="4"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M6 13C6 11.8954 6.89543 11 8 11H40C41.1046 11 42 11.8954 42 13V40C42 41.6569 40.6569 43 39 43H9C7.34315 43 6 41.6569 6 40V13Z"
+                            fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" />
+                        <path d="M32 27L24 35L16 27" stroke="#ffffff" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M23.9917 19V35" stroke="#ffffff" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
                 </a>
             </li>
 
             <li title="别点我！！！">
                 <a onclick='game_start();'>
-                    <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.0039 27C25.6608 27 27.0039 25.6569 27.0039 24C27.0039 22.3431 25.6608 21 24.0039 21C22.3471 21 21.0039 22.3431 21.0039 24C21.0039 25.6569 22.3471 27 24.0039 27Z" fill="#ffffff"/><path d="M19.0405 31.476C20.4626 32.4194 22.1673 32.9688 24 32.9688C25.8327 32.9688 27.5374 32.4194 28.9595 31.476L35.021 40.6827C31.861 42.7792 28.0727 44 24 44C19.9273 44 16.139 42.7792 12.979 40.6827L19.0405 31.476ZM15.0159 24.484L4.03531 25.145C4.01188 24.7474 4 24.3467 4 23.9432C4 16.0911 8.49944 9.29287 15.0538 6L19.9742 15.8688C17.0247 17.3506 15 20.4098 15 23.9432C15 24.1248 15.0053 24.3051 15.0159 24.484ZM28.0258 15.8688L32.9462 6C39.5006 9.29287 44 16.0911 44 23.9432C44 24.3467 43.9881 24.7474 43.9647 25.145L32.9841 24.484C32.9947 24.3051 33 24.1248 33 23.9432C33 20.4098 30.9753 17.3506 28.0258 15.8688Z" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/></svg>
+                    <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M24.0039 27C25.6608 27 27.0039 25.6569 27.0039 24C27.0039 22.3431 25.6608 21 24.0039 21C22.3471 21 21.0039 22.3431 21.0039 24C21.0039 25.6569 22.3471 27 24.0039 27Z"
+                            fill="#ffffff" />
+                        <path
+                            d="M19.0405 31.476C20.4626 32.4194 22.1673 32.9688 24 32.9688C25.8327 32.9688 27.5374 32.4194 28.9595 31.476L35.021 40.6827C31.861 42.7792 28.0727 44 24 44C19.9273 44 16.139 42.7792 12.979 40.6827L19.0405 31.476ZM15.0159 24.484L4.03531 25.145C4.01188 24.7474 4 24.3467 4 23.9432C4 16.0911 8.49944 9.29287 15.0538 6L19.9742 15.8688C17.0247 17.3506 15 20.4098 15 23.9432C15 24.1248 15.0053 24.3051 15.0159 24.484ZM28.0258 15.8688L32.9462 6C39.5006 9.29287 44 16.0911 44 23.9432C44 24.3467 43.9881 24.7474 43.9647 25.145L32.9841 24.484C32.9947 24.3051 33 24.1248 33 23.9432C33 20.4098 30.9753 17.3506 28.0258 15.8688Z"
+                            fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" />
+                    </svg>
                 </a>
             </li>
 
             <li><b style="margin-right: 10px;margin-left: 10px;">|</b></li>
 
             <li>
-                <a  onclick='$("#cloudwork").css("display","flex");'>
-                    <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9C6 7.34315 7.34315 6 9 6H34.2814L42 13.2065V39C42 40.6569 40.6569 42 39 42H9C7.34315 42 6 40.6569 6 39V9Z" fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24.0083 6L24 13.3846C24 13.7245 23.5523 14 23 14H15C14.4477 14 14 13.7245 14 13.3846L14 6" fill="none"/><path d="M24.0083 6L24 13.3846C24 13.7245 23.5523 14 23 14H15C14.4477 14 14 13.7245 14 13.3846L14 6H24.0083Z" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/><path d="M9 6H34.2814" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 26H34" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 34H24.0083" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <a onclick='$("#cloudwork").css("display","flex");'>
+                    <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6 9C6 7.34315 7.34315 6 9 6H34.2814L42 13.2065V39C42 40.6569 40.6569 42 39 42H9C7.34315 42 6 40.6569 6 39V9Z"
+                            fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M24.0083 6L24 13.3846C24 13.7245 23.5523 14 23 14H15C14.4477 14 14 13.7245 14 13.3846L14 6"
+                            fill="none" />
+                        <path
+                            d="M24.0083 6L24 13.3846C24 13.7245 23.5523 14 23 14H15C14.4477 14 14 13.7245 14 13.3846L14 6H24.0083Z"
+                            stroke="#ffffff" stroke-width="4" stroke-linejoin="round" />
+                        <path d="M9 6H34.2814" stroke="#ffffff" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M14 26H34" stroke="#ffffff" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M14 34H24.0083" stroke="#ffffff" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
                 </a>
             </li>
 
             <li style="position: fixed;right:20%;">
                 <div>
                     <a style="display: inline-block;margin-right: 0;" href="/user_system/">
-                        <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 20C27.866 20 31 16.866 31 13C31 9.13401 27.866 6 24 6C20.134 6 17 9.13401 17 13C17 16.866 20.134 20 24 20Z" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 40.8V42H42V40.8C42 36.3196 42 34.0794 41.1281 32.3681C40.3611 30.8628 39.1372 29.6389 37.6319 28.8719C35.9206 28 33.6804 28 29.2 28H18.8C14.3196 28 12.0794 28 10.3681 28.8719C8.86278 29.6389 7.63893 30.8628 6.87195 32.3681C6 34.0794 6 36.3196 6 40.8Z" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24 20C27.866 20 31 16.866 31 13C31 9.13401 27.866 6 24 6C20.134 6 17 9.13401 17 13C17 16.866 20.134 20 24 20Z"
+                                fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M6 40.8V42H42V40.8C42 36.3196 42 34.0794 41.1281 32.3681C40.3611 30.8628 39.1372 29.6389 37.6319 28.8719C35.9206 28 33.6804 28 29.2 28H18.8C14.3196 28 12.0794 28 10.3681 28.8719C8.86278 29.6389 7.63893 30.8628 6.87195 32.3681C6 34.0794 6 36.3196 6 40.8Z"
+                                fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
                         <a id="username" style="display: inline-block;">未登录</a>
                     </a>
                 </div>
@@ -239,7 +285,6 @@
                     <field name="text">text</field>
                     <field name="id">id</field>
                 </block>
-
                 <block type="h2">
                     <field name="text">text</field>
                     <field name="id">id</field>
@@ -274,6 +319,12 @@
                 <block type="p">
                     <field name="text">text</field>
                     <field name="id">id</field>
+                </block>
+
+                <block type="div">
+                    <field name="text">text</field>
+                    <field name="id">id</field>
+                    <field name="color">white</field>
                 </block>
 
                 <block type="p_xy">
@@ -369,6 +420,13 @@
                     <field name="r">10</field>
                 </block>
 
+                <block type="shadow">
+                    <field name="x">-2</field>
+                    <field name="y">-2</field>
+                    <field name="m">10</field>
+                    <field name="c">red</field>
+                </block>
+
                 <block type="bg_color">
                     <field name="color">red</field>
                 </block>
@@ -379,6 +437,10 @@
 
                 <block type="css_height">
                     <field name="height">10</field>
+                </block>
+
+                <block type="z-index">
+                    <field name="c">10</field>
                 </block>
 
             </category>
@@ -647,21 +709,31 @@
     <div id="g-apk">
         <div id="g-apk-child">
             <p style="font-size: 30px;margin-bottom: 20px;">作品打包apk</p>
-            <hr/>
-            <p style="font-size: 20px; margin-top: 20px;">应用名称：<input type="text" id="app_name" style="border: 1px solid #ccc; border-radius: 5px; padding: 8px; font-size: 16px;" placeholder="请输入应用名称"></p>
-            <p style="font-size: 20px; margin-top: 20px;margin-bottom: 20px;"><p style="margin-bottom: 20px;font-size: 20px;">应用图标（推荐512x512，一定要是正方形）：</p><input type="file" id="app_icon"></p>
-            <button id="apk_g" style="margin-top: 30px;padding: 7px;border-radius: 10px;background-color: #33c8b9;border: 0;width: 70px;color: white;margin-left: 10%;">打包</button>
-            <button onclick='$("#g-apk").css("display","none");' style="margin-left: 10%;padding: 7px;border-radius: 10px;background-color: #c83333;border: 0;width: 70px;color: white;margin-left: 20%;">取消</button>
+            <hr />
+            <p style="font-size: 20px; margin-top: 20px;">应用名称：<input type="text" id="app_name"
+                    style="border: 1px solid #ccc; border-radius: 5px; padding: 8px; font-size: 16px;"
+                    placeholder="请输入应用名称"></p>
+            <p style="font-size: 20px; margin-top: 20px;margin-bottom: 20px;">
+            <p style="margin-bottom: 20px;font-size: 20px;">应用图标（推荐512x512，一定要是正方形）：</p><input type="file"
+                id="app_icon"></p>
+            <button id="apk_g"
+                style="margin-top: 30px;padding: 7px;border-radius: 10px;background-color: #33c8b9;border: 0;width: 70px;color: white;margin-left: 10%;">打包</button>
+            <button onclick='$("#g-apk").css("display","none");'
+                style="margin-left: 10%;padding: 7px;border-radius: 10px;background-color: #c83333;border: 0;width: 70px;color: white;margin-left: 20%;">取消</button>
         </div>
     </div>
 
     <div id="cloudwork">
         <div id="cloudwork-child">
             <p style="font-size: 30px;margin-bottom: 20px;">保存为云作品</p>
-            <hr/>
-            <p style="font-size: 20px; margin-top: 20px;">作品名称：<input type="text" id="workname" style="border: 1px solid #ccc; border-radius: 5px; padding: 8px; font-size: 16px;" placeholder="请输入应用名称"></p>
-            <button id="save" style="margin-top: 30px;padding: 7px;border-radius: 10px;background-color: #33c8b9;border: 0;width: 70px;color: white;margin-left: 10%;">保存</button>
-            <button onclick='$("#cloudwork").css("display","none");' style="margin-left: 10%;padding: 7px;border-radius: 10px;background-color: #c83333;border: 0;width: 70px;color: white;margin-left: 20%;">取消</button>
+            <hr />
+            <p style="font-size: 20px; margin-top: 20px;">作品名称：<input type="text" id="workname"
+                    style="border: 1px solid #ccc; border-radius: 5px; padding: 8px; font-size: 16px;"
+                    placeholder="请输入应用名称"></p>
+            <button id="save"
+                style="margin-top: 30px;padding: 7px;border-radius: 10px;background-color: #33c8b9;border: 0;width: 70px;color: white;margin-left: 10%;">保存</button>
+            <button onclick='$("#cloudwork").css("display","none");'
+                style="margin-left: 10%;padding: 7px;border-radius: 10px;background-color: #c83333;border: 0;width: 70px;color: white;margin-left: 20%;">取消</button>
         </div>
     </div>
 
