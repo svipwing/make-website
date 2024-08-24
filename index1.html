@@ -287,7 +287,8 @@
                             </svg>
                         </a>
 
-                            <a id="username" style="display: inline-block; width: 51px; margin-bottom: 12px; padding-top: 0px;">未登录</a>                        
+                        <a id="username"
+                            style="display: inline-block; width: 51px; margin-bottom: 12px; padding-top: 0px;">未登录</a>
                     </div>
                 </li>
             </ul>
@@ -805,8 +806,8 @@
 	                color: white;
                 "><span>选择文件</span></div>
             </label>
-            <input type="file"id="app_icon" style="display: none;">
-        </p>
+            <input type="file" id="app_icon" style="display: none;">
+            </p>
             <button id="apk_g"
                 style="margin-top: 30px;padding: 7px;border-radius: 10px;background-color: #33c8b9;border: 0;width: 70px;color: white;margin-left: 0%;">打包</button>
             <button onclick='$("#g-apk").css("display","none");'
@@ -821,24 +822,14 @@
             <p style="font-size: 16px; margin-top: 20px;">作品名称<br>
                 <input type="text" id="workname"
                     style="border: 1px solid #ccc; border-radius: 5px; padding: 8px; font-size: 16px; margin-top: 6px;"
-                    placeholder="请输入应用名称"></p>
+                    placeholder="请输入应用名称">
+            </p>
             <button id="save"
                 style="margin-top: 30px;padding: 7px;border-radius: 10px;background-color: #33c8b9;border: 0;width: 70px;color: white;margin-left: 0%;">保存</button>
             <button onclick='$("#cloudwork").css("display","none");'
                 style="margin-left: 10%;padding: 7px;border-radius: 10px;background-color: #c83333;border: 0;width: 70px;color: white;margin-left: 3%;">取消</button>
         </div>
     </div>
-
-    <!-- <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js')
-                .then(reg => console.log('service worker registered'))
-                .catch(err => console.log('service worker not registered', err));
-            window.addEventListener('beforeinstallprompt', event => {
-              event.userChoice.then(result => {console.log(result.outcome);});
-            });
-        }
-    </script> -->
 
 
 </body>

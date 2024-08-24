@@ -16,11 +16,11 @@
 
     <link href="./css/welcome.css" rel="stylesheet" />
 
-    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
 
     <script src="./js/jquery.min.js"></script>
 
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
 
     <script src="./js/jquery.cookie.js"></script>
 
@@ -29,6 +29,8 @@
 
     <script src="./js/web.js"></script>
     <script src="./js/sweetalert.js"></script>
+
+    <script src="https://unpkg.com/darkreader@4.9.89/darkreader.js"></script>
 </head>
 
 <body>
@@ -227,6 +229,38 @@
         defer></script> -->
 
     <script src="./js/less.js"></script>
+
+    <script>
+        const button = document.createElement('button');
+        button.innerText = '🌙';
+        button.style.position = 'fixed';
+        button.style.bottom = '20px';
+        button.style.right = '20px';
+        button.style.padding = '10px';
+        button.style.borderRadius = '50%';
+        button.style.border = 'none';
+        button.style.backgroundColor = '#333';
+        button.style.color = '#fff';
+        button.style.cursor = 'pointer';
+        button.style.zIndex = '1000';
+        
+        let darkModeEnabled = false;
+        
+        // 按钮点击事件：切换深色模式
+        button.onclick = () => {
+            darkModeEnabled = !darkModeEnabled;
+            if (darkModeEnabled) {
+                DarkReader.enable({});
+                button.innerText = '☀️';
+            } else {
+                DarkReader.disable();
+                button.innerText = '🌙';
+            }
+        };
+        
+        // 将按钮添加到页面
+        document.body.appendChild(button);
+    </script>
 
 </body>
 
