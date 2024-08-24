@@ -60,13 +60,55 @@ Blockly.Blocks["p"] = {
 };
 Blockly.Blocks["div"] = {
     init: function () {
-        this.appendDummyInput()
+        this.appendStatementInput('html')
+            .setCheck(null)
             .appendField("块标签")
-            .appendField(new Blockly.FieldTextInput("text"), "text")
             .appendField(",id(可留空):")
             .appendField(new Blockly.FieldTextInput("id"), "id")
             .appendField(",颜色")
             .appendField(new Blockly.FieldTextInput("color"), "color");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+Blockly.Blocks["i"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("斜体文字")
+            .appendField(new Blockly.FieldTextInput("text"), "text")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+Blockly.Blocks["u"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("下划线文字")
+            .appendField(new Blockly.FieldTextInput("text"), "text")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+Blockly.Blocks["s"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("删除线文字")
+            .appendField(new Blockly.FieldTextInput("text"), "text")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(230);
