@@ -277,10 +277,11 @@ input button[type=file] {
 #theme-box {
     border-radius: 10px;
     position: fixed;
-    background-color: rgb(214, 220, 227);
+    background-color: rgb(255, 255, 255);
     padding: 20px;
     width: 75%;
-    height: 75%;
+    height: 70%;
+    padding: 32px;
 }
 
 #g-apk {
