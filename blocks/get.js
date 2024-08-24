@@ -74,6 +74,26 @@ Blockly.Blocks["div"] = {
         this.setHelpUrl("");
     },
 };
+Blockly.Blocks["div_xy"] = {
+    init: function () {
+        this.appendStatementInput('html')
+            .setCheck(null)
+            .appendField("块标签")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id")
+            .appendField(",颜色")
+            .appendField(new Blockly.FieldTextInput("color"), "color")
+            .appendField(",x")
+            .appendField(new Blockly.FieldTextInput("x"), "x")
+            .appendField(",y")
+            .appendField(new Blockly.FieldTextInput("y"), "y");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
 Blockly.Blocks["i"] = {
     init: function () {
         this.appendDummyInput()
@@ -81,6 +101,24 @@ Blockly.Blocks["i"] = {
             .appendField(new Blockly.FieldTextInput("text"), "text")
             .appendField(",id(可留空):")
             .appendField(new Blockly.FieldTextInput("id"), "id");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+Blockly.Blocks["i_xy"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("斜体文字")
+            .appendField(new Blockly.FieldTextInput("text"), "text")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id")
+            .appendField(",x")
+            .appendField(new Blockly.FieldTextInput("x"), "x")
+            .appendField(",y")
+            .appendField(new Blockly.FieldTextInput("y"), "y");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(230);
@@ -102,6 +140,24 @@ Blockly.Blocks["u"] = {
         this.setHelpUrl("");
     },
 };
+Blockly.Blocks["u_xy"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("下划线文字")
+            .appendField(new Blockly.FieldTextInput("text"), "text")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id")
+            .appendField(",x")
+            .appendField(new Blockly.FieldTextInput("x"), "x")
+            .appendField(",y")
+            .appendField(new Blockly.FieldTextInput("y"), "y");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
 Blockly.Blocks["s"] = {
     init: function () {
         this.appendDummyInput()
@@ -109,6 +165,24 @@ Blockly.Blocks["s"] = {
             .appendField(new Blockly.FieldTextInput("text"), "text")
             .appendField(",id(可留空):")
             .appendField(new Blockly.FieldTextInput("id"), "id");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+Blockly.Blocks["s_xy"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("删除线文字")
+            .appendField(new Blockly.FieldTextInput("text"), "text")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id")
+            .appendField(",x")
+            .appendField(new Blockly.FieldTextInput("x"), "x")
+            .appendField(",y")
+            .appendField(new Blockly.FieldTextInput("y"), "y");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(230);

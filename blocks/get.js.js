@@ -81,12 +81,32 @@ Blockly.JavaScript["div"] = function (block) {
     var code = '<div id="' + text_id + '" style="background-color: ' + text_color + '">' + statements_html + '</div>'
     return code;
 };
-
+Blockly.JavaScript["div_xy"] = function (block) {
+    var statements_html = Blockly.JavaScript.statementToCode(block, "html");
+    // var text_text = block.getFieldValue("text");
+    var text_color = block.getFieldValue("color");
+    var text_id = block.getFieldValue("id");
+    var text_x = block.getFieldValue("x");
+    var text_y = block.getFieldValue("y");
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<div id="' + text_id + '" style="position: fixed; background-color: ' + text_color + 'top:' + text_y + '%;' + 'left:' + text_x + '%;">' + statements_html + '</div>'
+    return code;
+};
 Blockly.JavaScript["i"] = function (block) {
     var text_text = block.getFieldValue("text");
     var text_id = block.getFieldValue("id");
     // TODO: Assemble JavaScript into code variable.
     var code = '<i id="' + text_id + '">' + text_text + '</i>'
+    return code;
+};
+
+Blockly.JavaScript["i_xy"] = function (block) {
+    var text_text = block.getFieldValue("text");
+    var text_id = block.getFieldValue("id");
+    var text_x = block.getFieldValue("x");
+    var text_y = block.getFieldValue("y");
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<i id="' + text_id + '" style="position: fixed; ' + 'top:' + text_y + '%;' + 'left:' + text_x + '%;">' + text_text + '</i>'
     return code;
 };
 
@@ -98,11 +118,31 @@ Blockly.JavaScript["u"] = function (block) {
     return code;
 };
 
+Blockly.JavaScript["u_xy"] = function (block) {
+    var text_text = block.getFieldValue("text");
+    var text_id = block.getFieldValue("id");
+    var text_x = block.getFieldValue("x");
+    var text_y = block.getFieldValue("y");
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<u id="' + text_id + '" style="position: fixed; ' + 'top:' + text_y + '%;' + 'left:' + text_x + '%;">' + text_text + '</u>'
+    return code;
+};
+
 Blockly.JavaScript["s"] = function (block) {
     var text_text = block.getFieldValue("text");
     var text_id = block.getFieldValue("id");
     // TODO: Assemble JavaScript into code variable.
     var code = '<s id="' + text_id + '">' + text_text + '</s>'
+    return code;
+};
+
+Blockly.JavaScript["s_xy"] = function (block) {
+    var text_text = block.getFieldValue("text");
+    var text_id = block.getFieldValue("id");
+    var text_x = block.getFieldValue("x");
+    var text_y = block.getFieldValue("y");
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<s id="' + text_id + '" style="position: fixed; ' + 'top:' + text_y + '%;' + 'left:' + text_x + '%;">' + text_text + '</s>'
     return code;
 };
 
