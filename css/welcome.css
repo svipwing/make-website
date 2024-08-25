@@ -44,7 +44,7 @@ a {
 }
 
 h1 {
-    font-size: 72px;
+    font-size: 36px;
     font-weight: 600;
     line-height: normal;
     letter-spacing: 0em;
@@ -76,8 +76,8 @@ p {
 
 button {
     padding: 16px 32px;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 20px;
     letter-spacing: 0em;
     color: white;
     background-color: black;
