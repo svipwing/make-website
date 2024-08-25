@@ -23,7 +23,7 @@
 
     <script src="./js/sweetalert.js"></script>
 
-    <script src="https://unpkg.com/darkreader@4.9.89/darkreader.js"></script>
+    <script src="./js/dark.js"></script>
 </head>
 
 <body>
@@ -70,13 +70,13 @@
 
     <h2 style="margin-top: 64px;margin-left: -3px;">更新历史</h2>
     <p id="history" style="margin-top: 24px;">暂无</p>
-    
+
     <h2 style="margin-top: 64px;margin-left: -3px;">开发成员</h2>
     <div class="group" style="margin-top: 24px;">
         <div class="card">
             <img class="avatar" src="https://q1.qlogo.cn/g?b=qq&nk=3260130869&s=640">
             <h3 style="margin-top: 8px;">技术云</h3>
-            <p style="margin-top: 8px;margin-bottom: 8px;">前端开发、后端开发、页面设计</p>
+            <p style="margin-top: 8px;margin-bottom: 8px;">创始人，前后端开发者、页面设计</p>
         </div>
         <div class="card">
             <img class="avatar" src="https://q1.qlogo.cn/g?b=qq&nk=1130511366&s=640">
@@ -86,53 +86,52 @@
         <div class="card">
             <img class="avatar" src="https://q1.qlogo.cn/g?b=qq&nk=2706176719&s=640">
             <h3 style="margin-top: 8px;">king2022</h3>
-            <p style="margin-top: 8px;margin-bottom: 8px;">前端开发</p>
+            <p style="margin-top: 8px;margin-bottom: 8px;">前端开发者</p>
         </div>
         <div class="card">
             <img class="avatar" src="https://q1.qlogo.cn/g?b=qq&nk=2667174454&s=640">
             <h3 style="margin-top: 8px;">可执行程序</h3>
-            <p style="margin-top: 8px;margin-bottom: 8px;">为产品提供建议，制作彩蛋</p>
+            <p style="margin-top: 8px;margin-bottom: 8px;">彩蛋开发者</p>
         </div>
         <div class="card">
             <img class="avatar" src="https://creation.codemao.cn/716/appcraft/IMAGE_Ees2xtBxc_1723987945518.jpg">
             <h3 style="margin-top: 8px;">海藻酸钠</h3>
-            <p style="margin-top: 8px;margin-bottom: 8px;">UI设计、开发者、官网优化/重构</p>
+            <p style="margin-top: 8px;margin-bottom: 8px;">UI设计、前端开发者，官网重构</p>
         </div>
         <div class="card">
             <img class="avatar" src="https://q1.qlogo.cn/g?b=qq&nk=38888678&s=640">
             <h3 style="margin-top: 8px;">Fgaoxing</h3>
-            <p style="margin-top: 8px;margin-bottom: 8px;">为产品制作UI界面</p>
+            <p style="margin-top: 8px;margin-bottom: 8px;">UI设计、前端开发者</p>
         </div>
         <div class="card">
             <img class="avatar" src="https://creation.codemao.cn/716/appcraft/IMAGE_Sf8gHftTq_1723987941082.png">
             <h3 style="margin-top: 8px;">WA</h3>
-            <p style="margin-top: 8px;margin-bottom: 8px;">后端开发、打包服务器开发</p>
+            <p style="margin-top: 8px;margin-bottom: 8px;">后端开发者，打包服务器研发</p>
         </div>
         <div class="card">
             <img class="avatar" src="https://q1.qlogo.cn/g?b=qq&nk=3463448740&s=640">
-            <h3 style="margin-top: 8px;">Fgaoxing</h3>
-            <p style="margin-top: 8px;margin-bottom: 8px;">前后端开发、账号系统&云作品开发</p>
+            <h3 style="margin-top: 8px;">青柠</h3>
+            <p style="margin-top: 8px;margin-bottom: 8px;">前后端开发者，账号系统&云作品开发</p>
         </div>
         <div class="card">
             <img class="avatar" src="https://q1.qlogo.cn/g?b=qq&nk=3332760455&s=640">
             <h3 style="margin-top: 8px;">酶游明</h3>
-            <p style="margin-top: 8px;margin-bottom: 8px;">前端开发、编辑器UI大优化</p>
+            <p style="margin-top: 8px;margin-bottom: 8px;">前端开发者，编辑器UI大优化</p>
         </div>
         <div class="card">
             <img class="avatar" src="https://q1.qlogo.cn/g?b=qq&nk=3492416851&s=640">
             <h3 style="margin-top: 8px;">ZX</h3>
-            <p style="margin-top: 8px;margin-bottom: 8px;">积木开发者</p>
+            <p style="margin-top: 8px;margin-bottom: 8px;">积木开发者，新增积木</p>
         </div>
     </div>
 
     <div class="footer">
         <center>
+            <p id="sitetime" style="margin-bottom: 15px;"></p>
             <p>&copy;2020～<span id="year">现在</span> 技术云网页开发团队</p>
-            <p id="sitetime"></p>
         </center>
     </div>
 
-    <!-- 当前年份 -->
     <script>
         window.onload = () => {
             now = new Date();
@@ -140,14 +139,10 @@
         };
     </script>
 
-    <!-- 网站运行时间 -->
     <script src="./js/sitetime.js"></script>
-
-    <!-- 获取更新历史 -->
     <script src="./js/gitee.js"></script>
+    <script src="./js/yh.js"></script>
 
-
-    <!-- 日月切换 -->
     <script>
         const button = document.createElement('button');
         button.innerText = '🌙';
@@ -163,9 +158,9 @@
         button.style.color = '#fff';
         button.style.cursor = 'pointer';
         button.style.zIndex = '1000';
-        
+
         let darkModeEnabled = false;
-        
+
         button.onclick = () => {
             darkModeEnabled = !darkModeEnabled;
             if (darkModeEnabled) {
@@ -176,8 +171,35 @@
                 button.innerText = '🌙';
             }
         };
-        
+
         document.body.appendChild(button);
+
+        var cnt = 0;
+        document.getElementById("sitetime").addEventListener("click", function () {
+            cnt++;
+
+            if (cnt == 3) {
+                window.location = "old/index.html";
+            }
+        });
+
+        function isMobile() {
+            const userAgentInfo = navigator.userAgent;
+            const mobileAgents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+            let mobileFlag = false;
+            for (let i = 0; i < mobileAgents.length; i++) {
+                if (userAgentInfo.indexOf(mobileAgents[i]) > 0) {
+                    mobileFlag = true;
+                    break;
+                }
+            }
+            return mobileFlag;
+        }
+
+        if (isMobile()) {
+            $(".right").hide();
+        }
+
     </script>
 
 </body>
