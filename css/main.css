@@ -172,6 +172,7 @@ body {
     padding: 5px;
     margin-right: 10px
 }
+
 input button[type=file] {
     flex: 1;
     padding: 5px;
@@ -211,8 +212,8 @@ input button[type=file] {
 #blocklyDiv {
     position: fixed;
     width: 60%;
-    height: calc(100% - 42px);
-    margin-top: 42px;
+    height: calc(100% - 50px);
+    margin-top: 50px;
 }
 
 .blocklyFlyout {
@@ -325,6 +326,7 @@ input button[type=file] {
     width: 40%;
     height: 45%;
 }
+
 .datainput {
     padding: .75rem 1rem;
     border: 1px solid #ffffff;
@@ -338,11 +340,13 @@ input button[type=file] {
     width: calc(100% - 3em - 2px);
     transition: border .8s;
     box-shadow: var(--box-shadow);
-    
+
 }
+
 body {
     background-image: url(https://static.codemao.cn/pickduck/rJ74KWDs0.jpg?hash=FsP728EZjY33-BSUhdk1AAvoYiRY);
 }
+
 .g-apk-card {
     background-color: white;
 }
