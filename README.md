@@ -61,6 +61,8 @@
 6. WA - APK打包功能 开发者
 7. 海藻酸钠 - 官网UI优化的设计师、开发者
 8. 青柠 - 后端开发者，负责账号系统和云作品
+9. 酶游明 - 前端开发者，编辑器UI优化
+10. zx - 前端开发者，添加积木
 
 本仓库使用了jquery和bootstrap框架，markdown编辑器采用markdown.js、html2md.js，代码高亮采用highlight.js，截图功能使用js-screen-shot
 
