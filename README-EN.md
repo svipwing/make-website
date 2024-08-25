@@ -19,9 +19,9 @@
 <hr/>
 
 <center>
-<img src="./image/cover.png" width="400px" height="300px" />
+<img src="./image/cover.png" />
 <hr />
-<img src="./image/help2.png" width="400px" height="300px" />
+<img src="./image/show.png" />
 <hr />
 <img src="https://compass.gitee.com/chart/svzp5m02.svg?metric=overview&y_trans=1&range=6M" alt="OSS Compass Analyze" />
 </center>
