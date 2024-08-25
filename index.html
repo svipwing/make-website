@@ -2,8 +2,7 @@
 <html>
 
 <head>
-    <meta charset="utf-8" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-        name="viewport" />
+    <meta charset="utf-8" content="width=device-width, initial-scale=1" name="viewport" />
 
     <link href="favicon.ico" rel="shortcut icon">
 
@@ -28,174 +27,109 @@
 </head>
 
 <body>
-    <a href='https://gitee.com/jsy-1/make-website' style="z-index: 9999; position: fixed; top: 0; right: 0">
-        <img alt='Fork me on Gitee' src='https://gitee.com/jsy-1/make-website/widgets/widget_5.svg'>
-        </img>
-    </a>
-
-    <div class="nav">
-        <big> 网页开发助手 </big>
-        <div class="link-group">
-            <a href="./index1.html"> 开始使用 </a>
-
-            <a id="qq" style="cursor: pointer;"> 加入QQ群 </a>
-
-            <a id="gitee_repo_pc" href="https://gitee.com/jsy-1/make-website" target="_blank"> Gitee仓库 </a>
-        </div>
-    </div>
-
-    <div class="title">
-        <div class="title-text">
-            <h1 style="color:#EE601E;margin-top:150px;margin-bottom:0;font-weight: bold;">
-                网页开发助手
-                <p id="version" style="display:none;font-size:12px;color:white;margin-bottom:0;">最新版</p>
-            </h1>
-
-            <h2 style="color:#DB9999;margin-top:20px;font-weight: bold;">
-                让世界上没有难做的网页！
-            </h2>
-            <a href="./index1.html">
-                <button style="margin-top: 20px; margin-bottom: 20px;border-radius: 10px;">立即体验</button>
+    <div class="bg"></div>
+    <header>
+        <div class="link">
+            <a href="https://gitee.com/jsy-1/make-website" target="_blank">
+                <img src="/image/gitee.svg">
             </a>
-            <div id="pc" style="width: 100%;display: flex;margin-bottom: 20px;">
-                <div class="feature">
-                    <h3>操作简单</h2>
-                        <h4>文档详细，小白易懂</h4>
-                </div>
-                <div class="feature">
-                    <h3>界面清爽</h2>
-                        <h4>简洁的界面</h4>
-                </div>
-                <div class="feature">
-                    <h3>生成代码</h2>
-                        <h4>支持一键生成代码</h4>
-                </div>
-                <div class="feature">
-                    <h3>实时预览</h2>
-                        <h4>实时查看效果</h4>
-                </div>
-                <div class="feature">
-                    <h3>答疑解惑</h2>
-                        <h4>有工作人员为您答疑解惑</h4>
-                </div>
-            </div>
+            <img id="qq" src="/image/qq.svg" style="cursor: pointer;">
+        </div>
+    </header>
+
+    <div class="intro">
+        <div class="left">
+            <img src="/image/logo_new.png" width="100px" height="100px">
+            <h1 style="margin-top: 24px;margin-left: -4px;">网页开发助手</h1>
+            <p style="font-size: 24px;">图形化网页开发工具，让世界上没有难做的网页</p>
+            <button onclick="window.location.href='/index1.html'" style="margin-top: 48px;">开始使用</button>
+        </div>
+        <div class="right">
+            <img src="/image/illus.svg" width="100%">
         </div>
     </div>
 
-    <center>
+    <div class="group">
         <div class="card">
-            <h2>关于我们</h2>
-            <h3>
-                一个图形化的网页开发工具<br /><br />
-                快速开发网页，让世界上没有难做的网页！
-            </h3>
+            <h3>操作简单</h3>
+            <p style="margin-top: 8px;margin-bottom: 8px;">文档详细，小白易懂</p>
         </div>
-    </center>
-
-    <center>
         <div class="card">
-            <h2>发展历史</h2>
-            <br />
-            <h3 id="history"></h3>
+            <h3>界面清爽</h3>
+            <p style="margin-top: 8px;margin-bottom: 8px;">界面简洁，功能直达</p>
         </div>
-    </center>
-
-    <center>
-        <div class="card" style="margin-bottom: 40px;">
-            <h1 style="margin-bottom: 20px">我们的团队成员</h1>
-            <div class="double">
-                <div class="member" style="height: auto; padding: 10px">
-                    <img height="100px;" src="https://q1.qlogo.cn/g?b=qq&nk=3260130869&s=640" style="margin-top: 15px"
-                        width="100px" />
-                    <h2>技术云</h2>
-                    <h3>领导者<br />负责前端开发、后端开发、页面设计</h3>
-                </div>
-                <div class="member" style="height: auto; padding: 10px">
-                    <img height="100px;" src="https://q1.qlogo.cn/g?b=qq&nk=1130511366&s=640" style="margin-top: 15px"
-                        width="100px" />
-                    <h2>CoolPlayLin</h2>
-                    <h3>全能开发者<br />精通前后端</h3>
-                </div>
-            </div>
-
-            <div class="double">
-                <div class="member" style="height: auto; padding: 10px">
-                    <img height="100px;" src="https://q1.qlogo.cn/g?b=qq&nk=2706176719&s=640" style="margin-top: 15px"
-                        width="100px" />
-                    <h2>king2022</h2>
-                    <h3>开发者<br />前端开发</h3>
-                </div>
-
-                <div class="member" style="height: auto; padding: 10px">
-                    <img height="100px;" src="https://q1.qlogo.cn/g?b=qq&nk=2667174454&s=640" style="margin-top: 15px"
-                        width="100px" />
-                    <h2>可执行程序</h2>
-                    <h3>为产品提供建议，制作彩蛋</h3>
-                </div>
-            </div>
-
-            <div class="double">
-                <div class="member" style="height: auto; padding: 10px">
-                    <img height="100px;"
-                        src="https://creation.codemao.cn/716/appcraft/IMAGE_Ees2xtBxc_1723987945518.jpg"
-                        style="margin-top: 15px" width="100px" />
-                    <h2>海藻酸钠</h2>
-                    <h3>UI设计、开发者<br />官网优化/重构</h3>
-                </div>
-
-                <div class="member" style="height: auto; padding: 10px;">
-                    <img height="100px;" src="https://q1.qlogo.cn/g?b=qq&nk=38888678&s=640" style="margin-top: 15px"
-                        width="100px" />
-                    <h2>Fgaoxing</h2>
-                    <h3>开发者<br />为产品制作UI界面</h3>
-                </div>
-            </div>
-
-            <div class="double">
-                <div class="member" style="height: auto; padding: 10px">
-                    <img height="100px;"
-                        src="https://creation.codemao.cn/716/appcraft/IMAGE_Sf8gHftTq_1723987941082.png"
-                        style="margin-top: 15px" width="100px" />
-                    <h2>WA</h2>
-                    <h3>后端开发者<br />打包服务器开发</h3>
-                </div>
-
-                <div class="member" style="height: auto; padding: 10px;">
-                    <img height="100px;" src="https://q1.qlogo.cn/g?b=qq&nk=3463448740&s=640" style="margin-top: 15px"
-                        width="100px" />
-                    <h2 style="position: relative;left:22.5px;">青柠
-                        <div
-                            style="display: inline-block;position: relative;background:#F8EFC3;color:#C19A26;border:solid 1px #C19A26;border-radius:2.5px;width:45px;height:17px;font-size: 12px;padding: 10px;">
-                            <img src="./flash.gif" style="position:absolute;top:0;left:0;width:45px;height:100%;">
-                            <span
-                                style="position: absolute;display: inline;align-items: center;top:5px;left:10px;">大佬</span>
-                            <div>
-                    </h2>
-                    <h3>前后端开发者<br />账号系统和云作品开发</h3>
-                </div>
-            </div>
-
-            <div class="double">
-                <div class="member" style="height: auto; padding: 10px">
-                    <img height="100px;" src="https://q1.qlogo.cn/g?b=qq&nk=3332760455&s=640" style="margin-top: 15px"
-                        width="100px" />
-                    <h2>酶游明</h2>
-                    <h3>前端开发者<br />编辑器UI大优化</h3>
-                </div>
-
-                <div class="member" style="height: auto; padding: 10px;">
-                    <img height="100px;" src="https://q1.qlogo.cn/g?b=qq&nk=3492416851&s=640" style="margin-top: 15px"
-                        width="100px" />
-                    <h2>ZX</h2>
-                    <h3>积木开发者<br />新增积木</h3>
-                </div>
-            </div>
+        <div class="card">
+            <h3>生成代码</h3>
+            <p style="margin-top: 8px;margin-bottom: 8px;">一键生成，高效开发</p>
         </div>
-    </center>
+        <div class="card">
+            <h3>实时预览</h3>
+            <p style="margin-top: 8px;margin-bottom: 8px;">快捷预览，无惧调试</p>
+        </div>
+    </div>
 
-    <div class="banquan" style="margin-bottom: 20px;">
-        <b style="display: block;">&copy;2020～<span id="year">现在</span> 技术云网页开发团队</b>
-        <b id="sitetime"></b>
+    <h2 style="margin-top: 64px;margin-left: -3px;">更新历史</h2>
+    <p id="history" style="margin-top: 24px;">暂无</p>
+    
+    <h2 style="margin-top: 64px;margin-left: -3px;">开发成员</h2>
+    <div class="group" style="margin-top: 24px;">
+        <div class="card">
+            <img class="avatar" src="https://q1.qlogo.cn/g?b=qq&nk=3260130869&s=640">
+            <h3 style="margin-top: 8px;">技术云</h3>
+            <p style="margin-top: 8px;margin-bottom: 8px;">前端开发、后端开发、页面设计</p>
+        </div>
+        <div class="card">
+            <img class="avatar" src="https://q1.qlogo.cn/g?b=qq&nk=1130511366&s=640">
+            <h3 style="margin-top: 8px;">CoolPlayLin</h3>
+            <p style="margin-top: 8px;margin-bottom: 8px;">全能开发者，精通前后端</p>
+        </div>
+        <div class="card">
+            <img class="avatar" src="https://q1.qlogo.cn/g?b=qq&nk=2706176719&s=640">
+            <h3 style="margin-top: 8px;">king2022</h3>
+            <p style="margin-top: 8px;margin-bottom: 8px;">前端开发</p>
+        </div>
+        <div class="card">
+            <img class="avatar" src="https://q1.qlogo.cn/g?b=qq&nk=2667174454&s=640">
+            <h3 style="margin-top: 8px;">可执行程序</h3>
+            <p style="margin-top: 8px;margin-bottom: 8px;">为产品提供建议，制作彩蛋</p>
+        </div>
+        <div class="card">
+            <img class="avatar" src="https://creation.codemao.cn/716/appcraft/IMAGE_Ees2xtBxc_1723987945518.jpg">
+            <h3 style="margin-top: 8px;">海藻酸钠</h3>
+            <p style="margin-top: 8px;margin-bottom: 8px;">UI设计、开发者、官网优化/重构</p>
+        </div>
+        <div class="card">
+            <img class="avatar" src="https://q1.qlogo.cn/g?b=qq&nk=38888678&s=640">
+            <h3 style="margin-top: 8px;">Fgaoxing</h3>
+            <p style="margin-top: 8px;margin-bottom: 8px;">为产品制作UI界面</p>
+        </div>
+        <div class="card">
+            <img class="avatar" src="https://creation.codemao.cn/716/appcraft/IMAGE_Sf8gHftTq_1723987941082.png">
+            <h3 style="margin-top: 8px;">WA</h3>
+            <p style="margin-top: 8px;margin-bottom: 8px;">后端开发、打包服务器开发</p>
+        </div>
+        <div class="card">
+            <img class="avatar" src="https://q1.qlogo.cn/g?b=qq&nk=3463448740&s=640">
+            <h3 style="margin-top: 8px;">Fgaoxing</h3>
+            <p style="margin-top: 8px;margin-bottom: 8px;">前后端开发、账号系统&云作品开发</p>
+        </div>
+        <div class="card">
+            <img class="avatar" src="https://q1.qlogo.cn/g?b=qq&nk=3332760455&s=640">
+            <h3 style="margin-top: 8px;">酶游明</h3>
+            <p style="margin-top: 8px;margin-bottom: 8px;">前端开发、编辑器UI大优化</p>
+        </div>
+        <div class="card">
+            <img class="avatar" src="https://q1.qlogo.cn/g?b=qq&nk=3492416851&s=640">
+            <h3 style="margin-top: 8px;">ZX</h3>
+            <p style="margin-top: 8px;margin-bottom: 8px;">积木开发者</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <center>
+            <p>&copy;2020～<span id="year">现在</span> 技术云网页开发团队</p>
+            <p id="sitetime"></p>
+        </center>
     </div>
 
     <!-- 当前年份 -->
@@ -214,9 +148,11 @@
 
 
     <!-- 日月切换 -->
-    <!-- <script>
+    <script>
         const button = document.createElement('button');
         button.innerText = '🌙';
+        button.style.width = '50px';
+        button.style.height = '50px';
         button.style.position = 'fixed';
         button.style.bottom = '20px';
         button.style.right = '20px';
@@ -242,7 +178,7 @@
         };
         
         document.body.appendChild(button);
-    </script> -->
+    </script>
 
 </body>
 

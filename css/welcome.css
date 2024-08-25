@@ -1,132 +1,116 @@
 * {
-    margin: 0;
+    margin: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    padding: 32px 64px;
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+    background-size: 16px 16px;
 }
 
 a {
     text-decoration: none;
 }
 
-#close {
-    padding: 10px;
-    background-color: white;
-    font-size: 25px;
-    position: absolute;
-    top: 50px;
-    right: 10px;
+.link {
+    display: flex;
+    justify-content: end;
+    gap: 24px;
 }
 
-.nav {
-    font-weight: bold;
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    color: black;
-    background-color: white;
-    width: 100%;
-    height: 60px;
-    padding: 5px;
+.intro {
+    margin-top: 64px;
     display: flex;
+    gap: 32px;
     align-items: center;
     justify-content: space-between;
 }
 
-.nav .link-group {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10%;
+.flex-col {
+    flex-direction: column;
 }
 
-.nav a {
-    color: black;
+h1 {
+    font-size: 72px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0em;
 }
 
-.title {
-    margin-top: 60px;
-    text-align: center;
-    align-items: center;
-    background-image: url('https://cdn.myhkw.cn/open/img/mojave');
-    background-size: cover;
-    background-position: center;
-    height: auto;
-    width: auto;
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0em;
 }
 
-.title .title-text {
-    backdrop-filter: blur(8px);
-    padding: 10px;
-}
-
-.title button {
-    background-color: #0052D9;
-    color: white;
-    width: 90px;
-    height: 40px;
-    border-width: 0;
-}
-
-.feature {
-    border-radius: 10px;
-    width: 100%;
-    height: 150px;
-    margin: 10px;
-    padding: 5px;
-    text-align: center;
-    background: white linear-gradient(180deg, #FFFFFF 0%, #D6DBDC 100%);
-    border: 1px solid #D6DBDC;
-    transition: all 0.3s ease-in-out;
-}
-
-.member {
-    border-radius: 10px;
-    height: 150px;
-    width: 100%;
-    display: block;
-    margin-top: 10px;
-    text-align: center;
-    background: white linear-gradient(180deg, #FFFFFF 0%, #D6DBDC 100%);
-    border: 2px solid #D6DBDC;
-    transition: all 0.3s ease-in-out;
-}
-
-.banquan {
-    font-size: 20px;
-    text-align: center;
-}
-
-.msg {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background-color: grey;
-    width: auto;
-    color: white;
-    opacity: 0.8;
-    height: auto;
-    padding: 20px;
-    font-size: 20px;
-    display: none;
-    z-index: 1;
-}
-
-.msg p {
+h3 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0em;
+    overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.card {
-    border-radius: 10px;
-    text-align: center;
-    align-items: center;
-    margin-top: 40px;
-    width: 85%;
-    background-color: white;
-    border: 2px solid #D6DBDC;
-    padding: 20px;
+p {
+    font-weight: normal;
+    line-height: normal;
+    letter-spacing: 0em;
+    color: #3D3D3D;
 }
 
-.card .double {
-    display: flex;
-    gap: 10px;
-    width: 100%;
+button {
+    padding: 16px 32px;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0em;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.group {
+    margin-top: 64px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.footer {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
 }
