@@ -212,8 +212,8 @@ input button[type=file] {
 #blocklyDiv {
     position: fixed;
     width: 60%;
-    height: calc(100% - 45px);
-    margin-top: 45px;
+    height: calc(100% - 50px);
+    margin-top: 50px;
 }
 
 .blocklyFlyout {

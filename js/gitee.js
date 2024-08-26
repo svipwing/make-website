@@ -17,6 +17,7 @@ request = $.ajax({
         }
 
         let text = $("#history");
+        text.html("");
         for (let i in result) {
             let s = i.replace("\n", "").replace("[update]", "");
             if (s.includes("Signed-off-by:")) {
