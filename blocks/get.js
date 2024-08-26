@@ -190,6 +190,73 @@ Blockly.Blocks["s_xy"] = {
         this.setHelpUrl("");
     },
 };
+Blockly.Blocks["table"] = {
+    init: function () {
+        this.appendStatementInput('table')
+            .appendField("定义表格")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+Blockly.Blocks["tr_head"] = {
+    init: function () {
+        this.appendStatementInput('tr')
+            .appendField("表头行")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+Blockly.Blocks["tr"] = {
+    init: function () {
+        this.appendStatementInput('tr')
+            .appendField("表格行")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+Blockly.Blocks["th"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("定义表头")
+            .appendField(new Blockly.FieldTextInput("text"), "text")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+Blockly.Blocks["td"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("定义单元格")
+            .appendField(new Blockly.FieldTextInput("text"), "text")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
 Blockly.Blocks["go"] = {
     init: function () {
         this.appendDummyInput()

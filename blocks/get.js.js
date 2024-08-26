@@ -45,7 +45,7 @@ Blockly.JavaScript["go"] = function (block) {
     var text_title = block.getFieldValue("title");
     var dropdown_unicode = block.getFieldValue("unicode");
     var code =
-        '<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=' +
+        '<html>\n<head>\n<script src=" https://static.codemao.cn/pickduck/Sk6ZKOYoR.js?hash=FvdCzpDmExIP2wPGUy13G5i3NEfy"></script><meta http-equiv="Content-Type" content="text/html; charset=' +
         dropdown_unicode +
         '">\n<title>' +
         text_title +
@@ -143,6 +143,43 @@ Blockly.JavaScript["s_xy"] = function (block) {
     var text_y = block.getFieldValue("y");
     // TODO: Assemble JavaScript into code variable.
     var code = '<s id="' + text_id + '" style="position: fixed; ' + 'top:' + text_y + '%;' + 'left:' + text_x + '%;">' + text_text + '</s>'
+    return code;
+};
+Blockly.JavaScript["table"] = function (block) {
+    var statements_table = Blockly.JavaScript.statementToCode(block, "table");
+    var text_id = block.getFieldValue("id");
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<s-table id="' + text_id + '">' + statements_table + '</s-table>'
+    return code;
+};
+Blockly.JavaScript["tr_head"] = function (block) {
+    var statements_tr = Blockly.JavaScript.statementToCode(block, "tr");
+    var text_id = block.getFieldValue("id");
+    // TODO: Assemble JavaScript into code variable.
+    var code = ' <s-thead><s-tr id="' + text_id + '">' + statements_tr + '</s-tr> </s-thead>\n'
+    return code;
+};
+Blockly.JavaScript["tr"] = function (block) {
+    var statements_tr = Blockly.JavaScript.statementToCode(block, "tr");
+    var text_id = block.getFieldValue("id");
+    // TODO: Assemble JavaScript into code variable.
+    var code = ' <s-tbody><s-tr id="' + text_id + '">' + statements_tr + '</s-tr></s-tbody>\n'
+    return code;
+};
+
+Blockly.JavaScript["th"] = function (block) {
+    var text_text = block.getFieldValue("text");
+    var text_id = block.getFieldValue("id");
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<s-th id="' + text_id + '">' + text_text + '</s-th>\n'
+    return code;
+};
+
+Blockly.JavaScript["td"] = function (block) {
+    var text_text = block.getFieldValue("text");
+    var text_id = block.getFieldValue("id");
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<s-td id="' + text_id + '">' + text_text + '</s-td>\n'
     return code;
 };
 
