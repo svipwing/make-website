@@ -50,6 +50,7 @@
     <script src="./js/cs.js"></script>
 
     <script src="./js/crypto.js"></script>
+    <link rel="stylesheet" href="https://static.codemao.cn/pickduck/rykwtwKsA.css?hash=FnOA4R-uAmCtLkbSimn8d65lAYl4">
 
     <script>
         $(document).ready(function () {
@@ -102,6 +103,7 @@
 
     <header class="navbar" data-intro="这里是站点导航栏，通往不同的页面" data-title="导航栏">
         <s-page style="background: none; color: white;" theme="primary">
+            
             <ul>
                 <li>
                     <img src="./image/logo_new.png" width="30px" height="30px"
@@ -110,7 +112,7 @@
                 <li><b style="margin-right: 10px;">网页开发助手</b><b style="margin-right: 25px;"> </b></li>
 
                 <li><b style="margin-right: 10px;">|</b></li>
-                <s-popup-menu style="border: white; z-index: 9999999999999; border-radius: 12px;">
+                <s-popup-menu style="border: white; z-index: 999; border-radius: 12px;">
                     <s-button slot="trigger" type="text" style="color: white; border-radius: 12px;">代码</s-button>
                     <s-popup-menu-item href="javascript:void(0)" id="code_open">
                         <s-icon slot="start" style="color: black; margin-left: 16px; width: 18px; height: 18px;">
@@ -134,7 +136,7 @@
                 </s-popup-menu>
 
                 <li><b style="margin-right: 10px;margin-left: 10px; display: none;">|</b></li>
-                <s-popup-menu style="border: white; z-index: 99999999; border-radius: 12px;">
+                <s-popup-menu style="border: white; z-index: 999; border-radius: 12px;">
                     <s-button slot="trigger" type="text" style="color: white; border-radius: 12px;">主题</s-button>
                     <s-popup-menu-item href="javascript:void(0)" onclick='$("#box-parent").css("display","flex");'>
                         <s-icon slot="start" style="color: black; margin-left: 16px; width: 18px; height: 18px;">
@@ -181,7 +183,7 @@
                 </script>
 
                 <li><b style="margin-right: 10px;margin-left: 10px; display: none;">|</b></li>
-                <s-popup-menu style="border: white; z-index: 99999999; border-radius: 12px;">
+                <s-popup-menu style="border: white; z-index: 999; border-radius: 12px;">
                     <s-button slot="trigger" type="text" style="color: white; border-radius: 12px;">其他</s-button>
                     <s-popup-menu-item href="javascript:void(0)" onclick="intro()">
                         <s-icon slot="start" style="color: black; margin-left: 16px; width: 18px; height: 18px;">
@@ -226,7 +228,7 @@
                 </s-popup-menu>
 
                 <li><b style="margin-right: 10px;margin-left: 10px;">|</b></li>
-                <s-popup-menu style="border: white; z-index: 99999999; border-radius: 12px;">
+                <s-popup-menu style="border: white; z-index: 999; border-radius: 12px;">
                     <s-button slot="trigger" type="text" style="color: white; border-radius: 12px;">打包</s-button>
                     <s-popup-menu-item href="javascript:void(0)" onclick='$("#g-apk").css("display","flex");'>
                         <s-icon slot="start" style="color: black; margin-left: 16px; width: 18px; height: 18px;">
@@ -271,6 +273,12 @@
                         </svg>
                     </a>
                 </li>
+                <li><b style="margin-right: 10px;margin-left: 10px;">|</b></li>              
+                <li>
+                    <a onclick="document.querySelector('#dialog').show()">
+                            <svg t="1724640283288" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6518" width="512" height="512"><path d="M874.951472 210.827653c-12.698365-22.787477-23.135378-42.965702-30.615237-58.44727v-1.391602c-20.526125-38.964847-44.357303-60.360722-75.320441-66.101079-46.444706-8.52356-84.365851 23.831179-120.721444 57.403569-13.394166-23.135378-26.092531-45.053104-36.181644-65.057378l-1.739502-3.131104a27.310183 27.310183 0 0 0-3.479004-5.218506A85.757453 85.757453 0 0 0 521.658598 32.876589a104.370125 104.370125 0 0 0-79.843146 78.103644 102.456673 102.456673 0 0 1-14.437868 29.223635c-19.656374-33.05054-36.877444-59.490971-46.792606-78.103643-58.44727-95.672615-128.723155-69.580084-123.504648 5.914307 7.653809 108.37098-142.117321 188.735977-202.304093 216.56801A33.746341 33.746341 0 0 0 34.598013 322.329737l146.292126 679.275565 5.566406-1.043701a44.183353 44.183353 0 0 0 18.960573 14.089967 44.531253 44.531253 0 0 0 26.788332 9.219361 26.440432 26.440432 0 0 0 5.218506 0c395.736725-47.140507 630.047656-151.684582 716.15301-319.024683 93.063362-179.516615-14.437867-376.428252-78.625494-494.018593zM537.835967 538.027996v-1.043701c0-7.653809 1.391602-15.133668 1.739502-22.787478v-1.391601-39.660648a38.095096 38.095096 0 0 0 0-6.262208v-1.739502a548.986859 548.986859 0 0 0-9.915162-77.059942v-3.826905-2.087402c0-0.695801-1.043701-4.174805-1.391602-6.262208-1.391602-6.610108-3.131104-13.394166-4.870605-20.352174a81.234748 81.234748 0 0 0-2.435303-8.871461 770.947325 770.947325 0 0 0-47.488407-123.504648 206.652848 206.652848 0 0 0 54.098515-88.366706 27.658083 27.658083 0 0 1 9.219361-14.785768c13.394166 25.744631 29.571535 53.402714 46.444705 82.626349 74.97254 128.375254 168.209852 288.409446 110.110483 430.178867-42.269901 103.152474-161.425794 189.953628-355.728177 258.83791 134.463511-118.634042 189.605728-239.877338 201.260391-352.771023z m338.333156 125.939951C835.812675 742.419491 747.793869 805.737367 612.112706 853.921575c78.799445-54.794316 132.202159-117.416391 161.077893-188.214126 63.665776-156.555188-7.653809-316.24148-80.191046-445.660435 3.131104-2.783203 6.262208-5.566407 9.219361-8.52356a245.269794 245.269794 0 0 1 50.271611-39.834598 71.493536 71.493536 0 0 1 12.002564 17.395021c8.52356 18.264772 19.656374 38.964847 32.702639 62.969976 60.186772 109.066781 150.29298 273.971579 79.147345 411.218293z m0 0" fill="#ffffff" p-id="6519"></path></svg>
+                    </a>
+                </li>
 
                 <li style="position: fixed;right:20%;display: flex;align-items: center;">
                         <a style="display: flex;margin-right: 0;align-items: center;" href="/user_system/">
@@ -278,6 +286,82 @@
                             <p style="display: inline-block;margin-left: 10px;color: white;" id="username">未登录</p>
                         </a>
                 </li>
+                <s-dialog id="dialog" style="padding: 16px; z-index: 99999999999999999999999999999999999999999; overflow: hidden;">
+
+                    <h3 style="text-align: start; margin-bottom: 8px; width: auto; align-items: start;">作品</h3>     
+                     <s-tab style="margin-bottom: 24px;">
+                         <s-tab-item style="align-items: center;">
+                           <div slot="text">我的作品</div>
+                         </s-tab-item>
+
+                       </s-tab>
+                     <div style="width: 100%; height: 64vh; display: grid;    /*行间距*/
+                     grid-row-gap: 24px;
+                     /*列间距*/
+                     grid-column-gap: 24px;
+                     /*每3行有2个行间距，所以每个格子的宽高都要减去(24*2) / 3 */
+                     grid-template-columns: repeat(3, calc(33.33% - 16px));
+                     overflow: auto;
+                     margin-bottom: 8px;
+">
+                         <s-card clickable="true" type="outlined" style="text-align: start; max-width: 240px; height: 205px; margin-bottom: 16px;">
+                             <div slot="image">
+                                 <img src="https://static.codemao.cn/pickduck/B1x9DwtiR.jpg?hash=FsP728EZjY33-BSUhdk1AAvoYiRY" alt="" width="238px" height="128px">
+                             </div>
+                             <div style="padding: 16px;">
+                             <div slot="headline" style="font-size: 20px; font-weight: 900; margin-bottom: 2px;">测试作品</div>
+                             <div slot="subhead">ID：0000000</div>
+                             </div>
+                           </s-card>
+                           <s-card clickable="true" type="outlined" style="text-align: start; max-width: 240px; height: 205px;">
+                            <div slot="image">
+                                <img src="https://static.codemao.cn/pickduck/B1x9DwtiR.jpg?hash=FsP728EZjY33-BSUhdk1AAvoYiRY" alt="" width="238px" height="128px">
+                            </div>
+                            <div style="padding: 16px;">
+                            <div slot="headline" style="font-size: 20px; font-weight: 900; margin-bottom: 2px;">测试作品</div>
+                            <div slot="subhead">ID：0000000</div>
+                            </div>
+                          </s-card>
+                          <s-card clickable="true" type="outlined" style="text-align: start; max-width: 240px; height: 205px;">
+                            <div slot="image">
+                                <img src="https://static.codemao.cn/pickduck/B1x9DwtiR.jpg?hash=FsP728EZjY33-BSUhdk1AAvoYiRY" alt="" width="238px" height="128px">
+                            </div>
+                            <div style="padding: 16px;">
+                            <div slot="headline" style="font-size: 20px; font-weight: 900; margin-bottom: 2px;">测试作品</div>
+                            <div slot="subhead">ID：0000000</div>
+                            </div>
+                          </s-card>
+                          <s-card clickable="true" type="outlined" style="text-align: start; max-width: 240px; height: 205px;">
+                            <div slot="image">
+                                <img src="https://static.codemao.cn/pickduck/B1x9DwtiR.jpg?hash=FsP728EZjY33-BSUhdk1AAvoYiRY" alt="" width="238px" height="128px">
+                            </div>
+                            <div style="padding: 16px;">
+                            <div slot="headline" style="font-size: 20px; font-weight: 900; margin-bottom: 2px;">测试作品</div>
+                            <div slot="subhead">ID：0000000</div>
+                            </div>
+                          </s-card>
+                          <s-card clickable="true" type="outlined" style="text-align: start; max-width: 240px; height: 205px;">
+                            <div slot="image">
+                                <img src="https://static.codemao.cn/pickduck/B1x9DwtiR.jpg?hash=FsP728EZjY33-BSUhdk1AAvoYiRY" alt="" width="238px" height="128px">
+                            </div>
+                            <div style="padding: 16px;">
+                            <div slot="headline" style="font-size: 20px; font-weight: 900; margin-bottom: 2px;">测试作品</div>
+                            <div slot="subhead">ID：0000000</div>
+                            </div>
+                          </s-card>
+                          <s-card clickable="true" type="outlined" style="text-align: start; max-width: 240px; height: 205px;">
+                            <div slot="image">
+                                <img src="https://static.codemao.cn/pickduck/B1x9DwtiR.jpg?hash=FsP728EZjY33-BSUhdk1AAvoYiRY" alt="" width="238px" height="128px">
+                            </div>
+                            <div style="padding: 16px;">
+                            <div slot="headline" style="font-size: 20px; font-weight: 900; margin-bottom: 2px;">测试作品</div>
+                            <div slot="subhead">ID：0000000</div>
+                            </div>
+                          </s-card>
+                     </div>
+
+                     <s-button slot="action" type="text">退出</s-button>
+                   </s-dialog> 
             </ul>
         </s-page>
 
