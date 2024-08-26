@@ -302,25 +302,24 @@
                     </a>
                 </li>
                 <s-dialog id="dialog"
-                    style="padding: 16px; z-index: 99999999999999999999999999999999999999999; overflow: hidden;">
+                    style="padding: 16px; z-index: 99999999999999999999999999999999999999999; overflow: hidden; display: flex; flex-direction: row; align-items: start;">
+                    <h3 style="margin-left: 2px; text-align: start; margin-bottom: 8px; width: auto; align-items: start;">作品
+                        </h3>                
+                    <div style="
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    ">
 
-                    <<<<<<< HEAD <h3 style="text-align: start; margin-bottom: 8px; width: auto; align-items: start;">作品
-                        </h3>
-                        <s-tab style="margin-bottom: 24px;">
-                            <s-tab-item style="align-items: center;">
-                                <div slot="text">我的作品</div>
-                            </s-tab-item>
-                            =======
-                            <h3 style="text-align: start; margin-bottom: 8px; width: auto; align-items: start;">作品</h3>
-                            <s-tab style="margin-bottom: 24px;">
-                                <s-tab-item style="align-items: center;" selected="true">
-                                    <div slot="text">我的作品</div>
-                                </s-tab-item>
-                                >>>>>>> 14c21ae8f6fccf1a3f2cd3c8e0136b98fb26760d
-
-                            </s-tab>
+                    <s-tab style="margin-bottom: 8px; width: 99%;">
+                       <s-tab-item selected="true">
+                         <div slot="text">我的作品</div>
+                       </s-tab-item>
+                     </s-tab>
                             <div style="width: 100%; height: 64vh; display: grid;    /*行间距*/
                      grid-row-gap: 24px;
+                     margin-left: 8px;
                      /*列间距*/
                      grid-column-gap: 24px;
                      /*每3行有2个行间距，所以每个格子的宽高都要减去(24*2) / 3 */
@@ -406,7 +405,48 @@
                                         <div slot="subhead">ID：0000000</div>
                                     </div>
                                 </s-card>
-                            </div>
+                                <s-card clickable="true" type="outlined"
+                                style="text-align: start; max-width: 240px; height: 205px;">
+                                <div slot="image">
+                                    <img src="https://static.codemao.cn/pickduck/B1x9DwtiR.jpg?hash=FsP728EZjY33-BSUhdk1AAvoYiRY"
+                                        alt="" width="238px" height="128px">
+                                </div>
+                                <div style="padding: 16px;">
+                                    <div slot="headline"
+                                        style="font-size: 20px; font-weight: 900; margin-bottom: 2px;">测试作品
+                                    </div>
+                                    <div slot="subhead">ID：0000000</div>
+                                </div>
+                            </s-card>
+                            <s-card clickable="true" type="outlined"
+                                style="text-align: start; max-width: 240px; height: 205px;">
+                                <div slot="image">
+                                    <img src="https://static.codemao.cn/pickduck/B1x9DwtiR.jpg?hash=FsP728EZjY33-BSUhdk1AAvoYiRY"
+                                        alt="" width="238px" height="128px">
+                                </div>
+                                <div style="padding: 16px;">
+                                    <div slot="headline"
+                                        style="font-size: 20px; font-weight: 900; margin-bottom: 2px;">测试作品
+                                    </div>
+                                    <div slot="subhead">ID：0000000</div>
+                                </div>
+                            </s-card>
+                            <s-card clickable="true" type="outlined"
+                                style="text-align: start; max-width: 240px; height: 205px;">
+                                <div slot="image">
+                                    <img src="https://static.codemao.cn/pickduck/B1x9DwtiR.jpg?hash=FsP728EZjY33-BSUhdk1AAvoYiRY"
+                                        alt="" width="238px" height="128px">
+                                </div>
+                                <div style="padding: 16px;">
+                                    <div slot="headline"
+                                        style="font-size: 20px; font-weight: 900; margin-bottom: 2px;">测试作品
+                                    </div>
+                                    <div slot="subhead">ID：0000000</div>
+                                </div>
+                            </s-card>
+                            </div>                    
+                </div>
+
 
                             <s-button slot="action" type="text">退出</s-button>
                 </s-dialog>
