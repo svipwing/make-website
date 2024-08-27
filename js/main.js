@@ -308,7 +308,16 @@ $(document).ready(function () {
     success: function (data, status) {
       if (data.status == true) {
         $("#username").text("用户" + data.data.uid);
+      } else {
+        document.querySelector("body > header > s-page > ul > li:nth-child(13)").style = "display:none;";
+        $("#worklist").hide();
+        $("body > header > s-page > ul > li:nth-child(14)").hide();
       }
+    },
+    error: function (data, status) {
+      document.querySelector("body > header > s-page > ul > li:nth-child(13)").style = "display:none;";
+      $("#worklist").hide();
+      $("body > header > s-page > ul > li:nth-child(14)").hide();
     }
   });
 
