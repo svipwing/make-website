@@ -124,6 +124,9 @@ function loadwork(path, id, name) {
 }
 
 function loadworklist() {
+
+  $('#dialog > div > div').html('');
+
   $.ajax({
     url: 'https://api.svipwing.xyz/works/1',
     method: 'GET',
@@ -144,7 +147,7 @@ function loadworklist() {
             withCredentials: true
           },
           success: function (pageResponse) {
-            console.log('当前页数据:', pageResponse);
+            //console.log('当前页数据:', pageResponse);
             const works = pageResponse.data.works;
             works.forEach(work => {
               const card = $(`
@@ -188,34 +191,87 @@ $(document).ready(function () {
   $("#save").click(function () {
 
     if (work_open == 0) {
-      const jsonString = JSON.stringify(Blockly.serialization.workspaces.save(workspace));
-      workname = $("#workname").val();
+
+      var workname = $("#workname").val();
 
       if (workname == "" || workname == " ") {
         workname = "未命名作品" + Math.floor(Math.random() * 1000);
       }
 
-      const blob = new Blob([jsonString], { type: 'application/json' });
+      //console.log(workname);
 
-      const url = `https://api.svipwing.xyz/create/${encodeURIComponent(workname)}`;
+      var workalreadysave = 0;
 
-      const xhr = new XMLHttpRequest();
-      xhr.open('PUT', url, true);
-      xhr.setRequestHeader("Content-Type", "application/octet-stream");
+      $.ajax({
+        url: 'https://api.svipwing.xyz/works/1',
+        method: 'GET',
+        xhrFields: {
+          withCredentials: true
+        },
+        success: function (response) {
 
-      xhr.withCredentials = true;
+          const totalPages = response.data.totalPages;
 
-      xhr.send(blob);
+          let cards = [];
 
-      xhr.onload = function () {
-        if (xhr.status === 200) {
-          $("#cloudwork").css("display", "none");
-          swal("保存成功", "您可以在我的作品中找到它", "success");
-        } else {
-          $("#cloudwork").css("display", "none");
-          swal("保存失败", xhr.responseText, "error");
+          for (let page = 1; page <= totalPages; page++) {
+            $.ajax({
+              url: `https://api.svipwing.xyz/works/${page}`,
+              method: 'GET',
+              xhrFields: {
+                withCredentials: true
+              },
+              success: function (pageResponse) {
+                //console.log('当前页数据:', pageResponse);
+                const works = pageResponse.data.works;
+                works.forEach(work => {
+                  if (work.name == workname) {
+                    workalreadysave = 1;
+                    swal("作品已存在", "请重新命名", "error");
+                  }
+                });
+
+                if (page === totalPages) {
+                  $('#dialog > div > div').append(cards);
+                }
+              },
+              error: function (error) {
+                swal('Oops!', "请求出错了！", { icon: "error" });
+              }
+            });
+          }
+        },
+        error: function (error) {
+          console.error('请求失败:', error);
         }
-      };
+      });
+
+
+      if (workalreadysave == 0) {
+        const jsonString = JSON.stringify(Blockly.serialization.workspaces.save(workspace));
+
+        const blob = new Blob([jsonString], { type: 'application/json' });
+
+        const url = `https://api.svipwing.xyz/create/${encodeURIComponent(workname)}`;
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('PUT', url, true);
+        xhr.setRequestHeader("Content-Type", "application/octet-stream");
+
+        xhr.withCredentials = true;
+
+        xhr.send(blob);
+
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            $("#cloudwork").css("display", "none");
+            swal("保存成功", "您可以在我的作品中找到它", "success");
+          } else {
+            $("#cloudwork").css("display", "none");
+            swal("保存失败", xhr.responseText, "error");
+          }
+        };
+      }
     } else {
       const jsonString = JSON.stringify(Blockly.serialization.workspaces.save(workspace));
 
