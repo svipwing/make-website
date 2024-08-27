@@ -41,6 +41,8 @@ Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
 
 y = true;
 
+var lastcode=" ";
+
 async function myUpdateFunction(_event) {
     var code = Blockly.JavaScript.workspaceToCode(workspace);
 
@@ -71,7 +73,11 @@ async function myUpdateFunction(_event) {
     })
 
     document.getElementById("code").textContent = code;
-    document.getElementById("look_html").srcdoc = code;
+
+    if(lastcode != code){
+        document.getElementById("look_html").srcdoc = code;
+        lastcode = code;
+    }
 
     Prism.highlightAll();
 }
