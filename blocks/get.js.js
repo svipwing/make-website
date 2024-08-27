@@ -183,6 +183,38 @@ Blockly.JavaScript["td"] = function (block) {
     return code;
 };
 
+Blockly.JavaScript["menu"] = function (block) {
+    var statements_op = Blockly.JavaScript.statementToCode(block, "op");
+    var text_id = block.getFieldValue("id");
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<s-popup-menu id="' + text_id + '">' + statements_op + '</s-popup-menu>\n'
+    return code;
+};
+
+Blockly.JavaScript["menu_button_main"] = function (block) {
+    var text_text = block.getFieldValue("text");
+    var text_id = block.getFieldValue("id");
+    // TODO: Assemble JavaScript into code variable.
+    var code = ' <s-button slot="trigger" id="' + text_id + '">' + text_text + ' </s-button>\n'
+    return code;
+};
+
+Blockly.JavaScript["menu_button_minor"] = function (block) {
+    var text_text = block.getFieldValue("text");
+    var text_id = block.getFieldValue("id");
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<s-popup-menu-item id="' + text_id + '" slot="trigger">' + text_text + ' <s-icon slot="end" type="arrow_drop_right"></s-icon></s-popup-menu-item>\n '
+    return code;
+};
+
+Blockly.JavaScript["menu_item"] = function (block) {
+    var text_text = block.getFieldValue("text");
+    var text_id = block.getFieldValue("id");
+    // TODO: Assemble JavaScript into code variable.
+    var code = ' <s-popup-menu-item id="' + text_id + '">' + text_text + ' </s-popup-menu-item>\n'
+    return code;
+};
+
 Blockly.JavaScript["code"] = function (block) {
     var text_code_txt = block.getFieldValue("code_txt");
     // TODO: Assemble JavaScript into code variable.

@@ -257,6 +257,61 @@ Blockly.Blocks["td"] = {
         this.setHelpUrl("");
     },
 };
+Blockly.Blocks["menu"] = {
+    init: function () {
+        this.appendStatementInput('op')
+            .appendField("定义下拉菜单")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+Blockly.Blocks["menu_button_main"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("下拉主菜单按钮")
+            .appendField(new Blockly.FieldTextInput("text"), "text")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+Blockly.Blocks["menu_button_minor"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("下拉子菜单按钮")
+            .appendField(new Blockly.FieldTextInput("text"), "text")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+Blockly.Blocks["menu_item"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("下拉菜单选项")
+            .appendField(new Blockly.FieldTextInput("text"), "text")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
 Blockly.Blocks["go"] = {
     init: function () {
         this.appendDummyInput()
