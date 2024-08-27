@@ -188,6 +188,29 @@ function loadworklist() {
   });
 }
 
+var isrun = 0;
+
+function runcode(){
+  if(isrun==0){
+    $("#mask").css("display","flex");
+    $("#look").css("left","5%");
+    $("#look").css("width","28%");
+  }else{
+    $("#mask").css("display","none");
+    $("#look").css("left","14.5%");
+    $("#look").css("width","22%");
+  }
+
+  $("#package_list").toggle();
+  $("#look_pos").toggle();
+
+  if(isrun == 0){
+    isrun=1;
+  }else{
+    isrun=0;
+  }
+}
+
 $(document).ready(function () {
 
   $("#save").click(function () {
@@ -311,15 +334,11 @@ $(document).ready(function () {
       if (data.status == true) {
         $("#username").text("用户" + data.data.uid);
       } else {
-        document.querySelector("body > header > s-page > ul > li:nth-child(13)").style = "display:none;";
-        $("#worklist").hide();
-        $("body > header > s-page > ul > li:nth-child(14)").hide();
+        $("#cloud1").hide();
       }
     },
     error: function (data, status) {
-      document.querySelector("body > header > s-page > ul > li:nth-child(13)").style = "display:none;";
-      $("#worklist").hide();
-      $("body > header > s-page > ul > li:nth-child(14)").hide();
+      $("#cloud1").hide();
     }
   });
 

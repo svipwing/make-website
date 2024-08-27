@@ -350,3 +350,16 @@ body {
 .g-apk-card {
     background-color: white;
 }
+
+#mask {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 50px;
+    left: 40%;
+    width: 60%;
+    height: calc(100% - 50px);
+    z-index: 99999999999999999999999999999999999999999999999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}

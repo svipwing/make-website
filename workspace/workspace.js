@@ -74,9 +74,10 @@ async function myUpdateFunction(_event) {
 
     document.getElementById("code").textContent = code;
 
-    if(lastcode != code){
+    if(lastcode != code.replace("\n","").replace(/(\n|\r|\r\n|↵)/g, '')){
         document.getElementById("look_html").srcdoc = code;
-        lastcode = code;
+        lastcode = code.replace("\n","").replace(/(\n|\r|\r\n|↵)/g, '');
+        //console.log(lastcode);
     }
 
     Prism.highlightAll();
