@@ -102,6 +102,8 @@ function upd() {
         swal("保存失败", xhr.responseText, "error");
       }
     };
+  }else{
+    $("#cloudwork").css("display","flex");
   }
 }
 
