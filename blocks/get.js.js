@@ -215,6 +215,30 @@ Blockly.JavaScript["menu_item"] = function (block) {
     return code;
 };
 
+Blockly.JavaScript["ul"] = function (block) {
+    var statements_li = Blockly.JavaScript.statementToCode(block, "li");
+    var text_id = block.getFieldValue("id");
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<ul id="' + text_id + '">' + statements_li + '</ul>\n'
+    return code;
+};
+
+Blockly.JavaScript["ol"] = function (block) {
+    var statements_li = Blockly.JavaScript.statementToCode(block, "li");
+    var text_id = block.getFieldValue("id");
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<ol id="' + text_id + '">' + statements_li + '</ol>\n'
+    return code;
+};
+
+Blockly.JavaScript["li"] = function (block) {
+    var text_text = block.getFieldValue("text");
+    var text_id = block.getFieldValue("id");
+    // TODO: Assemble JavaScript into code variable.
+    var code = ' <li id="' + text_id + '">' + text_text + ' </li>\n'
+    return code;
+};
+
 Blockly.JavaScript["code"] = function (block) {
     var text_code_txt = block.getFieldValue("code_txt");
     // TODO: Assemble JavaScript into code variable.
