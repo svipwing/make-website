@@ -312,6 +312,52 @@ Blockly.Blocks["menu_item"] = {
         this.setHelpUrl("");
     },
 };
+
+Blockly.Blocks["ul"] = {
+    init: function () {
+        this.appendStatementInput('li')
+            .appendField("定义无序列表")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+
+Blockly.Blocks["ol"] = {
+    init: function () {
+        this.appendStatementInput('li')
+            .appendField("定义有序列表")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+
+Blockly.Blocks["li"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("列表项")
+            .appendField(new Blockly.FieldTextInput("text"), "text")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+
+
+
 Blockly.Blocks["go"] = {
     init: function () {
         this.appendDummyInput()
