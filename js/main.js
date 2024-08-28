@@ -389,7 +389,7 @@ $(document).ready(function () {
   workspace.scrollCenter();
 
   c = false;
-  $("#dao").click(function () {
+  $("#da").click(function () {
     if (!c) {
       swal({
         title: "使用说明",

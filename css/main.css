@@ -20,7 +20,7 @@ div#nav {
 
 .navbar {
     top: 0;
-    height: 50px;
+    height: 56px;
     background-color: #2196f3;
     box-sizing: border-box;
     z-index: 9998;
@@ -148,7 +148,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #16b777;
+    background-color: #ffffff;
     color: #fff;
     padding: 20px;
     box-sizing: border-box;
@@ -354,10 +354,10 @@ body {
 #mask {
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
-    top: 50px;
+    top: 56px;
     left: 40%;
     width: 60%;
-    height: calc(100% - 50px);
+    height: calc(100% - 56px);
     z-index: 99999999999999999999999999999999999999999999999;
     display: none;
     justify-content: center;

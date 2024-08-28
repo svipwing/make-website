@@ -41,7 +41,7 @@ div#look_pos {
 
 div#package_list{
     position: absolute;
-    top: calc(15% + 5px);
+    top: calc(20% + 5px);
     left: 1.25%;
     background-color: #ffffff65;
     height: 60%;
@@ -53,6 +53,24 @@ div#package_list{
     flex-direction: column;
     justify-content: start;
     padding: 20px;
+}
+
+div#code_list{
+    position: absolute;
+    top: calc(10% + 5px);
+    left: 21%;
+    background-color: #ffffff65;
+    height: 1.5%;
+    width: 8%;
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    padding: 12px;
+    gap: 24px;
+    margin-bottom: 8px;
 }
 
 div#package_list .move-card{
