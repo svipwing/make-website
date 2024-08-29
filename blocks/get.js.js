@@ -152,6 +152,17 @@ Blockly.JavaScript["table"] = function (block) {
     var code = '<s-table id="' + text_id + '">' + statements_table + '</s-table>'
     return code;
 };
+
+Blockly.JavaScript["table_xy"] = function (block) {
+    var statements_table = Blockly.JavaScript.statementToCode(block, "table");
+    var text_id = block.getFieldValue("id");
+    var text_x = block.getFieldValue("x");
+    var text_y = block.getFieldValue("y");
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<s-table id="' + text_id + '"style="position: fixed; ' + 'top:' + text_y + '%;' + 'left:' + text_x + '%;">' + statements_table + '</s-table>'
+    return code;
+};
+
 Blockly.JavaScript["tr_head"] = function (block) {
     var statements_tr = Blockly.JavaScript.statementToCode(block, "tr");
     var text_id = block.getFieldValue("id");
@@ -183,11 +194,26 @@ Blockly.JavaScript["td"] = function (block) {
     return code;
 };
 
+
+
+
 Blockly.JavaScript["menu"] = function (block) {
     var statements_op = Blockly.JavaScript.statementToCode(block, "op");
     var text_id = block.getFieldValue("id");
+
     // TODO: Assemble JavaScript into code variable.
     var code = '<s-popup-menu id="' + text_id + '">' + statements_op + '</s-popup-menu>\n'
+    return code;
+};
+
+
+Blockly.JavaScript["menu_xy"] = function (block) {
+    var statements_op = Blockly.JavaScript.statementToCode(block, "op");
+    var text_id = block.getFieldValue("id");
+    var text_x = block.getFieldValue("x");
+    var text_y = block.getFieldValue("y");
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<s-popup-menu id="' + text_id + '"style="position: fixed; ' + 'top:' + text_y + '%;' + 'left:' + text_x + '%;">' + statements_op + '</s-popup-menu>\n'
     return code;
 };
 
@@ -223,6 +249,16 @@ Blockly.JavaScript["ul"] = function (block) {
     return code;
 };
 
+Blockly.JavaScript["ul_xy"] = function (block) {
+    var statements_li = Blockly.JavaScript.statementToCode(block, "li");
+    var text_id = block.getFieldValue("id");
+    var text_x = block.getFieldValue("x");
+    var text_y = block.getFieldValue("y");
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<ul id="' + text_id + '"style="position: fixed; ' + 'top:' + text_y + '%;' + 'left:' + text_x + '%;">' + statements_li + '</ul>\n'
+    return code;
+};
+
 Blockly.JavaScript["ol"] = function (block) {
     var statements_li = Blockly.JavaScript.statementToCode(block, "li");
     var text_id = block.getFieldValue("id");
@@ -230,6 +266,17 @@ Blockly.JavaScript["ol"] = function (block) {
     var code = '<ol id="' + text_id + '">' + statements_li + '</ol>\n'
     return code;
 };
+
+Blockly.JavaScript["ol_xy"] = function (block) {
+    var statements_li = Blockly.JavaScript.statementToCode(block, "li");
+    var text_id = block.getFieldValue("id");
+    var text_x = block.getFieldValue("x");
+    var text_y = block.getFieldValue("y");
+    // TODO: Assemble JavaScript into code variable.
+    var code = '<ol id="' + text_id + '"style="position: fixed; ' + 'top:' + text_y + '%;' + 'left:' + text_x + '%;">' + statements_li + '</ol>\n'
+    return code;
+};
+
 
 Blockly.JavaScript["li"] = function (block) {
     var text_text = block.getFieldValue("text");

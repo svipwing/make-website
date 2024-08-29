@@ -203,6 +203,25 @@ Blockly.Blocks["table"] = {
         this.setHelpUrl("");
     },
 };
+
+Blockly.Blocks["table_xy"] = {
+    init: function () {
+        this.appendStatementInput('table')
+            .appendField("定义表格")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id")
+            .appendField(",x")
+            .appendField(new Blockly.FieldTextInput("x"), "x")
+            .appendField(",y")
+            .appendField(new Blockly.FieldTextInput("y"), "y");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+
 Blockly.Blocks["tr_head"] = {
     init: function () {
         this.appendStatementInput('tr')
@@ -270,6 +289,25 @@ Blockly.Blocks["menu"] = {
         this.setHelpUrl("");
     },
 };
+
+Blockly.Blocks["menu_xy"] = {
+    init: function () {
+        this.appendStatementInput('op')
+            .appendField("定义下拉菜单")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id")
+            .appendField(",x")
+            .appendField(new Blockly.FieldTextInput("x"), "x")
+            .appendField(",y")
+            .appendField(new Blockly.FieldTextInput("y"), "y");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+
 Blockly.Blocks["menu_button_main"] = {
     init: function () {
         this.appendDummyInput()
@@ -284,6 +322,9 @@ Blockly.Blocks["menu_button_main"] = {
         this.setHelpUrl("");
     },
 };
+
+
+
 Blockly.Blocks["menu_button_minor"] = {
     init: function () {
         this.appendDummyInput()
@@ -327,12 +368,49 @@ Blockly.Blocks["ul"] = {
     },
 };
 
+
+Blockly.Blocks["ul_xy"] = {
+    init: function () {
+        this.appendStatementInput('li')
+            .appendField("定义无序列表")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id")
+            .appendField(",x")
+            .appendField(new Blockly.FieldTextInput("x"), "x")
+            .appendField(",y")
+            .appendField(new Blockly.FieldTextInput("y"), "y");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+
 Blockly.Blocks["ol"] = {
     init: function () {
         this.appendStatementInput('li')
             .appendField("定义有序列表")
             .appendField(",id(可留空):")
             .appendField(new Blockly.FieldTextInput("id"), "id");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+
+Blockly.Blocks["ol_xy"] = {
+    init: function () {
+        this.appendStatementInput('li')
+            .appendField("定义有序列表")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id")
+            .appendField(",x")
+            .appendField(new Blockly.FieldTextInput("x"), "x")
+            .appendField(",y")
+            .appendField(new Blockly.FieldTextInput("y"), "y");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(230);

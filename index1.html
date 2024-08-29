@@ -84,16 +84,17 @@
 
     <s-dialog id="dialog1" style="z-index: 999999999999999999999999999999999999999999999999; overflow: hidden;">
         <div slot="headline"> 导入 / 导出 </div>
-        <div >此功能用于积木数据操作，点击右下角的 按钮“关闭” 关闭对话框</div>
+        <div>此功能用于积木数据操作，点击右下角的 按钮“关闭” 关闭对话框</div>
         <br>
         <div class="input-section">
             <s-text-field label="积木数据" style="--border-radius: 12px; display: grid; margin-bottom: 12px; ">
-            <textarea id="data" type="text" class="datainput" style="min-height: 104px; width: 100%; max-height: 188px;"></textarea>               
+                <textarea id="data" type="text" class="datainput"
+                    style="min-height: 104px; width: 100%; max-height: 188px;"></textarea>
             </s-text-field>
 
             <s-button id="a" style="margin-right: 8px; background-color: #2196f3;">导入积木</s-button>
             <label for="importFile">
-            <s-button type="outlined" style="color: #2196f3;"> 选择作品文件 </s-button>                
+                <s-button type="outlined" style="color: #2196f3;"> 选择作品文件 </s-button>
             </label>
 
             <input id="importFile" accept=".json" type="file" style="display: none;">
@@ -101,16 +102,16 @@
         <s-divider style="margin-top: 12px; margin-bottom: 12px;"></s-divider>
         <div class="input-section">
             <p style="margin-bottom: 8px;">积木数据</p>
-        <s-text-field style="--border-radius: 12px; display: grid; margin-bottom: 12px;">
-            <input id="json" disabled placeholder="请先导出积木" type="text" style="padding-left: 18px;">
-        </s-text-field>
+            <s-text-field style="--border-radius: 12px; display: grid; margin-bottom: 12px;">
+                <input id="json" disabled placeholder="请先导出积木" type="text" style="padding-left: 18px;">
+            </s-text-field>
             <s-button id="b" style=" background-color: #2196f3;">导出积木</s-button>
         </div>
         <s-button slot="action" type="text" style="color: #2196f3;">
             <s-icon type="close" slot="start" style="margin-right: 8px;"></s-icon>
             关闭
         </s-button>
-      </s-dialog>
+    </s-dialog>
 
     <script src="./js/icon.js"></script>
     <div id="start_page">
@@ -127,7 +128,8 @@
 
     <button id="qq">遇到问题?</button>
 
-    <button id="dao" data-intro="这里可以导入和导出积木数据，方便储存" data-title="导入导出" onclick="document.querySelector('#dialog1').show()">导</button>
+    <button id="dao" data-intro="这里可以导入和导出积木数据，方便储存" data-title="导入导出"
+        onclick="document.querySelector('#dialog1').show()">导</button>
 
     <button id="take-photo" data-intro="点击此处将你的效果预览区截图并保存，分享给你的好友" data-title="预览区截图">拍照</button>
 
@@ -291,7 +293,7 @@
                 </s-popup-menu>
 
                 <li><b style="margin-right: 10px;margin-left: 10px;">|</b></li>
-                <s-popup-menu style="border: white; z-index: 999; border-radius: 12px;" id="cloud1" >
+                <s-popup-menu style="border: white; z-index: 999; border-radius: 12px;" id="cloud1">
                     <s-button slot="trigger" type="text" style="color: white; border-radius: 12px;">云作品</s-button>
                     <s-popup-menu-item href="javascript:void(0)" onclick='upd();'>
                         <s-icon slot="start" style="color: black; margin-left: 16px; width: 18px; height: 18px;">
@@ -396,20 +398,35 @@
 
                     <s-button slot="action" type="text">退出</s-button>
                 </s-dialog>
-                <s-button type="filled-tonal" id="runcode" onclick="runcode();" style="height: 40px; background-color: #2cc18b; display: flex; flex-direction: row; align-items: center; padding-top: 2px; color: white;">
-                    <s-icon slot="start" style="color: white; margin-right: 4px; margin-bottom: 2px; width: 20px; height: 20px;">
-                        <svg t="1724751769826" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8659" width="512" height="512"><path d="M385.237333 228.266667l350.933334 210.56c55.253333 33.152 55.253333 113.194667 0 146.346666L385.28 795.733333c-40.789333 24.490667-89.6 10.325333-113.92-24.149333l-0.042667 0.042667a42.666667 42.666667 0 1 0-73.216 43.946666l-0.085333 0.042667c47.36 72.533333 147.626667 103.424 231.168 53.333333l350.933333-210.602666c110.506667-66.304 110.506667-226.389333 0-292.693334l-350.933333-210.56C315.392 86.826667 170.666667 168.746667 170.666667 301.44V640a42.666667 42.666667 0 1 0 85.333333 0V301.44C256 235.093333 328.362667 194.133333 385.237333 228.266667z" fill="white" p-id="8660"></path></svg>
-                    </s-icon>                  
+                <s-button type="filled-tonal" id="runcode" onclick="runcode();"
+                    style="height: 40px; background-color: #2cc18b; display: flex; flex-direction: row; align-items: center; padding-top: 2px; color: white;">
+                    <s-icon slot="start"
+                        style="color: white; margin-right: 4px; margin-bottom: 2px; width: 20px; height: 20px;">
+                        <svg t="1724751769826" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" p-id="8659" width="512" height="512">
+                            <path
+                                d="M385.237333 228.266667l350.933334 210.56c55.253333 33.152 55.253333 113.194667 0 146.346666L385.28 795.733333c-40.789333 24.490667-89.6 10.325333-113.92-24.149333l-0.042667 0.042667a42.666667 42.666667 0 1 0-73.216 43.946666l-0.085333 0.042667c47.36 72.533333 147.626667 103.424 231.168 53.333333l350.933333-210.602666c110.506667-66.304 110.506667-226.389333 0-292.693334l-350.933333-210.56C315.392 86.826667 170.666667 168.746667 170.666667 301.44V640a42.666667 42.666667 0 1 0 85.333333 0V301.44C256 235.093333 328.362667 194.133333 385.237333 228.266667z"
+                                fill="white" p-id="8660"></path>
+                        </svg>
+                    </s-icon>
                     运行代码
-                  </s-button>
+                </s-button>
             </ul>
-            
+
         </s-page>
 
     </header>
 
     <div id="mask" onclick="runcode();" style="flex-direction: column;">
-        <?xml version="1.0" encoding="UTF-8"?><svg style="margin-bottom: 8px;" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.2838 43.1713C14.9327 42.1736 11.9498 40.3213 9.58787 37.867C10.469 36.8227 11 35.4734 11 34.0001C11 30.6864 8.31371 28.0001 5 28.0001C4.79955 28.0001 4.60139 28.01 4.40599 28.0292C4.13979 26.7277 4 25.3803 4 24.0001C4 21.9095 4.32077 19.8938 4.91579 17.9995C4.94381 17.9999 4.97188 18.0001 5 18.0001C8.31371 18.0001 11 15.3138 11 12.0001C11 11.0488 10.7786 10.1493 10.3846 9.35011C12.6975 7.1995 15.5205 5.59002 18.6521 4.72314C19.6444 6.66819 21.6667 8.00013 24 8.00013C26.3333 8.00013 28.3556 6.66819 29.3479 4.72314C32.4795 5.59002 35.3025 7.1995 37.6154 9.35011C37.2214 10.1493 37 11.0488 37 12.0001C37 15.3138 39.6863 18.0001 43 18.0001C43.0281 18.0001 43.0562 17.9999 43.0842 17.9995C43.6792 19.8938 44 21.9095 44 24.0001C44 25.3803 43.8602 26.7277 43.594 28.0292C43.3986 28.01 43.2005 28.0001 43 28.0001C39.6863 28.0001 37 30.6864 37 34.0001C37 35.4734 37.531 36.8227 38.4121 37.867C36.0502 40.3213 33.0673 42.1736 29.7162 43.1713C28.9428 40.752 26.676 39.0001 24 39.0001C21.324 39.0001 19.0572 40.752 18.2838 43.1713Z" fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/><path d="M24 31C27.866 31 31 27.866 31 24C31 20.134 27.866 17 24 17C20.134 17 17 20.134 17 24C17 27.866 20.134 31 24 31Z" fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/></svg>
+        <?xml version="1.0" encoding="UTF-8"?><svg style="margin-bottom: 8px;" width="48" height="48"
+            viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M18.2838 43.1713C14.9327 42.1736 11.9498 40.3213 9.58787 37.867C10.469 36.8227 11 35.4734 11 34.0001C11 30.6864 8.31371 28.0001 5 28.0001C4.79955 28.0001 4.60139 28.01 4.40599 28.0292C4.13979 26.7277 4 25.3803 4 24.0001C4 21.9095 4.32077 19.8938 4.91579 17.9995C4.94381 17.9999 4.97188 18.0001 5 18.0001C8.31371 18.0001 11 15.3138 11 12.0001C11 11.0488 10.7786 10.1493 10.3846 9.35011C12.6975 7.1995 15.5205 5.59002 18.6521 4.72314C19.6444 6.66819 21.6667 8.00013 24 8.00013C26.3333 8.00013 28.3556 6.66819 29.3479 4.72314C32.4795 5.59002 35.3025 7.1995 37.6154 9.35011C37.2214 10.1493 37 11.0488 37 12.0001C37 15.3138 39.6863 18.0001 43 18.0001C43.0281 18.0001 43.0562 17.9999 43.0842 17.9995C43.6792 19.8938 44 21.9095 44 24.0001C44 25.3803 43.8602 26.7277 43.594 28.0292C43.3986 28.01 43.2005 28.0001 43 28.0001C39.6863 28.0001 37 30.6864 37 34.0001C37 35.4734 37.531 36.8227 38.4121 37.867C36.0502 40.3213 33.0673 42.1736 29.7162 43.1713C28.9428 40.752 26.676 39.0001 24 39.0001C21.324 39.0001 19.0572 40.752 18.2838 43.1713Z"
+                fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" />
+            <path
+                d="M24 31C27.866 31 31 27.866 31 24C31 20.134 27.866 17 24 17C20.134 17 17 20.134 17 24C17 27.866 20.134 31 24 31Z"
+                fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" />
+        </svg>
         <p style="color: white;font-size: 32px;margin-left: 0px; font-weight: bold;">正在运行</p>
         <p style="color: white;font-size: 18px;margin-top: 4px; font-weight: 500;">点击此处结束运行</p>
     </div>
@@ -522,6 +539,12 @@
                     <field name="id">id</field>
                 </block>
 
+                <block type="table_xy">
+                    <field name="id">id</field>
+                    <field name="x">10</field>
+                    <field name="y">10</field>
+                </block>
+
                 <block type="tr_head">
                     <field name="id">id</field>
                 </block>
@@ -544,10 +567,18 @@
                     <field name="id">id</field>
                 </block>
 
+                <block type="menu_xy">
+                    <field name="id">id</field>
+                    <field name="x">10</field>
+                    <field name="y">10</field>
+                </block>
+
+
                 <block type="menu_button_main">
                     <field name="text">text</field>
                     <field name="id">id</field>
                 </block>
+
 
                 <block type="menu_button_minor">
                     <field name="text">text</field>
@@ -563,8 +594,20 @@
                     <field name="id">id</field>
                 </block>
 
+                <block type="ul_xy">
+                    <field name="id">id</field>
+                    <field name="x">10</field>
+                    <field name="y">10</field>
+                </block>
+
                 <block type="ol">
                     <field name="id">id</field>
+                </block>
+
+                <block type="ol_xy">
+                    <field name="id">id</field>
+                    <field name="x">10</field>
+                    <field name="y">10</field>
                 </block>
 
                 <block type="li">
@@ -877,26 +920,26 @@
 
     <pre><code id="code" class="language-html"></code></pre>
     <div id="look"><iframe id="look_html" width="100%" height="100%" style="border: 0;"></iframe></div>
- 
-    <div id="look_pos"></div>   
-        <div style="margin-bottom: 8px; display: none;" id="code_list">
-                <s-icon style="width: 18px; height: 18px;" href="javascript:void(0)" id="code_open" >
-                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M305.4 21.8c-1.3-10.4-9.1-18.8-19.5-20C276.1 .6 266.1 0 256 0c-11.1 0-22.1 .7-32.8 2.1c-10.3 1.3-18 9.7-19.3 20l-2.9 23.1c-.8 6.4-5.4 11.6-11.5 13.7c-9.6 3.2-19 7.2-27.9 11.7c-5.8 3-12.8 2.5-18-1.5l-18-14c-8.2-6.4-19.7-6.8-27.9-.4c-16.6 13-31.5 28-44.4 44.7c-6.3 8.2-5.9 19.6 .5 27.8l14.2 18.3c4 5.1 4.4 12 1.5 17.8c-4.4 8.8-8.2 17.9-11.3 27.4c-2 6.2-7.3 10.8-13.7 11.6l-22.8 2.9c-10.3 1.3-18.7 9.1-20 19.4C.7 234.8 0 245.3 0 256c0 10.6 .6 21.1 1.9 31.4c1.3 10.3 9.7 18.1 20 19.4l22.8 2.9c6.4 .8 11.7 5.4 13.7 11.6c3.1 9.5 6.9 18.7 11.3 27.5c2.9 5.8 2.4 12.7-1.5 17.8L54 384.8c-6.4 8.2-6.8 19.6-.5 27.8c12.9 16.7 27.8 31.7 44.4 44.7c8.2 6.4 19.7 6 27.9-.4l18-14c5.1-4 12.2-4.4 18-1.5c9 4.6 18.3 8.5 27.9 11.7c6.1 2.1 10.7 7.3 11.5 13.7l2.9 23.1c1.3 10.3 9 18.7 19.3 20c10.7 1.4 21.7 2.1 32.8 2.1c10.1 0 20.1-.6 29.9-1.7c10.4-1.2 18.2-9.7 19.5-20l2.8-22.5c.8-6.5 5.5-11.8 11.7-13.8c10-3.2 19.7-7.2 29-11.8c5.8-2.9 12.7-2.4 17.8 1.5L385 457.9c8.2 6.4 19.6 6.8 27.8 .5c2.8-2.2 5.5-4.4 8.2-6.7L451.7 421c1.8-2.2 3.6-4.4 5.4-6.6c6.5-8.2 6-19.7-.4-27.9l-14-17.9c-4-5.1-4.4-12.2-1.5-18c4.8-9.4 9-19.3 12.3-29.5c2-6.2 7.3-10.8 13.7-11.6l22.8-2.8c10.3-1.3 18.8-9.1 20-19.4c.2-1.7 .4-3.5 .6-5.2V230.1c-.2-1.7-.4-3.5-.6-5.2c-1.3-10.3-9.7-18.1-20-19.4l-22.8-2.8c-6.4-.8-11.7-5.4-13.7-11.6c-3.4-10.2-7.5-20.1-12.3-29.5c-3-5.8-2.5-12.8 1.5-18l14-17.9c6.4-8.2 6.8-19.7 .4-27.9c-1.8-2.2-3.6-4.4-5.4-6.6L421 60.3c-2.7-2.3-5.4-4.5-8.2-6.7c-8.2-6.4-19.6-5.9-27.8 .5L366.7 68.3c-5.1 4-12.1 4.4-17.8 1.5c-9.3-4.6-19-8.6-29-11.8c-6.2-2-10.9-7.3-11.7-13.7l-2.8-22.5zM287.8 162.6l-32 192c-1.5 8.7-9.7 14.6-18.4 13.2s-14.6-9.7-13.2-18.4l32-192c1.5-8.7 9.7-14.6 18.4-13.2s14.6 9.7 13.2 18.4zM187.3 227.3L158.6 256l28.7 28.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-40-40c-6.2-6.2-6.2-16.4 0-22.6l40-40c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6zm160-22.6l40 40c6.2 6.2 6.2 16.4 0 22.6l-40 40c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L353.4 256l-28.7-28.7c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0z" />
-                    </svg>
-                </s-icon>
-                <a style="width: 18px; height: 18px;" id="copycode" href="javascript:void(0)">
-                    <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
 
-                        <path
-                            d="M384 336H192c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16l140.1 0L400 115.9V320c0 8.8-7.2 16-16 16zM192 384H384c35.3 0 64-28.7 64-64V115.9c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1H192c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H256c35.3 0 64-28.7 64-64V416H272v32c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192c0-8.8 7.2-16 16-16H96V128H64z" />
-                    </svg>
-                </a>
-        </div>    
+    <div id="look_pos"></div>
+    <div style="margin-bottom: 8px; display: none;" id="code_list">
+        <s-icon style="width: 18px; height: 18px;" href="javascript:void(0)" id="code_open">
+            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M305.4 21.8c-1.3-10.4-9.1-18.8-19.5-20C276.1 .6 266.1 0 256 0c-11.1 0-22.1 .7-32.8 2.1c-10.3 1.3-18 9.7-19.3 20l-2.9 23.1c-.8 6.4-5.4 11.6-11.5 13.7c-9.6 3.2-19 7.2-27.9 11.7c-5.8 3-12.8 2.5-18-1.5l-18-14c-8.2-6.4-19.7-6.8-27.9-.4c-16.6 13-31.5 28-44.4 44.7c-6.3 8.2-5.9 19.6 .5 27.8l14.2 18.3c4 5.1 4.4 12 1.5 17.8c-4.4 8.8-8.2 17.9-11.3 27.4c-2 6.2-7.3 10.8-13.7 11.6l-22.8 2.9c-10.3 1.3-18.7 9.1-20 19.4C.7 234.8 0 245.3 0 256c0 10.6 .6 21.1 1.9 31.4c1.3 10.3 9.7 18.1 20 19.4l22.8 2.9c6.4 .8 11.7 5.4 13.7 11.6c3.1 9.5 6.9 18.7 11.3 27.5c2.9 5.8 2.4 12.7-1.5 17.8L54 384.8c-6.4 8.2-6.8 19.6-.5 27.8c12.9 16.7 27.8 31.7 44.4 44.7c8.2 6.4 19.7 6 27.9-.4l18-14c5.1-4 12.2-4.4 18-1.5c9 4.6 18.3 8.5 27.9 11.7c6.1 2.1 10.7 7.3 11.5 13.7l2.9 23.1c1.3 10.3 9 18.7 19.3 20c10.7 1.4 21.7 2.1 32.8 2.1c10.1 0 20.1-.6 29.9-1.7c10.4-1.2 18.2-9.7 19.5-20l2.8-22.5c.8-6.5 5.5-11.8 11.7-13.8c10-3.2 19.7-7.2 29-11.8c5.8-2.9 12.7-2.4 17.8 1.5L385 457.9c8.2 6.4 19.6 6.8 27.8 .5c2.8-2.2 5.5-4.4 8.2-6.7L451.7 421c1.8-2.2 3.6-4.4 5.4-6.6c6.5-8.2 6-19.7-.4-27.9l-14-17.9c-4-5.1-4.4-12.2-1.5-18c4.8-9.4 9-19.3 12.3-29.5c2-6.2 7.3-10.8 13.7-11.6l22.8-2.8c10.3-1.3 18.8-9.1 20-19.4c.2-1.7 .4-3.5 .6-5.2V230.1c-.2-1.7-.4-3.5-.6-5.2c-1.3-10.3-9.7-18.1-20-19.4l-22.8-2.8c-6.4-.8-11.7-5.4-13.7-11.6c-3.4-10.2-7.5-20.1-12.3-29.5c-3-5.8-2.5-12.8 1.5-18l14-17.9c6.4-8.2 6.8-19.7 .4-27.9c-1.8-2.2-3.6-4.4-5.4-6.6L421 60.3c-2.7-2.3-5.4-4.5-8.2-6.7c-8.2-6.4-19.6-5.9-27.8 .5L366.7 68.3c-5.1 4-12.1 4.4-17.8 1.5c-9.3-4.6-19-8.6-29-11.8c-6.2-2-10.9-7.3-11.7-13.7l-2.8-22.5zM287.8 162.6l-32 192c-1.5 8.7-9.7 14.6-18.4 13.2s-14.6-9.7-13.2-18.4l32-192c1.5-8.7 9.7-14.6 18.4-13.2s14.6 9.7 13.2 18.4zM187.3 227.3L158.6 256l28.7 28.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-40-40c-6.2-6.2-6.2-16.4 0-22.6l40-40c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6zm160-22.6l40 40c6.2 6.2 6.2 16.4 0 22.6l-40 40c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L353.4 256l-28.7-28.7c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0z" />
+            </svg>
+        </s-icon>
+        <a style="width: 18px; height: 18px;" id="copycode" href="javascript:void(0)">
+            <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+
+                <path
+                    d="M384 336H192c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16l140.1 0L400 115.9V320c0 8.8-7.2 16-16 16zM192 384H384c35.3 0 64-28.7 64-64V115.9c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1H192c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H256c35.3 0 64-28.7 64-64V416H272v32c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192c0-8.8 7.2-16 16-16H96V128H64z" />
+            </svg>
+        </a>
+    </div>
     <div id="package_list">
 
-        
+
         <div class="move-card" onclick="show(1,this);">
 
             <center>
