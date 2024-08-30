@@ -9,7 +9,7 @@
     color: white;
     overflow: scroll;
     padding: 50px;
-    z-index: 999;
+    z-index: 99;
 }
 
 div#look {

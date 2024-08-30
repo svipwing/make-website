@@ -587,7 +587,9 @@ Blockly.Blocks["link"] = {
             .appendField("超链接,提示文本")
             .appendField(new Blockly.FieldTextInput("百度"), "text")
             .appendField(",链接")
-            .appendField(new Blockly.FieldTextInput("https://baidu.com"), "link");
+            .appendField(new Blockly.FieldTextInput("https://baidu.com"), "link")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(230);
@@ -605,7 +607,9 @@ Blockly.Blocks["image"] = {
             .appendField(new Blockly.FieldTextInput("10"), "height")
             .appendField("像素,宽度")
             .appendField(new Blockly.FieldTextInput("10"), "width")
-            .appendField("像素");
+            .appendField("像素")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(180);
@@ -620,7 +624,9 @@ Blockly.Blocks["button"] = {
             .appendField("按钮,文本")
             .appendField(new Blockly.FieldTextInput("按钮文本"), "text")
             .appendField(",点击后跳转到链接")
-            .appendField(new Blockly.FieldTextInput("http://baidu.com"), "link");
+            .appendField(new Blockly.FieldTextInput("http://baidu.com"), "link")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(210);
@@ -861,7 +867,9 @@ Blockly.Blocks["link_xy"] = {
             .appendField("，x坐标")
             .appendField(new Blockly.FieldTextInput("5"), "x")
             .appendField("，y坐标")
-            .appendField(new Blockly.FieldTextInput("5"), "y");
+            .appendField(new Blockly.FieldTextInput("5"), "y")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(230);
@@ -883,7 +891,9 @@ Blockly.Blocks["image_xy"] = {
             .appendField("，x坐标")
             .appendField(new Blockly.FieldTextInput("5"), "x")
             .appendField("，y坐标")
-            .appendField(new Blockly.FieldTextInput("5"), "y");
+            .appendField(new Blockly.FieldTextInput("5"), "y")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(180);
@@ -902,7 +912,9 @@ Blockly.Blocks["button_xy"] = {
             .appendField("，x坐标")
             .appendField(new Blockly.FieldTextInput("5"), "x")
             .appendField("，y坐标")
-            .appendField(new Blockly.FieldTextInput("5"), "y");
+            .appendField(new Blockly.FieldTextInput("5"), "y")
+            .appendField(",id(可留空):")
+            .appendField(new Blockly.FieldTextInput("id"), "id");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(210);
@@ -934,6 +946,18 @@ Blockly.Blocks["input_xy"] = {
         this.setTooltip("");
         this.setHelpUrl("");
     },
+};
+
+Blockly.Blocks['to_num'] = {
+    init: function () {
+        this.appendValueInput("NAME")
+            .setCheck(null)
+            .appendField("转换为数字");
+        this.setOutput(true, null);
+        this.setColour(60);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    }
 };
 
 for (var key in msg) {
