@@ -105,7 +105,7 @@
             <s-text-field style="--border-radius: 12px; display: grid; margin-bottom: 12px;">
                 <input id="json" disabled placeholder="请先导出积木" type="text" style="padding-left: 18px;">
             </s-text-field>
-            <s-button id="b" style=" background-color: #2196f3;">导出积木</s-button>
+            <s-button id="b" style=" background-color: #2196f3; font-size: 15px">导出积木</s-button>
         </div>
         <s-button slot="action" type="text" style="color: #2196f3;">
             <s-icon type="close" slot="start" style="margin-right: 8px;"></s-icon>
@@ -379,27 +379,15 @@
                      overflow: auto;
                      margin-bottom: 8px;
 ">
-                            <!-- <s-card clickable="true" type="outlined"
-                                style="text-align: start; max-width: 240px; height: 205px; margin-bottom: 16px;">
-                                <div slot="image">
-                                    <img src="https://static.codemao.cn/pickduck/B1x9DwtiR.jpg?hash=FsP728EZjY33-BSUhdk1AAvoYiRY"
-                                        alt="" width="238px" height="128px">
-                                </div>
-                                <div style="padding: 16px;">
-                                    <div slot="headline" style="font-size: 20px; font-weight: 900; margin-bottom: 2px;">
-                                        测试作品
-                                    </div>
-                                    <div slot="subhead">ID：0000000</div>
-                                </div>
-                            </s-card> -->
                         </div>
                     </div>
 
 
                     <s-button slot="action" type="text">退出</s-button>
                 </s-dialog>
+
                 <s-button type="filled-tonal" id="runcode" onclick="runcode();"
-                    style="height: 40px; background-color: #2cc18b; display: flex; flex-direction: row; align-items: center; padding-top: 2px; color: white;">
+                    style="font-size: 12px;height: 32px; background-color: #2cc18b; display: flex; flex-direction: row; align-items: center; padding-left: 12px; padding-right: 12px; padding-top: 2px; color: white;">
                     <s-icon slot="start"
                         style="color: white; margin-right: 4px; margin-bottom: 2px; width: 20px; height: 20px;">
                         <svg t="1724751769826" class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -427,7 +415,7 @@
                 d="M24 31C27.866 31 31 27.866 31 24C31 20.134 27.866 17 24 17C20.134 17 17 20.134 17 24C17 27.866 20.134 31 24 31Z"
                 fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" />
         </svg>
-        <p style="color: white;font-size: 32px;margin-left: 0px; font-weight: bold;">正在运行</p>
+        <p style="color: white;font-size: 32px;margin-left: 0px; font-weight: bold; margin-bottom: 10px;">正在运行</p>
         <p style="color: white;font-size: 18px;margin-top: 4px; font-weight: 500;">点击此处结束运行</p>
     </div>
     <div id="blocklyDiv" data-intro="你可以在这里拖拽积木，制作网页" data-title="工作区" style="z-index: 1;">
@@ -745,6 +733,15 @@
                     <field name="TEXT"></field>
                 </block>
 
+                
+                <block type="dom_get_value">
+                    <field name="id">a</field>
+                </block>
+
+                <block type="button_onclick">
+                    <field name="id">a</field>
+                </block>
+
                 <block type="controls_if"></block>
 
                 <block type="logic_compare">
@@ -838,13 +835,6 @@
                             <field name="TEXT">abc</field>
                         </shadow>
                     </value>
-                </block>
-                <block type="dom_get_value">
-                    <field name="id">a</field>
-                </block>
-
-                <block type="button_onclick">
-                    <field name="id">a</field>
                 </block>
 
             </category>
@@ -1066,6 +1056,8 @@
         window.onload = () => {
             now = new Date();
             document.getElementById("years").innerHTML = now.getFullYear();
+
+            $("#blocklyDiv").css("margin-top", "40px");
         };
     </script>
 

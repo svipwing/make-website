@@ -212,8 +212,7 @@ input button[type=file] {
 #blocklyDiv {
     position: fixed;
     width: 60%;
-    height: calc(100% - 50px);
-    margin-top: 50px;
+    height: calc(100% - 40px);
 }
 
 .blocklyFlyout {
@@ -362,4 +361,14 @@ body {
     display: none;
     justify-content: center;
     align-items: center;
+}
+
+@font-face {
+    font-family: "NotoSansCJKsc-Regular";
+    src:
+        url("https://creation.codemao.cn/coconut/web/1.20.0/static/media/NotoSansCJKsc-Regular.35a647da.woff2") format("woff2"),
+}
+
+body {
+    font-family: "NotoSansCJKsc-Regular";
 }
