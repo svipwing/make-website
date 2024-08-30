@@ -301,6 +301,34 @@ Blockly.JavaScript["style"] = function (block) {
     return code;
 };
 
+Blockly.JavaScript["display"] = function (block) {
+    var text_type = block.getFieldValue("type");
+    // var statements_css = Blockly.JavaScript.statementToCode(block, "css");
+    var code = 'display: ' + text_type + ';\n';
+    return code;
+};
+
+Blockly.JavaScript["flex_justify_content"] = function (block) {
+    var text_type = block.getFieldValue("type");
+    // var statements_css = Blockly.JavaScript.statementToCode(block, "css");
+    var code = 'justify-content: ' + text_type + ';\n';
+    return code;
+};
+
+Blockly.JavaScript["flex_direction"] = function (block) {
+    var text_zhuzou = block.getFieldValue("zhuzou");
+    // var statements_css = Blockly.JavaScript.statementToCode(block, "css");
+    var code = 'flex-direction: ' + text_zhuzou + ';\n';
+    return code;
+};
+
+Blockly.JavaScript["flex_align_items"] = function (block) {
+    var text_type = block.getFieldValue("type");
+    // var statements_css = Blockly.JavaScript.statementToCode(block, "css");
+    var code = 'align-items: ' + text_type + ';\n';
+    return code;
+};
+
 Blockly.JavaScript["text_color"] = function (block) {
     var text_color = block.getFieldValue("color");
 
@@ -602,6 +630,6 @@ Blockly.JavaScript['to_num'] = function (block) {
     var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
 
     var code = `Number(${value_name})`;
-    
+
     return [code, Blockly.JavaScript.ORDER_NONE];
 };

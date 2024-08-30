@@ -684,6 +684,22 @@
                     <field name="who">a</field>
                 </block>
 
+                <block type="display">
+                    <field name=" type">block</field>
+                </block>
+
+                <block type="flex_justify_content">
+                    <field name=" type">center</field>
+                </block>
+
+                <block type="flex_direction">
+                    <field name=" zhuzou">row</field>
+                </block>
+
+                <block type="flex_align_items">
+                    <field name=" type">center</field>
+                </block>
+
                 <block type="text_color">
                     <field name="color">red</field>
                 </block>
@@ -945,35 +961,35 @@
                     <mutation divisor_input="false"></mutation>
                     <field name="PROPERTY">EVEN</field>
                     <value name="NUMBER_TO_CHECK">
-                      <shadow type="math_number">
-                        <field name="NUM">0</field>
-                      </shadow>
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
                     </value>
-                  </block>
+                </block>
 
-                  <block type="math_round">
+                <block type="math_round">
                     <field name="OP">ROUND</field>
                     <value name="NUM">
-                      <shadow type="math_number">
-                        <field name="NUM">3.1</field>
-                      </shadow>
+                        <shadow type="math_number">
+                            <field name="NUM">3.1</field>
+                        </shadow>
                     </value>
-                  </block>
+                </block>
 
-                  <block type="math_random_int">
+                <block type="math_random_int">
                     <value name="FROM">
-                      <shadow type="math_number">
-                        <field name="NUM">1</field>
-                      </shadow>
+                        <shadow type="math_number">
+                            <field name="NUM">1</field>
+                        </shadow>
                     </value>
                     <value name="TO">
-                      <shadow type="math_number">
-                        <field name="NUM">100</field>
-                      </shadow>
+                        <shadow type="math_number">
+                            <field name="NUM">100</field>
+                        </shadow>
                     </value>
-                  </block>
+                </block>
 
-                  <block type="math_random_float"></block>
+                <block type="math_random_float"></block>
 
             </category>
 

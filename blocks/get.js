@@ -496,6 +496,87 @@ Blockly.Blocks["style"] = {
         this.setHelpUrl("");
     },
 };
+Blockly.Blocks["display"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("设置标签显示模式为:")
+            .appendField(
+                new Blockly.FieldDropdown([
+                    ["正常", "block"],
+                    ["flex", "flex"],
+                    ["隐藏", "none"],
+                ]),
+                "type"
+            );;
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(330);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+
+
+Blockly.Blocks["flex_justify_content"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("设置flex主轴显示模式为:")
+            .appendField(
+                new Blockly.FieldDropdown([
+                    ["中心对齐", "center"],
+                    ["末端对齐", "end"],
+                    ["中间两倍,首尾一倍", "space-around"],
+                    ["首尾顶格,其余均分", "space-between"],
+                    ["均分", "space-evenly"],
+                ]),
+                "type"
+            );;
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(330);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+
+Blockly.Blocks["flex_direction"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("设置flex主轴为:")
+            .appendField(
+                new Blockly.FieldDropdown([
+                    ["横", "row"],
+                    ["竖", "column"],
+                ]),
+                "zhuzou"
+            );;
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(330);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+
+
+Blockly.Blocks["flex_align_items"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("flex侧轴显示模式")
+            .appendField(
+                new Blockly.FieldDropdown([
+                    ["居中", "center"],
+                    ["末对齐", "end"],
+                ]),
+                "type"
+            );;
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(330);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
 
 Blockly.Blocks["text_color"] = {
     init: function () {
