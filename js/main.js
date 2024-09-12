@@ -190,7 +190,10 @@ function loadworklist() {
 
 var isrun = 0;
 
+var beforerun = "";
+
 function runcode(){
+
   if(isrun==0){
     $("#mask").css("display","flex");
     $("#look").css("left","5%");
@@ -206,8 +209,10 @@ function runcode(){
 
   if(isrun == 0){
     isrun=1;
+    beforerun = document.getElementById("look_html").srcdoc;
   }else{
     isrun=0;
+    document.getElementById("look_html").srcdoc = beforerun;
   }
 }
 
