@@ -496,6 +496,20 @@ Blockly.Blocks["style"] = {
         this.setHelpUrl("");
     },
 };
+Blockly.Blocks["style_hover"] = {
+    init: function () {
+        this.appendStatementInput("css")
+            .setCheck(null)
+            .appendField("id为")
+            .appendField(new Blockly.FieldTextInput("a"), "who")
+            .appendField("鼠标悬停时元素的样式");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(260);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
 Blockly.Blocks["display"] = {
     init: function () {
         this.appendDummyInput()
@@ -597,6 +611,26 @@ Blockly.Blocks["text_size"] = {
             .appendField("字体大小:")
             .appendField(new Blockly.FieldTextInput("10"), "size")
             .appendField("像素");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(330);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    },
+};
+
+Blockly.Blocks["overflow"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("元素内容溢出时的显示模式")
+            .appendField(
+                new Blockly.FieldDropdown([
+                    ["隐藏", "hidden"],
+                    ["滚动", "scroll"],
+                    ["滚动", "auto"],
+                ]),
+                "type"
+            );
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(330);

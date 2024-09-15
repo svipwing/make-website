@@ -301,6 +301,14 @@ Blockly.JavaScript["style"] = function (block) {
     return code;
 };
 
+Blockly.JavaScript["style_hover"] = function (block) {
+    var text_who = block.getFieldValue("who");
+    var statements_css = Blockly.JavaScript.statementToCode(block, "css");
+
+    var code = "<style>\n#" + text_who + ":hover {\n" + statements_css + "}\n</style>\n";
+    return code;
+};
+
 Blockly.JavaScript["display"] = function (block) {
     var text_type = block.getFieldValue("type");
     // var statements_css = Blockly.JavaScript.statementToCode(block, "css");
@@ -342,6 +350,13 @@ Blockly.JavaScript['text_size'] = function (block) {
     var code = 'font-size:' + text_size + 'px;\n';
     return code;
 };
+
+Blockly.JavaScript['overflow'] = function (block) {
+    var text_type = block.getFieldValue('type');
+    var code = 'overflow:' + text_type + ' ;\n';
+    return code;
+};
+
 
 Blockly.JavaScript['js'] = function (block) {
     var statements_js = Blockly.JavaScript.statementToCode(block, 'js');
