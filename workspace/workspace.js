@@ -25,7 +25,7 @@ var options = {
     css: true,
     media: "./media/",
     rtl: false,
-    scrollbars: false,
+    scrollbars: true,
     sounds: true,
     oneBasedIndex: true,
     zoom: {
